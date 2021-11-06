@@ -1,10 +1,10 @@
 import React from 'react'
-import 'homepage.scss'
+import './homepage.scss'
 
 const Homepage = () => {
   return (
     <div>
-      home
+      homeweferg
     </div>
   )
 }

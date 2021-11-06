@@ -1,5 +1,5 @@
 import React from 'react'
-import 'cv.scss'
+import './cv.scss'
 
 const Cv = () => {
   return (

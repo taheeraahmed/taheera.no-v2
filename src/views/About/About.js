@@ -1,5 +1,5 @@
 import React from 'react'
-import 'about.scss'
+import './about.scss'
 
 const About = () => {
   return (
