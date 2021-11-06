@@ -4,7 +4,8 @@ import './homepage.scss'
 const Homepage = () => {
   return (
     <div>
-      homeweferg
+      Homepage
+      hallo hjaskejr
     </div>
   )
 }
