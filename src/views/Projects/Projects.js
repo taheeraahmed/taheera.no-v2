@@ -29,7 +29,7 @@ const Projects = () => {
         <Grid item md={8}>
           <Card src={Fotogjengen} heading="Fotogjengen sin nettside">
             Jobbet med å utvikle nettsiden til fotogjengen på Samfundet.
-            Teknologier vi bruker: TypeScript React, Kotlin, Docker
+            Teknologier vi bruker: TypeScript React, Kotlin, Docker. Github repo-ene kan finnes <a href="https://github.com/Fotogjengen/">her</a>
           </Card>
         </Grid>
 
