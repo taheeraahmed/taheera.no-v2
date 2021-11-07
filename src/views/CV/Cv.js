@@ -30,6 +30,7 @@ const Cv = () => {
         >
           LinkedIn
         </a>
+        {" "}profilen min 
       </p>
       <p>
         Dersom det skulle være ønkselig kan du laste ned CV-en min{" "}
