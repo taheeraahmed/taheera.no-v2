@@ -5,7 +5,7 @@ import './card.scss'
 const Card = ({src, heading, children}) => {
   return (
       <div className="card">
-        <img style={{borderTopLeftRadius: '0.6em', borderBottomLeftRadius: '0.6em'}}src={src} width="200" alt={heading}/>
+        <img style={{borderTopLeftRadius: '0.6em', borderBottomLeftRadius: '0.6em'}} src={src} height="200" alt={heading}/>
         <div className="text">
         <Typography gutterBottom variant="h5" component="div">
             {heading}
