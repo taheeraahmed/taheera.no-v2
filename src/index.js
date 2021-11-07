@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import Routes from './Routes';
 import Navbar from './components/Navbar/Navbar';
+import './styles/fonts.scss';
 
 ReactDOM.render(
   <React.StrictMode>

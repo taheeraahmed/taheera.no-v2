@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@300&display=swap');
+
+h1 {
+  font-size: 43pt;
+  background: -webkit-linear-gradient(#fe6b8b 30%,#ff8e53 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+  font-family: 'Abril Fatface', cursive;
+  
+}
+p {
+  margin: 0.4em;
+  font-family: 'Roboto', sans-serif;
+}
