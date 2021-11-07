@@ -1,0 +1,32 @@
+.homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  h1 {
+    text-align: left;
+  }
+  .image {
+    text-align: right;
+  }
+}
+@media screen and (max-width: 960px) { 
+  .homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    h1 {
+      text-align: center;
+    }
+    .image {
+      text-align: center;
+    }
+    .icons {
+      text-align: center;
+    }
+    .text {
+      text-align: center;
+    }
+  }
+}
