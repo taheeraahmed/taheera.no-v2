@@ -58,13 +58,8 @@
   height: 3px;
   width: 0;
   background: transparent;
-  transition: width 0.7s ease, background-color 0.5s ease;
 }
 
-.nav-item:hover:after {
-  width: 100%;
-  background: linear-gradient(45deg, rgb(254, 107, 139) 30%, rgb(255, 142, 83) 90%);
-}
 
 .nav-item .active {
   border: 0px;
