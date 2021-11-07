@@ -3,8 +3,31 @@
   border-radius: 0.5em;
   display: flex;
   height: 200;
+  img {
+    border-top-left-radius: 0.6em;
+    border-bottom-left-radius: 0.6em;
+  }
   .text {
-    padding:0.8em;
-
+    padding:0.8em 1.5rem 0.8rem 1.5rem;
+    text-align: center;
+  }
+  h1 {
+    margin: 2;
+  }
+}
+@media screen and (max-width: 960px) { 
+  .card{
+    display: block;
+    background-color: transparent;
+    height: 200;
+    img {
+      border-radius: 0.6em;
+    }
+    .text {
+      display: none;
+    }
+    h1 {
+      margin: 2;
+    }
   }
 }
