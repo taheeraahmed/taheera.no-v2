@@ -1,12 +1,5 @@
-.pages {
-  color: #316685;
-  text-align: center;
-  font-size: calc(1.5rem + 2vw);
-  margin-top: 10%;
-}
-
 .navbar {
-  background-color: #1f5156;
+  background-color: #ffffff;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -26,17 +19,8 @@
   max-width: 1500px;
 }
 
-.main-container{
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  background-color:rgba(0,0,0,0.3);
-}
-
 .nav-logo {
-  color: #f5b921;
+  color: #fe6b8b;
   align-items: center;
   margin-left: 20px;
   cursor: pointer;
@@ -53,7 +37,7 @@
 }
 
 .nav-links {
-  color: #fff;
+  color: #fe6b8b;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
@@ -79,11 +63,11 @@
 
 .nav-item:hover:after {
   width: 100%;
-  background: #ffdd40;
+  background: linear-gradient(45deg, rgb(254, 107, 139) 30%, rgb(255, 142, 83) 90%);
 }
 
 .nav-item .active {
-  color: #ffdd40;
+  color: linear-gradient(45deg, rgb(254, 107, 139) 30%, rgb(255, 142, 83) 90%);
 }
 
 .nav-icon {
