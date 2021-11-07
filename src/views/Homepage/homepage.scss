@@ -2,9 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   min-height: 90vh;
-}
-.text{
-  margin-right: 3em;
+  h1 {
+    text-align: left;
+  }
+  .image {
+    text-align: right;
+  }
 }

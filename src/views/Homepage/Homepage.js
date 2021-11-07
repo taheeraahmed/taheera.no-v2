@@ -8,13 +8,9 @@ import { Grid, IconButton } from "@mui/material";
 const Homepage = () => {
   return (
     <div className="homepage">
-      <Grid
-        container
-        className="homepage"
-        spacing={0}
-      >
-        <Grid item xs={0} md={6}>
-          <ImageWithBorder src={meg} alt="Taheera Ahmed" width="20%" />
+      <Grid container className="homepage" spacing={10}>
+        <Grid item className="image" xs={0} md={6}>
+          <ImageWithBorder src={meg} alt="Taheera Ahmed" width="40%" />
         </Grid>
         <Grid item xs={0} md={6}>
           <h1>Taheera Ahmed</h1>
