@@ -6,12 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import Routes from './Routes';
 import Navbar from './components/Navbar/Navbar';
 import './styles/fonts.scss';
+import Footer from './components/Footer/Footer';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Navbar/>
       <Routes/>
+      <Footer/>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
