@@ -1,10 +1,21 @@
-import React  from "react";
+import React, {useState}  from "react";
 import "./cv.scss";
-import { Document, Page, pdfjs } from "react-pdf";
-import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
+import { Document, Page,pdfjs } from 'react-pdf';
+
+const url = process.env.PUBLIC_URL+ "/CV_taheera.pdf"
+
 
 const Cv = () => {
-  pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  console.log(numPages,pageNumber)
+  
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+    setPageNumber(1);
+  }
+  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
   return (
     <div className="cv">
@@ -31,7 +42,9 @@ const Cv = () => {
         </a>
       </p>
       <center>
-        <Document file="CV_taheera.pdf">
+        <Document 
+          file={url}
+          onLoadSuccess={onDocumentLoadSuccess}>
           <Page pageNumber={1} />
         </Document>
       </center>
