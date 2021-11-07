@@ -9,7 +9,6 @@ const Contact = () => {
       <Chip
         sx={{
           backgroundColor: "transparent",
-          fontWeight: "bolder",
           fontSize: "12pt",
           color: "black",
         }}
@@ -19,7 +18,6 @@ const Contact = () => {
       <Chip
         sx={{
           backgroundColor: "transparent",
-          fontWeight: "bolder",
           fontSize: "12pt",
           color: "black",
         }}
