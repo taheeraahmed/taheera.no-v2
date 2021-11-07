@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import "./cv.scss";
-import { Document, Page } from "react-pdf";
+import { Document, Page, pdfjs } from "react-pdf";
+
+import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
 
 import PDF from "./CV_taheera.pdf";
 
 const Cv = () => {
+  pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
+  
   return (
     <div className="cv">
       <h1>Cv</h1>
@@ -24,7 +28,7 @@ const Cv = () => {
         rel="noreferrer"
         target="_blank"
       >
-        <Document file={PDF}>
+        <Document file="CV_taheera.pdf">
           <Page pageNumber={1} />
         </Document>
       </a>
