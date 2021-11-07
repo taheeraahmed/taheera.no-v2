@@ -11,6 +11,7 @@ const ImageWithBorder = ({ src, width, alt}) => {
           backgroundRepeat: "no",
           background: "linear-gradient(#FE6B8B 30%, #FF8E53 90%)",
           boxShadow: "0 1px 7px 3px rgba(255, 105, 135, .3)",
+          borderRadius: 1000,
         }}
         width={width}
         alt={alt}
