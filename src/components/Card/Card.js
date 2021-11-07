@@ -1,27 +1,21 @@
 import React from 'react';
-import {Card as CardMui} from '@mui/material';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import './card.scss'
 
-const Card = ({src, heading, text}) => {
+const Card = ({src, heading, children}) => {
   return (
-    <CardMui sx={{ maxWidth: 345}} elevation={0}>
-        <CardMedia
-          component="img"
-          height="140"
-          image={src}
-          alt={heading}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+      <div className="card">
+        <img style={{borderTopLeftRadius: '0.6em', borderBottomLeftRadius: '0.6em'}}src={src} width="200" alt={heading}/>
+        <div className="text">
+        <Typography gutterBottom variant="h5" component="div">
             {heading}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {text}
+          <Typography variant="body1" color="text.secondary">
+            {children}
           </Typography>
-        </CardContent>
-    </CardMui>
+          </div>
+      </div>
+          
   );
 }
 export default Card;
