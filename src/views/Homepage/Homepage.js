@@ -15,7 +15,7 @@ const Homepage = () => {
         <Grid item xs={12} md={6}>
           <div className="text">
           <h1>Taheera Ahmed</h1>
-          <p>24 år  |  4. klasse datateknologi  |  Trondheim</p>
+          <span><p>24 år  <div className="circle"></div>  4. klasse datateknologi  <div className="circle"></div>  Trondheim</p></span>
           <p>Jeg er gira på livet for øyeblikket </p>
           </div>
           <div className="icons">
