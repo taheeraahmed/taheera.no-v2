@@ -9,6 +9,15 @@
   .image {
     text-align: right;
   }
+  .circle {
+    width:8px;
+    height: 8px;
+    margin: 0.1em;
+    border-radius: 10px;
+    background: linear-gradient(#fe6b8b 30%,#ff8e53 90%);
+    display: inline-block;
+    box-shadow: 0 1px 7px 3px rgba(255, 105, 135, .2);
+  }
 }
 @media screen and (max-width: 960px) { 
   .homepage {
