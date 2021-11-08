@@ -9,10 +9,10 @@ const Homepage = () => {
   return (
     <div className="homepage">
       <Grid container className="homepage" spacing={10}>
-        <Grid item className="image" xs={0} md={6}>
+        <Grid item className="image" xs={12} md={6}>
           <ImageWithBorder src={meg} alt="Taheera Ahmed" width="40%" />
         </Grid>
-        <Grid item xs={0} md={6}>
+        <Grid item xs={12} md={6}>
           <div className="text">
           <h1>Taheera Ahmed</h1>
           <p>24 år  |  4. klasse datateknologi  |  Trondheim</p>
