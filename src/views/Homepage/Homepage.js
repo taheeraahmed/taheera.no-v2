@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./homepage.scss";
 import meg from "../../assets/meg.jpeg";
 import ImageWithBorder from "../../components/ImageWithBorder/ImageWithBorder";
@@ -6,6 +6,10 @@ import { Facebook, GitHub, Instagram, Email, LinkedIn } from "@mui/icons-materia
 import { Grid, IconButton } from "@mui/material";
 
 const Homepage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="homepage">
       <Grid container className="homepage" spacing={10}>
@@ -16,7 +20,7 @@ const Homepage = () => {
           <div className="text">
           <h1>Taheera Ahmed</h1>
           <span><p>24 år  <div className="circle"></div>  4. klasse datateknologi  <div className="circle"></div>  Trondheim</p></span>
-          <p>Jeg er gira på livet for øyeblikket </p>
+          <p>Jeg er gira på livet for øyeblikket. </p>
           </div>
           <div className="icons">
             <a
