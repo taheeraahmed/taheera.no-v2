@@ -34,7 +34,7 @@ const Footer = () => {
         <h3>Github repository</h3>
         <br/>
         <div className="github-icon">
-        <a activeClassName="active" href="https://github.com/taheeraahmed/taheera.no-vol-2">
+        <a activeclassname="active" href="https://github.com/taheeraahmed/taheera.no-vol-2">
           <GitHub sx={{fontSize:70}}/>
           <br/>
         All kildekoden til nettsiden<br/>
