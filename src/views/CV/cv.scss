@@ -9,7 +9,6 @@
   }
 }
 .react-pdf__Document{
-
   .linkAnnotation {
     display: none;
   }
@@ -27,7 +26,7 @@
 
 @media screen and (max-width: 960px) {
   .react-pdf__Page__canvas {
-    width: 80% !important;
+    width: 70% !important;
     height: 20% !important;
   }
 
