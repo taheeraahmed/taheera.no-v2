@@ -7,26 +7,26 @@ const NavLinks = () => {
     <div className="navLinksContainer">
       <NavLink exact 
         to="/" 
-        activeClassName="active" 
+        activeclassname="active" 
         className="navLink">
         Hjem
       </NavLink>
       <NavLink exact 
         to="/about" 
-        activeClassName="active" 
+        activeclassname="active" 
         className="navLink">
         Om meg
       </NavLink>
       <NavLink exact 
         to="/cv" 
-        activeClassName="active" 
+        activeclassname="active" 
         className="navLink">
         Cv
       </NavLink>
       <NavLink
         exact
         to="/projects"
-        activeClassName="active"
+        activeclassname="active"
         className="navLink"
       >
         Prosjekter
