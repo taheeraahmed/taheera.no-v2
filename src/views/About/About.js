@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./about.scss";
 import { Grid, Stack } from "@mui/material";
 import Tur from "../../assets/tur.jpg";
@@ -8,6 +8,10 @@ import Lese from "../../assets/lese.jpg"
 import ImageWithDescription from "../../components/ImageWithDescription/ImageWithDescription";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="about">
       <Stack container spacing={2} alignItems="center" justify="center">
