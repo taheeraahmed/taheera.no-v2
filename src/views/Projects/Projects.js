@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Grid, Stack } from "@mui/material";
 import ImageWithDescription from "../../components/ImageWithDescription/ImageWithDescription";
 import "./projects.scss";
@@ -12,6 +12,10 @@ import Fotogjengen from "../../assets/fotogjengen.png"
 import StyledChip from "../../components/StyledChip/StyledChip";
 
 const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const thispage = ['React', 'Javascript', 'Gradients']
   const classification = ['Python', 'TensorFlow/Keras', 'Supervised learning']
   const kmeans =  ['Python', 'Kunstig Intelligens', 'Data mining']
