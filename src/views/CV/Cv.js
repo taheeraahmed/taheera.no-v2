@@ -1,4 +1,4 @@
-import React, {useState}  from "react";
+import React, {useState, useEffect}  from "react";
 import "./cv.scss";
 import { Document, Page,pdfjs } from 'react-pdf';
 
@@ -6,6 +6,10 @@ const url = process.env.PUBLIC_URL+ "/CV_taheera.pdf"
 
 
 const Cv = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
