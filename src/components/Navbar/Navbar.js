@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import { Turn as Hamburger } from 'hamburger-react'
 import './navbar.scss'
 
 const Navbar = () => {
@@ -12,6 +13,7 @@ const Navbar = () => {
     <div>
      <div className={click ? "main-container" : ""} onClick={()=>Close()} />
       <nav className="navbar" onClick={(e)=>e.stopPropagation()}>
+
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
             Taheera Ahmed
@@ -65,7 +67,7 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="nav-icon" onClick={handleClick}>
-            <i className={click ? "fa fa-times" : "fa fa-bars"}></i>
+          <Hamburger/>
           </div>
         </div>
       </nav>
