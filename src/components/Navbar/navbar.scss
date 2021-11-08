@@ -80,23 +80,23 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    border-top: 1pxsolid #fff;
+    left: -100%;
     position: absolute;
-    top: 80px;
-    left: -110%;
+    top: 40px;
     opacity: 1;
     transition: all 0.5s ease;
   }
 
   .nav-menu.active {
-    background: #1f5156;
-    left: 0px;
+    background: #ffffff;
+    left: -40px;
+    position: absolute;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
   }
   .nav-item .active {
-    color: #ffdd40;
+    color: #fe6b8b;
     border: none;
   }
   .nav-links {
@@ -108,11 +108,11 @@
   .nav-icon {
     display: block;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -0.4em;
+    right: -0.4em;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #ffdd40;
+    color: #fe6b8b;
   }
 }
