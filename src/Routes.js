@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Route, useLocation,Switch } from "react-router-dom";
 import About from "./views/About/About";
 import Homepage from "./views/Homepage/Homepage";
 import Cv from "./views/CV/Cv";
 import Projects from "./views/Projects/Projects"
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
+
+const titleMap = [
+  {path: '/', title:'Taheera Ahmed'},
+  {path: '/about', title:'Om meg | Taheera '},
+  {path: '/cv', title:'CV | Taheera '},
+  {path: '/projects', title:'Prosjekter | Taheera '},
+]
+
 const Routes = () => {
   const location = useLocation()
+  const [, setPageTitle] = useState('Home');
+
+
+  useEffect(() => {
+    const curTitle = titleMap.find(item => item.path === location.pathname)
+    if(curTitle && curTitle.title){
+      setPageTitle(curTitle.title)
+      document.title = curTitle.title
+    }
+  }, [location.pathname])
+
+
   return (
     <TransitionGroup>
         <CSSTransition
@@ -15,8 +35,8 @@ const Routes = () => {
           key={location.key}
         >
           <Switch location={location}>
-            <Route exact path="/" component={Homepage} />
-            <Route exact path="/about" component={About} />
+            <Route exact path="/" component={Homepage}/>
+            <Route exact path="/about" component={About}/>
             <Route exact path="/cv" component={Cv} />
             <Route exact path="/projects" component={Projects} />
           </Switch>
