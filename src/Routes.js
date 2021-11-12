@@ -6,23 +6,25 @@ import Cv from "./views/CV/Cv";
 import Projects from "./views/Projects/Projects"
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
+const titleMap = [
+  {path: '/', title:'Taheera Ahmed'},
+  {path: '/about', title:'Om meg | Taheera '},
+  {path: '/cv', title:'CV | Taheera '},
+  {path: '/projects', title:'Prosjekter | Taheera '},
+]
+
 const Routes = () => {
   const location = useLocation()
   const [, setPageTitle] = useState('Home');
 
-  const titleMap = [
-    {path: '/', title:'Taheera Ahmed'},
-    {path: '/about', title:'Om meg | Taheera '},
-    {path: '/cv', title:'CV | Taheera '},
-    {path: '/projects', title:'Prosjekter | Taheera '},
-  ]
+
   useEffect(() => {
     const curTitle = titleMap.find(item => item.path === location.pathname)
     if(curTitle && curTitle.title){
       setPageTitle(curTitle.title)
       document.title = curTitle.title
     }
-  }, [location])
+  }, [location.pathname])
 
 
   return (
