@@ -44,6 +44,8 @@ const Projects = () => {
           <ImageWithDescription src={Fotogjengen} heading="Fotogjengen sin nettside">
             Jobbet med å utvikle nettsiden til fotogjengen på Samfundet.
             Teknologier vi bruker: TypeScript React, Kotlin, Docker. Github repo-ene kan finnes <a href="https://github.com/Fotogjengen/">her</a>
+            <br/>
+            Foto credz: <a href="https://foto.samfundet.no">foto.samfundet.no</a>
             <StyledChip chipList={fg}/>
           </ImageWithDescription>
         </Grid>
