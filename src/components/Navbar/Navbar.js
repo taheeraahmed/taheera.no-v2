@@ -67,7 +67,7 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="nav-icon" onClick={handleClick}>
-          <Hamburger/>
+            <Hamburger toggled={click}/>
           </div>
         </div>
       </nav>
