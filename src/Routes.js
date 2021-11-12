@@ -8,7 +8,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 const Routes = () => {
   const location = useLocation()
-  const [pageTitle, setPageTitle] = useState('Home');
+  const [, setPageTitle] = useState('Home');
 
   const titleMap = [
     {path: '/', title:'Taheera Ahmed'},
