@@ -18,6 +18,10 @@
     display: inline-block;
     box-shadow: 0 1px 7px 3px rgba(255, 105, 135, .2);
   }
+  .chips {
+    display: flex;
+    align-items: center;
+  }
 }
 @media screen and (max-width: 960px) { 
   .homepage {
@@ -25,11 +29,11 @@
     justify-content: center;
     align-items: center;
     min-height: 90vh;
-    h1 {
+    h1, .image {
       text-align: center;
     }
-    .image {
-      text-align: center;
+    .chips {
+      justify-content: center;
     }
     .icons {
       text-align: center;
