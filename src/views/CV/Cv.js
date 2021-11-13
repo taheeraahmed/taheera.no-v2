@@ -10,10 +10,9 @@ const Cv = () => {
     window.scrollTo(0, 0)
   }, [])
 
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [, setNumPages] = useState(null);
+  const [, setPageNumber] = useState(1);
 
-  console.log(numPages,pageNumber)
   
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
