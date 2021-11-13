@@ -19,7 +19,11 @@ const Homepage = () => {
         <Grid item xs={12} md={6}>
           <div className="text">
           <h1>Taheera Ahmed</h1>
-          <span><p>24 år  <div className="circle"></div>  4. klasse datateknologi  <div className="circle"></div>  Trondheim</p></span>
+          <div style={{display:'flex', alignItems:'baseline'}}>
+          <p>24 år</p>  
+          <div className="circle"/>
+          <p>4. klasse datateknologi </p> <div className="circle"/>  <p>Trondheim</p>
+          </div>
           <p>Jeg er gira på livet for øyeblikket. </p>
           </div>
           <div className="icons">
