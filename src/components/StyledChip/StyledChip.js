@@ -20,8 +20,8 @@ const styles = {
 };
 
 const StyledChip = ({chipList}) => {
-  const listChips = chipList.map((item) =>(
-    <Chip label={item} style={styles.chip}/>
+  const listChips = chipList.map((item, index) =>(
+    <Chip label={item} key={index} style={styles.chip}/>
    )
 );
   return (

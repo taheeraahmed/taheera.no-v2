@@ -6,3 +6,9 @@
     font-weight: bolder;
   }
 }
+
+@media screen and (max-width: 960px) {
+  .projects {
+    text-align: center;
+  }
+}
