@@ -3,6 +3,14 @@
   justify-content: center;
   align-items: center;
   min-height: 90vh;
+  padding-left: 0em;
+  padding-right: 4em;
+  p {
+    line-height: 1.5;
+  }
+  a {
+    color: #fe6b8b;
+  }
   h1 {
     text-align: left;
   }
@@ -23,12 +31,15 @@
     align-items: center;
   }
 }
-@media screen and (max-width: 960px) { 
+@media screen and (max-width: 962px) { 
   .homepage {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 90vh;
+    padding-top: 2em;
+    padding-left: 0em;
+    padding-right: 0em;
     h1, .image {
       text-align: center;
     }
@@ -38,12 +49,12 @@
     .icons {
       text-align: center;
       position: relative;
-      top: -7em;
+      top: -5em;
     }
     .text {
       text-align: center;
       position: relative;
-      top: -7em;
+      top: -5em;
     }
   }
 }

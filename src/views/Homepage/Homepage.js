@@ -24,7 +24,10 @@ const Homepage = () => {
           <div className="circle"/>
           <p>4. klasse datateknologi </p> <div className="circle"/>  <p>Trondheim</p>
           </div>
+          <span>
           <p>Jeg er gira på livet for øyeblikket. </p>
+          <p>Dersom du er en ikke-teknisk person men er nysgjerrig på hva jeg driver med, kan du sjekke ut <a href="https://www.youtube.com/watch?v=CmkaDiaAB9E&ab_channel=TaheeraAhmed">denne videoen</a>.</p>
+          </span>
           </div>
           <div className="icons">
             <a
