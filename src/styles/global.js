@@ -10,15 +10,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    align-items: center;
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
     transition: all 0.25s linear;
   }
   h1 {
@@ -39,13 +33,14 @@ h3 {
   background-position:bottom 0 left 0,bottom 8px left 0;
   background-repeat:no-repeat;
 }
-p {
-  margin: 0.4em;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14pt;
+.homepage {
+  .circle {
+    background: ${({ theme }) => theme.gradient};
+    
+  }
+  a {
+    color: ${({ theme }) => theme.color}
+  }
 }
-a {
-  text-decoration: none;
-  color: ${({ theme }) => theme.color};
-}
+
   `;
