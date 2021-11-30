@@ -32,9 +32,7 @@ h3 {
   background-size:100% 4px;
   background-position:bottom 0 left 0,bottom 8px left 0;
   background-repeat:no-repeat;
-}
-p {
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.footerText}
 }
 .homepage {
   .circle {
