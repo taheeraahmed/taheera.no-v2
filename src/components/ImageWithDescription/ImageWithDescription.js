@@ -21,7 +21,7 @@ const ImageWithDescription = ({ src, heading, children }) => {
         <Typography gutterBottom variant="h5">
           {heading}
         </Typography>
-        <Typography variant="body1" color="text.secondary">
+        <Typography variant="body1">
           {children}
         </Typography>
     </Grid>

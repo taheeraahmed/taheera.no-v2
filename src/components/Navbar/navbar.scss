@@ -1,5 +1,4 @@
 .navbar {
-  background-color: white;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -91,14 +90,13 @@
 
   .nav-menu.active {
     background: #ffffff;
-    left: -40px;
+    left: 0px;
     position: absolute;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
   }
   .nav-item .active {
-    color: #fe6b8b;
     border: none;
   }
   .nav-links {
