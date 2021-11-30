@@ -58,12 +58,12 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.footerColor};
   }
   .nav-item .active {
-  border: 0px;
-  border-bottom: 4px solid;
-  border-image:  ${({ theme }) => theme.gradient};
-  border-image-slice: 1;
-  margin: auto;
-  text-decoration: none;
+    border: 0px;
+    border-bottom: 4px solid;
+    border-image:  ${({ theme }) => theme.gradient};
+    border-image-slice: 1;
+    margin: auto;
+    text-decoration: none;
   }
   .react-pdf__Page__canvas {
     width: 30% !important;
@@ -76,8 +76,8 @@ export const GlobalStyles = createGlobalStyle`
     box-shadow: ${({ theme }) => theme.boxShad};
   }
   .projects{
-  a{
-    color:${({ theme }) => theme.color};
-  }
+    a{
+      color:${({ theme }) => theme.color};
+    }
 }
 `;
