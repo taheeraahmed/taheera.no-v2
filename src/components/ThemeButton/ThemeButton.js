@@ -2,6 +2,8 @@ import React from "react";
 import { func, string } from "prop-types";
 import { Switch } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { useContext } from "react";
+import { ThemeContext } from "styled-components";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -10,10 +12,10 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   "& .MuiSwitch-switchBase": {
     margin: 1,
     padding: 0,
-    transform: "translateX(6px)",
+    transform: "translateX(-2px)",
     "&.Mui-checked": {
       color: "#fff",
-      transform: "translateX(22px)",
+      transform: "translateX(30px)",
       "& .MuiSwitch-thumb:before": {
         backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 20 20"><path fill="${encodeURIComponent(
           "#fff"
@@ -29,6 +31,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     backgroundColor: "#d5d5d5",
     width: 32,
     height: 32,
+    boxShadow: 0,
     "&:before": {
       content: "''",
       position: "absolute",
@@ -52,9 +55,27 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 
 const Toggle = ({ theme, toggleTheme }) => {
+  const themeContext = useContext(ThemeContext);
+
+  const styles = {
+    chip: {
+      fontWeight: "bolder",
+      marginTop: "1em",
+      marginRight: "8px",
+      boxShadow: themeContext.boxShad,
+      borderRadius: "80px",
+      background: themeContext.gradient,
+      color: "white",
+    },
+    link: {
+      color: "black",
+      padding: "10pt",
+    },
+  };
+
   return (
     <>
-      <MaterialUISwitch onClick={toggleTheme} />
+      <MaterialUISwitch onClick={toggleTheme} sx={styles.chip} />
     </>
   );
 };
