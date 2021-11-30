@@ -9,12 +9,9 @@ import { Button } from "@mui/material";
 
 function App() {
   const [theme, setTheme] = useState("pinkOrangeTheme");
-  // The function that toggles between themes
   const toggleTheme = () => {
-    // if the theme is not light, then set it to dark
     if (theme === "pinkOrangeTheme") {
       setTheme("blueGreenTheme");
-      // otherwise, it should be light
     } else {
       setTheme("pinkOrangeTheme");
     }
