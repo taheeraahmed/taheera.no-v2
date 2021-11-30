@@ -83,4 +83,7 @@ export const GlobalStyles = createGlobalStyle`
   .extra {
     background: ${({ theme }) => theme.footerColor};
   }
+  .nav-icon {
+    color:${({ theme }) => theme.color};
+  }
 `;
