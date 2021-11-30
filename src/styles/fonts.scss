@@ -1,6 +1,8 @@
+@import "src/styles/colors";
+
 h1 {
   font-size: 4em;
-  background: -webkit-linear-gradient(#fe6b8b 30%,#ff8e53 90%);
+  background: -webkit-linear-gradient($pink 30%,$orange 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -11,7 +13,7 @@ h1 {
 }
 h3 {
   display:inline-block;
-  background: linear-gradient(#fe6b8b 30%,#ff8e53 90%);
+  background: linear-gradient($pink 30%,$orange 90%);
   background-size:100% 4px;
   background-position:bottom 0 left 0,bottom 8px left 0;
   background-repeat:no-repeat;

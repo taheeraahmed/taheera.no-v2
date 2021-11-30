@@ -1,25 +1,28 @@
 import { Chip } from '@mui/material'
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from 'styled-components';
 
-const styles = {
-  chip: {
-      fontWeight: 'bolder',
-      marginTop: '1em',
-      marginRight: '8px',
-      boxShadow: '0 1px 6px 3px rgba(255, 105, 135, .3)',
-      borderRadius: '80px',
-      background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
-      color: 'white',
-  },
-  link: {
-      color: 'black',
-      padding: '10pt',
-      
-      
-  }
-};
 
 const StyledChip = ({chipList}) => {
+
+  const themeContext = useContext(ThemeContext);
+
+  const styles = {
+    chip: {
+      fontWeight: "bolder",
+      marginTop: "1em",
+      marginRight: "8px",
+      boxShadow: themeContext.boxShad,
+      borderRadius: "80px",
+      background: themeContext.gradient,
+      color: "white",
+    },
+    link: {
+      color: "black",
+      padding: "10pt",
+    },
+  };
+
   const listChips = chipList.map((item, index) =>(
     <Chip label={item} key={index} style={styles.chip}/>
    )

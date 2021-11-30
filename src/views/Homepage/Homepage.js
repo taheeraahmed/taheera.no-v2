@@ -4,11 +4,16 @@ import meg from "../../assets/meg.jpeg";
 import ImageWithBorder from "../../components/ImageWithBorder/ImageWithBorder";
 import { Facebook, GitHub, Instagram, Email, LinkedIn } from "@mui/icons-material";
 import { Grid, IconButton } from "@mui/material";
+import { useContext } from "react";
+import { ThemeContext } from "styled-components";
 
 const Homepage = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  const themeContext = useContext(ThemeContext);
+  console.log("Current theme: ", themeContext);
 
   return (
     <div className="homepage">
