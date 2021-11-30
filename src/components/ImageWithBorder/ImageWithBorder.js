@@ -1,8 +1,11 @@
 import React from "react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-
+import { useContext } from "react";
+import { ThemeContext } from "styled-components";
 
 const ImageWithBorder = ({ src, width, alt}) => {
+  const themeContext = useContext(ThemeContext);
+  console.log("Current theme: ", themeContext);
   return (
     <div className="image">
       <LazyLoadImage
@@ -11,8 +14,8 @@ const ImageWithBorder = ({ src, width, alt}) => {
           border: "double 6px transparent",
           marginBottom: 20,
           backgroundRepeat: "no",
-          background: "linear-gradient(#FE6B8B 30%, #FF8E53 90%)",
-          boxShadow: "0 1px 7px 3px rgba(255, 105, 135, .3)",
+          background: themeContext.gradient,
+          boxShadow: themeContext.boxShad,
           width: width
         }}
         effect="blur"
