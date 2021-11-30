@@ -4,7 +4,7 @@ export const blueGreenTheme = {
   color: "#89d4cf",
   footerColor: "#757575",
   gradient: "linear-gradient(315deg, #734ae8 0%, #89d4cf 74%)",
-  boxShad: "0 1px 10px 3px rgba(115, 74, 232, .3)",
+  boxShad: "0 1px 10px 3px rgba(115, 74, 232, .4)",
   footerText: "#000000",
 };
 

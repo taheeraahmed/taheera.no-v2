@@ -64,15 +64,20 @@ export const GlobalStyles = createGlobalStyle`
   border-image-slice: 1;
   margin: auto;
   text-decoration: none;
-}
-.react-pdf__Page__canvas {
-  width: 30% !important;
-  height: 20% !important;
-  margin-top:1.5em;
-  border: double 6px transparent;
-  margin-bottom: 20;
-  background-repeat: no;
-  background: ${({ theme }) => theme.gradient};
-  box-shadow: ${({ theme }) => theme.boxShad};
+  }
+  .react-pdf__Page__canvas {
+    width: 30% !important;
+    height: 20% !important;
+    margin-top:1.5em;
+    border: double 6px transparent;
+    margin-bottom: 20;
+    background-repeat: no;
+    background: ${({ theme }) => theme.gradient};
+    box-shadow: ${({ theme }) => theme.boxShad};
+  }
+  .projects{
+  a{
+    color:${({ theme }) => theme.color};
+  }
 }
 `;
