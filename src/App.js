@@ -6,6 +6,7 @@ import { ThemeProvider } from "styled-components";
 import { pinkOrangeTheme, blueGreenTheme } from "./styles/themes";
 import { GlobalStyles } from "./styles/global";
 import Toggle from "./components/ThemeButton/ThemeButton";
+import './App.css'
 
 function App() {
   const [theme, setTheme] = useState("pinkOrangeTheme");
@@ -25,9 +26,11 @@ function App() {
         <Navbar />
         <Routes />
         <Footer />
-        <h3>Bare fordi jeg kan</h3>
-        <br/>
-        <Toggle theme={theme} toggleTheme={toggleTheme} />
+        <div className="extra">
+          <h3>Bare fordi jeg kan</h3>
+          <br />
+          <Toggle theme={theme} toggleTheme={toggleTheme} />
+        </div>
       </>
     </ThemeProvider>
   );
