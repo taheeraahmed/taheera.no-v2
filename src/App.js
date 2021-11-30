@@ -5,7 +5,7 @@ import Routes from "./Routes";
 import { ThemeProvider } from "styled-components";
 import { pinkOrangeTheme, blueGreenTheme } from "./styles/themes";
 import { GlobalStyles } from "./styles/global";
-import { Button } from "@mui/material";
+import Toggle from "./components/ThemeButton/ThemeButton";
 
 function App() {
   const [theme, setTheme] = useState("pinkOrangeTheme");
@@ -24,8 +24,10 @@ function App() {
         <GlobalStyles />
         <Navbar />
         <Routes />
-        <Button onClick={toggleTheme}>Toggle theme</Button>
         <Footer />
+        <h3>Bare fordi jeg kan</h3>
+        <br/>
+        <Toggle theme={theme} toggleTheme={toggleTheme} />
       </>
     </ThemeProvider>
   );
