@@ -33,6 +33,9 @@ h3 {
   background-position:bottom 0 left 0,bottom 8px left 0;
   background-repeat:no-repeat;
 }
+p {
+  color: ${({ theme }) => theme.text};
+}
 .homepage {
   .circle {
     background: ${({ theme }) => theme.gradient};
@@ -40,7 +43,14 @@ h3 {
   }
   a {
     color: ${({ theme }) => theme.color}
+  } 
+}
+.cv{
+  a {
+    color: ${({ theme }) => theme.color}
   }
 }
-
-  `;
+.footer{
+  background-color: ${({ theme }) => theme.footerColor};
+}
+`;

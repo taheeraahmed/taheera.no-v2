@@ -5,7 +5,6 @@ import { ThemeContext } from "styled-components";
 
 const ImageWithBorder = ({ src, width, alt}) => {
   const themeContext = useContext(ThemeContext);
-  console.log("Current theme: ", themeContext);
   return (
     <div className="image">
       <LazyLoadImage

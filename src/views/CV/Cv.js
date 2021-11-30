@@ -1,6 +1,7 @@
-import React, {useState, useEffect}  from "react";
+import React, {useState, useEffect, useContext}  from "react";
 import "./cv.scss";
 import { Document, Page,pdfjs } from 'react-pdf';
+import { ThemeContext } from "styled-components";
 
 const url = process.env.PUBLIC_URL+ "/CV_taheera.pdf"
 
@@ -9,6 +10,8 @@ const Cv = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+    const themeContext = useContext(ThemeContext);
 
   const [, setNumPages] = useState(null);
   const [, setPageNumber] = useState(1);
