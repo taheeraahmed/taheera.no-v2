@@ -37,7 +37,7 @@ export const GlobalStyles = createGlobalStyle`
   .homepage {
     .circle {
       background: ${({ theme }) => theme.gradient};
-      
+      boxShadow: ${({ theme }) => theme.boxShad};
     }
     a {
       color: ${({ theme }) => theme.color}
@@ -66,12 +66,6 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
   .react-pdf__Page__canvas {
-    width: 30% !important;
-    height: 20% !important;
-    margin-top:1.5em;
-    border: double 6px transparent;
-    margin-bottom: 20;
-    background-repeat: no;
     background: ${({ theme }) => theme.gradient};
     box-shadow: ${({ theme }) => theme.boxShad};
   }
