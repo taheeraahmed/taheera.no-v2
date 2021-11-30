@@ -79,5 +79,8 @@ export const GlobalStyles = createGlobalStyle`
     a{
       color:${({ theme }) => theme.color};
     }
-}
+  }
+  .extra {
+    background: ${({ theme }) => theme.footerColor};
+  }
 `;
