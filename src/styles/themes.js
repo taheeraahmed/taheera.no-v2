@@ -1,6 +1,6 @@
 export const blueGreenTheme = {
   name: "blueGreenTheme",
-  body: "#6b6b6b",
+  body: "radial-gradient(circle, rgba(150,150,150,1) 0%, rgba(107,107,107,1) 59%, rgba(105,105,105,1) 100%);",
   text: "#f0f0f0",
   color: "#89d4cf",
   colorOpacity: "rgba(137, 212, 207, 0.2)",
@@ -14,7 +14,7 @@ export const blueGreenTheme = {
 
 export const pinkOrangeTheme = {
   name: "pinkOrangeTheme",
-  body: "#F5F5F5",
+  body: "radial-gradient(circle, rgba(245,245,245,1) 5%, rgba(229,229,229,1) 62%, rgba(214,214,214,1) 80%, rgba(186,186,186,1) 100%);",
   text: "#363537",
   color: "#fe6b8b",
   colorOpacity: "rgba(254, 107, 139, 0.2)",
