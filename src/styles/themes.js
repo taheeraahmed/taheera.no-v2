@@ -6,7 +6,7 @@ export const blueGreenTheme = {
   colorOpacity: "rgba(137, 212, 207, 0.2)",
   secondary: "#734ae8",
   footerColor: "#2e2e2e",
-  gradient: "linear-gradient(315deg, #734ae8 0%, #89d4cf 74%)",
+  gradient: "linear-gradient(315deg, #734ae8 10%, #89d4cf 90%)",
   boxShad: "0 1px 10px 3px rgba(115, 74, 232, .4)",
   footerText: "#dedede",
   white: "#ffffff",
