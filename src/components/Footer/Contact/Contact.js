@@ -28,6 +28,16 @@ const Contact = () => {
         icon={<Mail sx={{ fontSize: "12pt", color: "black" }} />}
         label="taheera@hotmail.com"
       />
+      <Chip
+        sx={{
+          backgroundColor: "transparent",
+          fontSize: "12pt",
+          color: "black",
+        }}
+        style={{ color: themeContext.footerText }}
+        icon={<Mail sx={{ fontSize: "12pt", color: "black" }} />}
+        label="taheera@hotmail.com"
+      />
     </div>
   );
 };
