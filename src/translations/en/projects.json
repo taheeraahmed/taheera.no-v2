@@ -1,0 +1,19 @@
+{
+	"ai": "Artifical Intelligence",
+	"chatbot": "Chatbot",
+	"chatbotDesc": "Made three different types of chatbots in Python: (1) Rule-based, (2) Retrieval-based and (3) Deep learning based. Here I have used different methods in order to generate an answer from the chatbot",
+	"classification": "Classification of forest types",
+	"classificationDescription": "In this project I made a model to predict the forest cover type based on cartographic variables, given by a dataset from Kaggle. The goal was to classify the six different forest cover types. The model has an accuracy equal to 85%",
+	"dreamknit": "Dreamknit's page",
+	"dreamknitDescription": "Developed a webpage with Dreamknit to sell their amazing recipes, with some help from a genius knitting-algorithm. The website can be found",
+	"fotoGangDescription2": "Photography credits: ",
+	"fotogang": "Fotogang's webpage",
+	"fotogangDescription": "Working on developing a website for the \"Fotogang\" at the student house of Trondheim. We use technologies such as: TypeScript React, Kotlin, Docker. Our github-repo can be found",
+	"kmeans": "Implemented K-means algorithm (in Python) which is used for classification of unknown data points. ",
+	"os": "Operating Systems",
+	"shell": "Shell",
+	"shellDesc": "Implemented a fairly simple shell in C, which can do the basic operations like cs, pipe and ls. ",
+	"subtitle": "These are some of the projects I have finished",
+	"thisPageDescription": "I have had tons of fun making this React-app. I have used some material-ui components but I have mostly created my own. ",
+	"thispage": "This website"
+}

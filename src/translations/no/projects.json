@@ -1,0 +1,19 @@
+{
+	"ai": "Kunstig Intellligens",
+	"chatbot": "Chatbot",
+	"chatbotDesc": "Laget tre forskjellige chatbotter i Python: (1) Rule-based, (2) Retrieval-based og (3) Deep learning based. Her har jeg brukt forskjellige metoder for å få svar fra chatbotten.",
+	"classification": "Klassifisering av skogtyper",
+	"classificationDescription": "I dette prosjektet lages det en modell for å forutsi skogdekktype basert på kun kartografiske variabler, gitt av et datasett fra Kaggle. Målet er å klassifisere de seks forskjellige skogdekketypene. Modellen har en accuracy på 85%.",
+	"dreamknit": "Dreamknit sin nettside",
+	"dreamknitDescription": "Utviklet en nettside med Dreamknit for å selge fantastiske strikkeoppskrifter ved hjelp av en genial strikkealgoritme. Nettsiden kan finnes her",
+	"fotoGangDescription2": "Foto credz: ",
+	"fotogang": "Fotogjengen sin nettside",
+	"fotogangDescription": "Jobbet med å utvikle nettsiden til fotogjengen på Samfundet. Teknologier vi bruker: TypeScript React, Kotlin, Docker. Github repo-ene kan finnes",
+	"kmeans": "Implementerte K means algoritmen (i Python) som brukes for klassifisering av ukjente datapunkter\n",
+	"os": "Operativ Systemer",
+	"shell": "Shell",
+	"shellDesc": "Implementerte et relativt simpelt shell i C som kan gjøre basic operasjoner som cd, pipe og ls",
+	"subtitle": "Dette er noen av prosjektene jeg har fullført",
+	"thisPageDescription": "Kost meg med å lage en React-app. Brukt noen Material-UI komponenter, men har laget de fleste selv.",
+	"thispage": "Denne nettsiden"
+}
