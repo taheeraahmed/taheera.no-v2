@@ -1,11 +1,11 @@
  {
-		"aboutme": "Om meg",
-		"becauseIcan": "Bare fordi jeg kan ",
-		"contact": "Kontakt",
-		"githubfooter": "All kildekoden til nettsiden kan finnes her",
-		"here": "her",
-		"home": "Hjem",
-		"menu": "Meny",
-		"projects": "Prosjekter"
-
-}
+   "aboutme": "Om meg",
+   "becauseIcan": "Bare fordi jeg kan ",
+   "contact": "Kontakt",
+   "githubfooter": "All kildekoden til nettsiden",
+   "githubfooter2": "kan finnes her",
+   "here": "her",
+   "home": "Hjem",
+   "menu": "Meny",
+   "projects": "Prosjekter"
+ }
