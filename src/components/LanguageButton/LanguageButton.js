@@ -12,7 +12,6 @@ const LanguageButton = () => {
   const { i18n } = useTranslation();
   const themeContext = useContext(ThemeContext);
 
-  console.log(themeContext.color);
   return (
     <ButtonGroup>
       {Object.keys(lngs).map((lng) => (

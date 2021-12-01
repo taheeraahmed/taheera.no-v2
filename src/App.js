@@ -22,7 +22,6 @@ function App() {
       //check count value, if below 0 we change href property to our red circle image path
       if (theme === "pinkOrangeTheme") {
         favicon.href = "favicon_1.svg";
-        console.log(favicon);
       }
       //if above 0, we set back to green
       else {

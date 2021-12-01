@@ -3,15 +3,27 @@ import "./cv.scss";
 import { Document, Page,pdfjs } from 'react-pdf';
 import { useTranslation } from "react-i18next";
 
-
-const url = process.env.PUBLIC_URL+ "/CV_taheera.pdf"
-
+const CV = {
+  en: process.env.PUBLIC_URL + "/CV_taheera_en.pdf",
+  no: process.env.PUBLIC_URL + "/CV_taheera_no.pdf",
+};
 
 const Cv = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useState('');
+  const [cv, setCv] = useState('')
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+
+
+  useEffect(() => {
+    setLanguage(i18n.language);
+    setCv(CV[language]);
+  }, [i18n.language, cv, language]);
+  
+
 
   const [, setNumPages] = useState(null);
   const [, setPageNumber] = useState(1);
@@ -41,14 +53,14 @@ const Cv = () => {
         <a
           rel="noreferrer"
           target="_blank"
-          href={process.env.PUBLIC_URL + "/CV_taheera.pdf"}
+          href={cv}
         >
           {" "}
           {t("common.here")}
         </a>
       </p>
       <center>
-        <Document file={url} onLoadSuccess={onDocumentLoadSuccess}>
+        <Document file={cv} onLoadSuccess={onDocumentLoadSuccess}>
           <Page pageNumber={1} />
         </Document>
       </center>
