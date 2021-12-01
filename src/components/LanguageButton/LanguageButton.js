@@ -22,9 +22,12 @@ const LanguageButton = () => {
           sx={{
             "&.MuiButton-root": {
               fontWeight: i18n.resolvedLanguage === lng ? "1000" : "normal",
+              textTransform: "capitalize",
               background:
                 i18n.resolvedLanguage === lng ? themeContext.colorOpacity : "",
               marginLeft: "8px",
+              padding: '2px 8px 2px 8px',
+              fontSize: '12pt',
               color: themeContext.color,
               border: `1px ${themeContext.color} solid`,
               "&:hover": {
