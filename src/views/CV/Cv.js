@@ -11,7 +11,7 @@ const CV = {
 const Cv = () => {
   const { t, i18n } = useTranslation();
   const [language, setLanguage] = useState('');
-  const [cv, setCv] = useState('')
+  const [cv, setCv] = useState(CV[i18n.language]);
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
