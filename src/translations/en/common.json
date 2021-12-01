@@ -1,9 +1,10 @@
 {
-	"aboutme": "About me",
-	"contact": "Contact",
-	"githubfooter": "All of the source code to the webpage can be found here",
-	"here": "here",
-	"home": "Home",
-	"menu": "Menu",
-	"projects": "Projects"
+		"aboutme": "About me",
+		"becauseIcan": "Just because I can",
+		"contact": "Contact",
+		"githubfooter": "All of the source code to the webpage can be found here",
+		"here": "here",
+		"home": "Home",
+		"menu": "Menu",
+		"projects": "Projects"
 }
