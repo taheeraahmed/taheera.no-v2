@@ -23,16 +23,24 @@ const Homepage = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <div className="text">
-          <h1>Taheera Ahmed</h1>
-          <div className="chips">
-          <p>24 år</p>  
-          <div className="circle"/>
-          <p>4. klasse datateknologi </p> <div className="circle"/>  <p>Trondheim</p>
-          </div>
-          <span>
-          <p>Jeg er gira på livet for øyeblikket. </p>
-          <p>Dersom du er en ikke-teknisk person men er nysgjerrig på hva jeg driver med, kan du sjekke ut <a href="https://www.youtube.com/watch?v=CmkaDiaAB9E&ab_channel=TaheeraAhmed">denne videoen</a>.</p>
-          </span>
+            <h1>Taheera Ahmed</h1>
+            <div className="chips">
+              <p>24 år</p>
+              <div className="circle" />
+              <p>4. klasse datateknologi </p> <div className="circle" />{" "}
+              <p>Trondheim</p>
+            </div>
+            <span>
+              <p>Jeg er gira på livet for øyeblikket. </p>
+              <p>
+                Dersom du er en ikke-teknisk person men er nysgjerrig på hva jeg
+                driver med, kan du sjekke ut{" "}
+                <a href="https://www.youtube.com/watch?v=CmkaDiaAB9E&ab_channel=TaheeraAhmed">
+                  denne videoen
+                </a>
+                .
+              </p>
+            </span>
           </div>
           <div className="icons">
             <a
@@ -41,7 +49,10 @@ const Homepage = () => {
               target="_blank"
             >
               <IconButton>
-                <Facebook fontSize="large" />
+                <Facebook
+                  fontSize="large"
+                  style={{ color: themeContext.white }}
+                />
               </IconButton>
             </a>
             <a
@@ -50,7 +61,10 @@ const Homepage = () => {
               target="_blank"
             >
               <IconButton>
-                <LinkedIn fontSize="large" />
+                <LinkedIn
+                  fontSize="large"
+                  style={{ color: themeContext.white }}
+                />
               </IconButton>
             </a>
             <a
@@ -59,7 +73,10 @@ const Homepage = () => {
               target="_blank"
             >
               <IconButton>
-                <GitHub fontSize="large" />
+                <GitHub
+                  fontSize="large"
+                  style={{ color: themeContext.white }}
+                />
               </IconButton>
             </a>
             <a
@@ -68,12 +85,15 @@ const Homepage = () => {
               target="_blank"
             >
               <IconButton>
-                <Instagram fontSize="large" />
+                <Instagram
+                  fontSize="large"
+                  style={{ color: themeContext.white }}
+                />
               </IconButton>
             </a>
             <a href="mailto:taheera@hotmail.com">
               <IconButton>
-                <Email fontSize="large" />
+                <Email fontSize="large" style={{ color: themeContext.white }} />
               </IconButton>
             </a>
           </div>
