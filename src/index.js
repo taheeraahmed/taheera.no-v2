@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { BrowserRouter as Router } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import './styles/fonts.scss';
-
 import App from './App';
+import "./translations/i18n";
 
 ReactDOM.render(
   <React.StrictMode>
+    <Suspense fallback="loading">
       <Router>
-          <App/>
+        <App />
       </Router>
+    </Suspense>
   </React.StrictMode>,
   document.getElementById("root")
 );
