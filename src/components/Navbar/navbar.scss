@@ -80,8 +80,8 @@
   .nav-menu {
     display: flex;
     flex-direction: column;
-    width: 105%;
-    left: -110%;
+    width: 120%;
+    left: -120%;
     position: absolute;
     top: 50px;
     opacity: 1;
@@ -90,7 +90,7 @@
 
   .nav-menu.active {
     background: #ffffff;
-    left: -35px;
+    left: -50px;
     position: absolute;
     opacity: 1;
     transition: all 0.5s ease;
