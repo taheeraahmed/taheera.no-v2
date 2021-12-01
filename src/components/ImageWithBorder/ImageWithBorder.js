@@ -15,7 +15,7 @@ const ImageWithBorder = ({ src, width, alt}) => {
           backgroundRepeat: "no",
           background: themeContext.gradient,
           boxShadow: themeContext.boxShad,
-          width: width
+          maxWidth: width,
         }}
         effect="blur"
         alt={alt}
