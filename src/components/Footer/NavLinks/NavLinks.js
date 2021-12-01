@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { ThemeContext } from "styled-components";
 import "./navLinks.scss";
+import { useTranslation } from "react-i18next";
 
 const NavLinks = () => {
   const themeContext = useContext(ThemeContext);
+  const { t } = useTranslation();
   return (
     <div className="navLinksContainer">
       <NavLink
@@ -14,7 +16,7 @@ const NavLinks = () => {
         className="navLink"
         style={{ color: themeContext.footerText }}
       >
-        Hjem
+        {t("common.home")}
       </NavLink>
       <NavLink
         exact
@@ -23,7 +25,7 @@ const NavLinks = () => {
         style={{ color: themeContext.footerText }}
         className="navLink"
       >
-        Om meg
+        {t("common.aboutme")}
       </NavLink>
       <NavLink
         exact
@@ -41,7 +43,7 @@ const NavLinks = () => {
         activeclassname="active"
         className="navLink"
       >
-        Prosjekter
+        {t("common.projects")}
       </NavLink>
     </div>
   );

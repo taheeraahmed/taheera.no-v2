@@ -6,19 +6,22 @@ import { GitHub } from "@mui/icons-material";
 import Contact from "./Contact/Contact";
 import NavLinks from "./NavLinks/NavLinks";
 import { ThemeContext } from "styled-components";
+import { useTranslation } from "react-i18next";
+
 
 
 const Footer = () => {
   const themeContext = useContext(ThemeContext);
+  const { t } = useTranslation();
   return (
     <div className="footer">
       <Grid container spacing={5}>
         <Grid item md={4} xs={12}>
-          <h3>Kontakt</h3>
+          <h3>{t("common.contact")}</h3>
           <Contact />
         </Grid>
         <Grid item md={4} xs={12}>
-          <h3>Meny</h3>
+          <h3>{t("common.menu")}</h3>
           <NavLinks />
         </Grid>
         <Grid item md={4} xs={12}>
@@ -35,9 +38,9 @@ const Footer = () => {
                 style={{ color: themeContext.footerText }}
               />
               <br />
-              All kildekoden til nettsiden
+              {t("common.githubfooter")}
               <br />
-              kan finnes her
+              {t("common.githubfooter2")}
             </a>
           </div>
         </Grid>

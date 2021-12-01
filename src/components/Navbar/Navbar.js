@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { Turn as Hamburger } from 'hamburger-react'
 import './navbar.scss'
 import { ThemeContext } from 'styled-components';
+import { useTranslation } from "react-i18next";
+
 
 const Navbar = () => {
   const [click, setClick] = React.useState(false);
@@ -10,6 +12,7 @@ const Navbar = () => {
 
   const handleClick = () => setClick(!click);
   const Close = () => setClick(false);
+  const { t } = useTranslation();
   
   return (
     <div>
@@ -36,7 +39,7 @@ const Navbar = () => {
                 style={{ color: themeContext.color }}
                 onClick={click ? handleClick : null}
               >
-                Hjem
+                {t("common.home")}
               </NavLink>
             </li>
             <li className="nav-item">
@@ -48,7 +51,7 @@ const Navbar = () => {
                 style={{ color: themeContext.color }}
                 onClick={click ? handleClick : null}
               >
-                Om meg
+                {t("common.aboutme")}
               </NavLink>
             </li>
             <li className="nav-item">
@@ -72,7 +75,7 @@ const Navbar = () => {
                 style={{ color: themeContext.color }}
                 onClick={click ? handleClick : null}
               >
-                Prosjekter
+                {t("common.projects")}
               </NavLink>
             </li>
           </ul>
