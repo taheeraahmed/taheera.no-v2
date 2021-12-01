@@ -12,8 +12,11 @@ import LanguageButton from "./components/LanguageButton/LanguageButton";
 import { Grid } from "@mui/material";
 
 function App() {
-  const [theme, setTheme] = useState("pinkOrangeTheme");
+  const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+  const [theme, setTheme] = useState(darkThemeMq.matches ? 'blueGreenTheme' : 'pinkOrangeTheme');
   const { t } = useTranslation();
+
+  
 
   useEffect(() => {
     const faviconUpdate = async () => {
