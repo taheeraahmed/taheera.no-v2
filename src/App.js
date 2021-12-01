@@ -6,20 +6,15 @@ import { ThemeProvider } from "styled-components";
 import { pinkOrangeTheme, blueGreenTheme } from "./styles/themes";
 import { GlobalStyles } from "./styles/global";
 import Toggle from "./components/ThemeButton/ThemeButton";
-import './App.css'
+import "./App.scss";
 import { useTranslation } from "react-i18next";
-import { Button } from "@mui/material";
-
-const lngs = {
-  en: { nativeName: "English" },
-  no: { nativeName: "Norsk" },
-};
-
+import LanguageButton from "./components/LanguageButton/LanguageButton";
+import { Grid } from "@mui/material";
 
 function App() {
   const [theme, setTheme] = useState("pinkOrangeTheme");
-  const { t, i18n } = useTranslation();
-  
+  const { t } = useTranslation();
+
   useEffect(() => {
     const faviconUpdate = async () => {
       //grab favicon element by ID
@@ -48,8 +43,6 @@ function App() {
     }
   };
 
-  
-
   return (
     <ThemeProvider
       theme={theme === "pinkOrangeTheme" ? pinkOrangeTheme : blueGreenTheme}
@@ -60,27 +53,21 @@ function App() {
 
         <Routes />
         <Footer />
-        <div className="extra">
-          <h3>{t("common.becauseIcan")}</h3>
-          <br />
-          <Toggle theme={theme} toggleTheme={toggleTheme} />
-          <div>
-            {Object.keys(lngs).map((lng) => (
-              <Button
-                key={lng}
-                style={{
-                  fontWeight: i18n.resolvedLanguage === lng ? "bold" : "normal",
-                }}
-                type="submit"
-                onClick={() => {
-                  i18n.changeLanguage(lng);
-                }}
-              >
-                {lngs[lng].nativeName}
-              </Button>
-            ))}
-          </div>
-        </div>
+        <Grid container spacing={5} className="extra">
+          <Grid item className="box" md={4} xs={12}>
+            <h3>{t("common.becauseIcan")}</h3>
+            <br />
+            <Toggle theme={theme} toggleTheme={toggleTheme} />
+          </Grid>
+          <Grid item className="box" md={4} xs={12}>
+            <h3>{t("common.changeLang")}</h3>
+            <br />
+            <LanguageButton />
+          </Grid>
+          <Grid item className="box" md={4} xs={12}>
+            <p style={{padding:'0 7em 0 7em', fontSize: '12pt'}}>{t("common.whyDesc")}</p>
+          </Grid>
+        </Grid>
       </>
     </ThemeProvider>
   );
