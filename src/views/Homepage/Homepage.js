@@ -6,14 +6,15 @@ import { Facebook, GitHub, Instagram, Email, LinkedIn } from "@mui/icons-materia
 import { Grid, IconButton } from "@mui/material";
 import { useContext } from "react";
 import { ThemeContext } from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const Homepage = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
   const themeContext = useContext(ThemeContext);
-  console.log("Current theme: ", themeContext);
 
   return (
     <div className="homepage">
@@ -25,18 +26,17 @@ const Homepage = () => {
           <div className="text">
             <h1>Taheera Ahmed</h1>
             <div className="chips">
-              <p>24 år</p>
+              <p>{t("homepage.age")}</p>
               <div className="circle" />
-              <p>4. klasse datateknologi </p> <div className="circle" />{" "}
+              <p>{t("homepage.compsci")}</p> <div className="circle" />{" "}
               <p>Trondheim</p>
             </div>
             <span>
-              <p>Jeg er gira på livet for øyeblikket. </p>
+              <p>{t("homepage.bio")} </p>
               <p>
-                Dersom du er en ikke-teknisk person men er nysgjerrig på hva jeg
-                driver med, kan du sjekke ut{" "}
+                {t("homepage.dataengineer")}
                 <a href="https://www.youtube.com/watch?v=CmkaDiaAB9E&ab_channel=TaheeraAhmed">
-                  denne videoen
+                  {t("homepage.checkout")}
                 </a>
                 .
               </p>

@@ -1,11 +1,14 @@
 import React, {useState, useEffect }  from "react";
 import "./cv.scss";
 import { Document, Page,pdfjs } from 'react-pdf';
+import { useTranslation } from "react-i18next";
+
 
 const url = process.env.PUBLIC_URL+ "/CV_taheera.pdf"
 
 
 const Cv = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -24,31 +27,28 @@ const Cv = () => {
     <div className="cv">
       <h1>Cv</h1>
       <p>
-        Her ligger CV-en min. For mer detaljer rundt CV-en kan du gjerne sjekke
-        ut{" "}
+        {t("cv.subtitle")}{" "}
         <a
           rel="noreferrer"
           target="_blank"
           href="https://www.linkedin.com/in/taheera-ahmed-997750158/"
         >
           LinkedIn
-        </a>
-        {" "}profilen min 
+        </a>{" "}
       </p>
       <p>
-        Dersom det skulle være ønkselig kan du laste ned CV-en min{" "}
+        {t("cv.subtitle2")}{" "}
         <a
           rel="noreferrer"
           target="_blank"
           href={process.env.PUBLIC_URL + "/CV_taheera.pdf"}
         >
-          her
+          {" "}
+          {t("common.here")}
         </a>
       </p>
       <center>
-        <Document 
-          file={url}
-          onLoadSuccess={onDocumentLoadSuccess}>
+        <Document file={url} onLoadSuccess={onDocumentLoadSuccess}>
           <Page pageNumber={1} />
         </Document>
       </center>
