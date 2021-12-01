@@ -36,8 +36,15 @@ const Homepage = () => {
             <h1>Taheera Ahmed</h1>
             <div className="chips">
               <p>{t("homepage.age")}</p>
-              <div className="circle" />
-              <p>{t("homepage.compsci")}</p> <div className="circle" />{" "}
+              <div
+                className="circle"
+                style={{ boxShadow: themeContext.boxShad }}
+              />
+              <p>{t("homepage.compsci")}</p>{" "}
+              <div
+                className="circle"
+                style={{ boxShadow: themeContext.boxShad }}
+              />{" "}
               <p>Trondheim</p>
             </div>
             <LanguageButton />
