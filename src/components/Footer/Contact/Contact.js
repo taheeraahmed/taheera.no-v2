@@ -11,7 +11,7 @@ const Contact = () => {
     const { t } = useTranslation();
   return (
     <div className="contact">
-      <p style={{ padding: "0 8em 0 8em", fontSize: "12pt" }}>
+      <p style={{padding:'0 8em 0 8em', fontSize: '12pt', color: themeContext.footerText ,lineHeight: 1.3, fontWeight:'lighter'}}>
         {t("common.contactDesc")}
       </p>
       <Chip
