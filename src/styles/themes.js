@@ -1,4 +1,5 @@
 export const blueGreenTheme = {
+  name: "blueGreenTheme",
   body: "#6b6b6b",
   text: "#f0f0f0",
   color: "#89d4cf",
@@ -12,6 +13,7 @@ export const blueGreenTheme = {
 };
 
 export const pinkOrangeTheme = {
+  name: "pinkOrangeTheme",
   body: "#F5F5F5",
   text: "#363537",
   color: "#fe6b8b",
