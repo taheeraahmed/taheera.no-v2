@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import "./homepage.scss";
-import meg from "../../assets/meg.jpeg";
 import ImageWithBorder from "../../components/ImageWithBorder/ImageWithBorder";
 import { Facebook, GitHub, Instagram, Email, LinkedIn } from "@mui/icons-material";
 import { Grid, IconButton } from "@mui/material";
@@ -10,19 +9,27 @@ import { useTranslation } from "react-i18next";
 import LanguageButton from "../../components/LanguageButton/LanguageButton";
 
 
+const picture = {
+  pinkOrangeTheme: require("../../assets/meg_1.jpg").default,
+  blueGreenTheme: require("../../assets/meg_2.jpg").default,
+};
+
 const Homepage = () => {
+  const themeContext = useContext(ThemeContext);
   const { t } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0)
+
   }, [])
-
-  const themeContext = useContext(ThemeContext);
-
   return (
     <div className="homepage">
       <Grid container className="homepage" spacing={10}>
         <Grid item className="image" xs={12} md={6}>
-          <ImageWithBorder src={meg} alt="Taheera Ahmed" width="40%" />
+          <ImageWithBorder
+            src={picture[themeContext.name]}
+            alt="Taheera Ahmed"
+            width="40%"
+          />
         </Grid>
         <Grid item xs={12} md={6}>
           <div className="text">
