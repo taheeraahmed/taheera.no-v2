@@ -67,7 +67,7 @@ function App() {
             <LanguageButton />
           </Grid>
           <Grid item className="box" md={4} xs={12}>
-            <p style={{padding:'0 8em 0 8em', fontSize: '12pt'}}>{t("common.whyDesc")}</p>
+            <p style={{padding:'0 8em 0 8em', fontSize: '12pt', color: theme.footerText ,lineHeight: 1.3,fontWeight:'lighter'}}>{t("common.whyDesc")}</p>
           </Grid>
         </Grid>
       </>
