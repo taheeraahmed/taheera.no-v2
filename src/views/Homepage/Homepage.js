@@ -7,6 +7,8 @@ import { Grid, IconButton } from "@mui/material";
 import { useContext } from "react";
 import { ThemeContext } from "styled-components";
 import { useTranslation } from "react-i18next";
+import LanguageButton from "../../components/LanguageButton/LanguageButton";
+
 
 const Homepage = () => {
   const { t } = useTranslation();
@@ -31,6 +33,8 @@ const Homepage = () => {
               <p>{t("homepage.compsci")}</p> <div className="circle" />{" "}
               <p>Trondheim</p>
             </div>
+            <LanguageButton />
+
             <span>
               <p>{t("homepage.bio")} </p>
               <p>
