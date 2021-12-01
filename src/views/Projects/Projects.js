@@ -37,6 +37,7 @@ const Projects = () => {
           <ImageWithDescription
             src={Gradients}
             heading={t("projects.thispage")}
+            href="https://taheera.no"
           >
             {t("projects.thisPageDescription")}
             <StyledChip chipList={thispage} />
@@ -46,6 +47,7 @@ const Projects = () => {
           <ImageWithDescription
             src={Fotogjengen}
             heading={t("projects.fotogang")}
+            href="https://github.com/Fotogjengen/"
           >
             {t("projects.fotogangDescription")}
             <a href="https://github.com/Fotogjengen/"> {t("common.here")}</a>
@@ -60,6 +62,7 @@ const Projects = () => {
           <ImageWithDescription
             src={Dreamknit}
             heading={t("projects.dreamknit")}
+            href="https://app.dreamknit.no"
           >
             {t("projects.dreamknitDescription")}
             <a href="https://www.dreamknit.no/"> {t("common.here")}</a>
@@ -70,25 +73,38 @@ const Projects = () => {
           <ImageWithDescription
             src={Classification}
             heading={t("projects.classification")}
+            href="https://github.com/taheeraahmed/Forest-Type-Cover-Classification"
           >
             {t("projects.classificationDescription")}
             <StyledChip chipList={classification} />
           </ImageWithDescription>
         </Grid>
         <Grid item md={8}>
-          <ImageWithDescription src={Chatbot} heading={t("projects.chatbot")}>
+          <ImageWithDescription
+            src={Chatbot}
+            heading={t("projects.chatbot")}
+            href="https://github.com/taheeraahmed/Chat-bots"
+          >
             {t("projects.chatbotDesc")}
             <StyledChip chipList={chatbot} />
           </ImageWithDescription>
         </Grid>
         <Grid item md={8}>
-          <ImageWithDescription src={Kmeans} heading="K-means">
+          <ImageWithDescription
+            src={Kmeans}
+            heading="K-means"
+            href="https://github.com/taheeraahmed/K-means-cluster"
+          >
             {t("projects.kmeans")}
             <StyledChip chipList={kmeans} />
           </ImageWithDescription>
         </Grid>
         <Grid item md={8}>
-          <ImageWithDescription src={Shell} heading={t("projects.shell")}>
+          <ImageWithDescription
+            src={Shell}
+            heading={t("projects.shell")}
+            href="https://github.com/taheeraahmed/Shell-Implementation"
+          >
             {t("projects.shellDesc")}
             <StyledChip chipList={shell} />
           </ImageWithDescription>
