@@ -21,6 +21,6 @@ export const pinkOrangeTheme = {
   secondary: "#ff8e53",
   footerColor: "#ffffff",
   boxShad: "0 1px 7px 3px rgba(255, 105, 135, .3)",
-  gradient: "linear-gradient(#fe6b8b 30%,#ff8e53 90%)",
+  gradient: "linear-gradient(315deg, #fe6b8b 30%,#ff8e53 90%)",
 };
 
