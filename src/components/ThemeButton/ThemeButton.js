@@ -56,7 +56,7 @@ const Toggle = ({ theme, toggleTheme }) => {
   const themeContext = useContext(ThemeContext);
 
   const styles = {
-    chip: {
+    background: {
       boxShadow: themeContext.boxShad,
       background: themeContext.gradient,
       borderRadius: '80px'
@@ -65,7 +65,7 @@ const Toggle = ({ theme, toggleTheme }) => {
 
   return (
     <>
-      <MaterialUISwitch onClick={toggleTheme} sx={styles.chip} />
+      <MaterialUISwitch onClick={toggleTheme} sx={styles.background} />
     </>
   );
 };
