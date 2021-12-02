@@ -23,7 +23,7 @@ const Login = () => {
     window.scrollTo(0, 0);
     if (loading) {
       // maybe trigger a loading screen
-      return "loading";
+      return (<div>Loading</div>);
     }
     if (user) history.replace("/dashboard");
   }, [user, loading, history]);
@@ -38,6 +38,7 @@ const Login = () => {
     "&.MuiButton-root": {
       fontSize: "12pt",
       color: "#ffffff",
+      boxShadow: themeContext.boxShad,
       background: themeContext.gradient,
     },
   };

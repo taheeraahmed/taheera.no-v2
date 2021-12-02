@@ -1,0 +1,10 @@
+.dashboard {
+  margin: 2rem;
+  min-height: 60vh;
+  padding-bottom: 20px;
+  .box {
+    background-color: rgba(256,256,256,0.2);
+    padding: 50px;
+    border-radius: 3px;
+  }
+}

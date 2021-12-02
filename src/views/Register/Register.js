@@ -36,6 +36,7 @@ const Register = () =>{
     "&.MuiButton-root": {
       fontSize: "12pt",
       color: "#ffffff",
+      boxShadow: themeContext.boxShad,
       background: themeContext.gradient,
     },
   };

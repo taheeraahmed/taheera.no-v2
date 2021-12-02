@@ -81,10 +81,10 @@ export const GlobalStyles = createGlobalStyle`
     color:${({ theme }) => theme.color};
   }
   .login__container {
-    box-shadow: ${({ theme }) => theme.boxShad};
+    
   }
   .register__container {
-    box-shadow: ${({ theme }) => theme.boxShad};
+    
     color:${({ theme }) => theme.body};
     a {
       color:${({ theme }) => theme.secondary};

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { useLocation } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import { Turn as Hamburger } from 'hamburger-react'
 import './navbar.scss'
@@ -9,12 +10,11 @@ import { useTranslation } from "react-i18next";
 const Navbar = () => {
   const [click, setClick] = React.useState(false);
   const themeContext = useContext(ThemeContext);
-
+  const location = useLocation()
   const handleClick = () => setClick(!click);
   const Close = () => setClick(false);
   const { t } = useTranslation();
-  if (window.location.pathname === "/login" || "/dashboard" || "register") return null;
-  else {
+    if (location.pathname === "/dashboard") return null;
     return (
       <div>
         <div
@@ -90,7 +90,6 @@ const Navbar = () => {
         </nav>
       </div>
     );
-  }
   
 }
 
