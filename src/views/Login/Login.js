@@ -1,52 +1,83 @@
-import React, { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useEffect, useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
 import { auth, signInWithEmailAndPassword, signInWithGoogle } from "../../assets/firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import "./Login.css";
-function Login() {
+import "./Login.scss";
+import { Button, TextField } from "@mui/material";
+import { useTranslation } from "react-i18next";
+import { ThemeContext } from "styled-components";
+
+
+const Login = () => {
+  const { t } = useTranslation();
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, loading, error] = useAuthState(auth);
+  const themeContext = useContext(ThemeContext);
+  console.log(error)
   const history = useHistory();
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (loading) {
       // maybe trigger a loading screen
-      return;
+      return "loading";
     }
     if (user) history.replace("/dashboard");
   }, [user, loading, history]);
+
+  const TextFieldStyle = {
+    "&.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+      borderColor: themeContext.color,
+    },
+  };
+
+  const ButtonStyle = {
+    "&.MuiButton-root": {
+      fontSize: "12pt",
+      color: "#ffffff",
+      background: themeContext.gradient,
+    },
+  };
   return (
     <div className="login">
       <div className="login__container">
-        <input
+        <h1>{t("common.login")}</h1>
+        <div className="subtitle">
+          <p>{t("common.douche")}</p>
+          <p>{t("common.douche2")}</p>
+          <p>{t("common.douche3")}</p>
+        </div>
+        <TextField
+          sx={{TextFieldStyle}}
+          variant="filled"
+          margin="dense"
           type="text"
-          className="login__textBox"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="E-mail Address"
+          label={t("common.email")}
+          required
         />
-        <input
+        <TextField
+          variant="filled"
           type="password"
-          className="login__textBox"
+          margin="dense"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
+          label={t("common.password")}
+          required
         />
-        <button
-          className="login__btn"
+        <br />
+        <Button
+          style={{marginBottom: 4}}
+          sx={ButtonStyle}
           onClick={() => signInWithEmailAndPassword(email, password)}
         >
-          Login
-        </button>
-        <button className="login__btn login__google" onClick={signInWithGoogle}>
-          Login with Google
-        </button>
-        <div>
-          <Link to="/reset">Forgot Password</Link>
-        </div>
-        <div>
-          Don't have an account? <Link to="/register">Register</Link> now.
-        </div>
+          {t("common.login")}
+        </Button>
+        <Button sx={ButtonStyle} onClick={signInWithGoogle}>
+          {t("common.loginGoogle")}
+        </Button>
       </div>
     </div>
   );

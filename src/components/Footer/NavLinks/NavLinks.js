@@ -45,6 +45,15 @@ const NavLinks = () => {
       >
         {t("common.projects")}
       </NavLink>
+      <NavLink
+        exact
+        to="/login"
+        style={{ color: themeContext.footerText }}
+        activeclassname="active"
+        className="navLink"
+      >
+        {t("common.login")}
+      </NavLink>
     </div>
   );
 };

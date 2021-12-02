@@ -1,61 +1,89 @@
-import React, { useEffect, useState } from "react";
+import { Button, TextField } from "@mui/material";
+import React, { useContext, useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useTranslation } from "react-i18next";
 import { Link, useHistory } from "react-router-dom";
+import { ThemeContext } from "styled-components";
 import {
   auth,
   registerWithEmailAndPassword,
   signInWithGoogle,
 } from "../../assets/firebase/firebase";
-import "./Register.css";
-function Register() {
+import "./Register.scss";
+
+const Register = () =>{
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [user, loading, error] = useAuthState(auth);
   const history = useHistory();
+  const themeContext = useContext(ThemeContext);
+  const { t } = useTranslation();
+
+  console.log(error)
+
   const register = () => {
     if (!name) alert("Please enter name");
     registerWithEmailAndPassword(name, email, password);
   };
+
   useEffect(() => {
     if (loading) return;
     if (user) history.replace("/dashboard");
   }, [user, loading,history]);
+
+  const ButtonStyle = {
+    "&.MuiButton-root": {
+      fontSize: "12pt",
+      color: "#ffffff",
+      background: themeContext.gradient,
+    },
+  };
   return (
     <div className="register">
       <div className="register__container">
-        <input
+        <h1>{t("common.register")}</h1>
+        <TextField
+          margin="dense"
+          variant="filled"
           type="text"
-          className="register__textBox"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Full Name"
+          label={t("common.name")}
         />
-        <input
+        <TextField
+          margin="dense"
+          variant="filled"
           type="text"
-          className="register__textBox"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="E-mail Address"
+          label={t("common.email")}
         />
-        <input
+        <TextField
+          margin="dense"
+          variant="filled"
           type="password"
-          className="register__textBox"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
+          label={t("common.password")}
         />
-        <button className="register__btn" onClick={register}>
-          Register
-        </button>
-        <button
-          className="register__btn register__google"
+        <Button
+          style={{ marginBottom: 7, marginTop: 10 }}
+          sx={ButtonStyle}
+          onClick={register}
+        >
+          {t("common.register")}
+        </Button>
+        <Button
+          style={{ marginBottom: 7 }}
+          sx={ButtonStyle}
           onClick={signInWithGoogle}
         >
-          Register with Google
-        </button>
-        <div>
-          Already have an account? <Link to="/">Login</Link> now.
+          {t("common.registerGoogle")}
+        </Button>
+        <div className="alreadyUser">
+          {t("common.alreadyAccount")}
+          <Link to="/login">{t("common.loginhere")}</Link>
         </div>
       </div>
     </div>

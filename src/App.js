@@ -16,9 +16,8 @@ function App() {
   const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
   const [theme, setTheme] = useState(darkThemeMq.matches ? 'blueGreenTheme' : 'pinkOrangeTheme');
   const { t } = useTranslation();
-
   
-
+  
   useEffect(() => {
     const faviconUpdate = async () => {
       //grab favicon element by ID
@@ -54,7 +53,6 @@ function App() {
         <GlobalStyles />
         <RouteChangeTracker />
         <Navbar />
-
         <Routes />
         <Footer />
         <Grid container spacing={5} className="extra">
