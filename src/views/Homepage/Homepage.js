@@ -10,8 +10,8 @@ import LanguageButton from "../../components/LanguageButton/LanguageButton";
 
 
 const picture = {
-  pinkOrangeTheme: require("../../assets/meg_1.jpg").default,
-  blueGreenTheme: require("../../assets/meg_2.jpg").default,
+  pinkOrangeTheme: require("../../assets/images/meg_1.jpg").default,
+  blueGreenTheme: require("../../assets/images/meg_2.jpg").default,
 };
 
 const Homepage = () => {

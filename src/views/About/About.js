@@ -1,10 +1,10 @@
 import React, {useEffect} from "react";
 import "./about.scss";
 import { Grid, Stack } from "@mui/material";
-import Tur from "../../assets/tur.jpg";
-import BucketHat from "../../assets/buckethat.jpg";
-import Trene from "../../assets/trene.jpg";
-import Lese from "../../assets/lese.jpg"
+import Tur from "../../assets/images/tur.jpg";
+import BucketHat from "../../assets/images/buckethat.jpg";
+import Trene from "../../assets/images/trene.jpg";
+import Lese from "../../assets/images/lese.jpg";
 import ImageWithDescription from "../../components/ImageWithDescription/ImageWithDescription";
 import { useTranslation } from "react-i18next";
 

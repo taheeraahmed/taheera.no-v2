@@ -2,13 +2,13 @@ import React, {useEffect} from "react";
 import { Grid, Stack } from "@mui/material";
 import ImageWithDescription from "../../components/ImageWithDescription/ImageWithDescription";
 import "./projects.scss";
-import Gradients from "../../assets/gradients.jpeg";
-import Classification from "../../assets/klassifisering.png";
-import Kmeans from "../../assets/kmeans.png";
-import Shell from "../../assets/terminal.jpeg";
-import Chatbot from "../../assets/chatbot.jpeg";
-import Dreamknit from "../../assets/dreamknit.jpeg"
-import Fotogjengen from "../../assets/fotogjengen.png"
+import Gradients from "../../assets/images/gradients.jpeg";
+import Classification from "../../assets/images/klassifisering.png";
+import Kmeans from "../../assets/images/kmeans.png";
+import Shell from "../../assets/images/terminal.jpeg";
+import Chatbot from "../../assets/images/chatbot.jpeg";
+import Dreamknit from "../../assets/images/dreamknit.jpeg";
+import Fotogjengen from "../../assets/images/fotogjengen.png";
 import StyledChip from "../../components/StyledChip/StyledChip";
 import { useTranslation } from "react-i18next";
 
