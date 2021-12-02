@@ -14,6 +14,8 @@ import homepage_no from "./no/homepage.json";
 import homepage_en from "./en/homepage.json";
 import projects_no from "./no/projects.json";
 import projects_en from "./en/projects.json";
+import dashboard_no from "./no/dashboard.json";
+import dashboard_en from "./en/dashboard.json";
 
 i18n
   // load translation using http -> see /public/locales (i.e. https://github.com/i18next/react-i18next/tree/master/example/react/public/locales)
@@ -41,6 +43,7 @@ i18n
           cv: cv_no,
           homepage: homepage_no,
           projects: projects_no,
+          dashboard: dashboard_no,
         },
       },
       en: {
@@ -50,6 +53,7 @@ i18n
           cv: cv_en,
           homepage: homepage_en,
           projects: projects_en,
+          dashboard: dashboard_en,
         },
       },
     },

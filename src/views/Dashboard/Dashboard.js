@@ -3,11 +3,15 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useHistory } from "react-router";
 import "./Dashboard.css";
 import { auth, db, logout } from "../../assets/firebase/firebase";
+import { useTranslation } from "react-i18next";
 
 function Dashboard() {
   const [user, loading, error] = useAuthState(auth);
+  console.log(error)
   const [name, setName] = useState("");
   const history = useHistory();
+  const { t } = useTranslation();
+
   const fetchUserName = async () => {
     try {
       const query = await db
@@ -21,19 +25,21 @@ function Dashboard() {
       alert("An error occured while fetching user data");
     }
   };
+
   useEffect(() => {
     if (loading) return;
     if (!user) return history.replace("/");
     fetchUserName();
   }, [user, loading]);
+
   return (
     <div className="dashboard">
       <div className="dashboard__container">
-        Logged in as
+        {t("dashboard.loggedInAs")}
         <div>{name}</div>
         <div>{user?.email}</div>
         <button className="dashboard__btn" onClick={logout}>
-          Logout
+          {t("dashboard.logOut")}
         </button>
       </div>
     </div>
