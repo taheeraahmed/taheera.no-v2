@@ -10,6 +10,7 @@ import "./App.scss";
 import { useTranslation } from "react-i18next";
 import LanguageButton from "./components/LanguageButton/LanguageButton";
 import { Grid } from "@mui/material";
+import RouteChangeTracker from "./components/RouteChangeTracker/RouteChangeTracker";
 
 function App() {
   const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
@@ -51,6 +52,7 @@ function App() {
     >
       <>
         <GlobalStyles />
+        <RouteChangeTracker />
         <Navbar />
 
         <Routes />
@@ -67,7 +69,17 @@ function App() {
             <LanguageButton />
           </Grid>
           <Grid item className="box" md={4} xs={12}>
-            <p style={{padding:'0 8em 0 8em', fontSize: '12pt', color: theme.footerText ,lineHeight: 1.3,fontWeight:'lighter'}}>{t("common.whyDesc")}</p>
+            <p
+              style={{
+                padding: "0 8em 0 8em",
+                fontSize: "12pt",
+                color: theme.footerText,
+                lineHeight: 1.3,
+                fontWeight: "lighter",
+              }}
+            >
+              {t("common.whyDesc")}
+            </p>
           </Grid>
         </Grid>
       </>
