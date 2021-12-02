@@ -13,7 +13,7 @@ const Navbar = () => {
   const handleClick = () => setClick(!click);
   const Close = () => setClick(false);
   const { t } = useTranslation();
-  if (window.location.pathname === "/login") return null;
+  if (window.location.pathname === "/login" || "/dashboard" || "register") return null;
   else {
     return (
       <div>

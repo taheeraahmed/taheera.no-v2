@@ -4,9 +4,13 @@ import { ThemeContext } from "styled-components";
 import "./navLinks.scss";
 import { useTranslation } from "react-i18next";
 
+
 const NavLinks = () => {
   const themeContext = useContext(ThemeContext);
   const { t } = useTranslation();
+
+
+
   return (
     <div className="navLinksContainer">
       <NavLink
