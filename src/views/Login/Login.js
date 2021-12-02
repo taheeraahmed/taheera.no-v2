@@ -16,7 +16,9 @@ const Login = () => {
   const [user, loading, error] = useAuthState(auth);
   const themeContext = useContext(ThemeContext);
   console.log(error)
+
   const history = useHistory();
+
   useEffect(() => {
     window.scrollTo(0, 0);
     if (loading) {
@@ -49,27 +51,35 @@ const Login = () => {
           <p>{t("common.douche3")}</p>
         </div>
         <TextField
-          sx={{TextFieldStyle}}
+          sx={{ TextFieldStyle }}
           variant="filled"
           margin="dense"
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           label={t("common.email")}
+          color="secondary"
           required
         />
         <TextField
           variant="filled"
           type="password"
+          sx={{
+            "&$focused $notchedOutline": {
+              borderColor: "#4A90E2",
+              borderWidth: 1,
+            },
+          }}
           margin="dense"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           label={t("common.password")}
+          color="secondary"
           required
         />
         <br />
         <Button
-          style={{marginBottom: 4}}
+          style={{ marginBottom: 4 }}
           sx={ButtonStyle}
           onClick={() => signInWithEmailAndPassword(email, password)}
         >

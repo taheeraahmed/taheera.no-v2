@@ -47,6 +47,7 @@ const Register = () =>{
           margin="dense"
           variant="filled"
           type="text"
+          color="secondary"
           value={name}
           onChange={(e) => setName(e.target.value)}
           label={t("common.name")}
@@ -56,12 +57,14 @@ const Register = () =>{
           variant="filled"
           type="text"
           value={email}
+          color="secondary"
           onChange={(e) => setEmail(e.target.value)}
           label={t("common.email")}
         />
         <TextField
           margin="dense"
           variant="filled"
+          color="secondary"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
