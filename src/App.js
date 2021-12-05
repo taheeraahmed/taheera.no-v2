@@ -9,19 +9,18 @@ import Toggle from "./components/ThemeButton/ThemeButton";
 import "./App.scss";
 import { useTranslation } from "react-i18next";
 import LanguageButton from "./components/LanguageButton/LanguageButton";
-import { initGA, trackingPageGA } from "./assets/ga/react-ga";
 import { Grid } from "@mui/material";
+import ReactGA from "react-ga";
 
 function App() {
   const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
   const [theme, setTheme] = useState(darkThemeMq.matches ? 'blueGreenTheme' : 'pinkOrangeTheme');
   const { t } = useTranslation();
 
-  useEffect(() => {
-    initGA(); // Initialize google analytics
-    trackingPageGA("/"); // = ReactGA.pageview (window.location.pathname);
-  }, []);
-  
+  const gaTrackingId = "UA-214163544-1"; // enter your Tracking ID
+  ReactGA.initialize(gaTrackingId);
+  ReactGA.pageview("/");
+
   useEffect(() => {
     const faviconUpdate = async () => {
       //grab favicon element by ID
