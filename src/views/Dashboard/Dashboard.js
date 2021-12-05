@@ -7,6 +7,8 @@ import { useTranslation } from "react-i18next";
 import { Button, Grid } from "@mui/material";
 import { ThemeContext } from "styled-components";
 import ImageGenerator from "../../components/ImageGenerator/ImageGenerator";
+import DigitalClock from "../../components/DigitalClock/DigitalClock";
+import FavoriteWebSites from "../../components/FavoriteWebsites/FavoriteWebsites";
 
 function Dashboard() {
   const [user, loading, error] = useAuthState(auth);
@@ -46,6 +48,7 @@ function Dashboard() {
 
   return (
     <div className="dashboard">
+      <br />
       <Grid
         container
         direction="row"
@@ -55,7 +58,12 @@ function Dashboard() {
       >
         <Grid item>
           <div className="box">
-            <p>Yo</p>
+            <FavoriteWebSites />
+          </div>
+        </Grid>
+        <Grid item>
+          <div className="box">
+              <DigitalClock />
           </div>
         </Grid>
         <Grid item>
@@ -80,16 +88,22 @@ function Dashboard() {
         </Grid>
         <Grid item>
           <div className="box">
-            <p>Yo</p>
+            <p>{t("Yo")}</p>
           </div>
         </Grid>
         <Grid item>
           <div className="box">
-            <ImageGenerator/>
+            <p>{t("Yo")}</p>
           </div>
         </Grid>
         <Grid item>
-          <div className="box" style={{textAlign: 'center'}}>
+          <div className="box">
+            <p>{t("Yo")}</p>
+          </div>
+        </Grid>
+        <Grid item></Grid>
+        <Grid item>
+          <div className="box" style={{ textAlign: "center" }}>
             {t("dashboard.loggedInAs")}
             <div>{name}</div>
             <div>{user?.email}</div>
@@ -101,8 +115,12 @@ function Dashboard() {
               {t("dashboard.logOut")}
             </Button>
           </div>
-        </Grid>
+        </Grid>{" "}
       </Grid>
+      <br />
+      <div className="boxOutside">
+        <ImageGenerator />
+      </div>
     </div>
   );
 }

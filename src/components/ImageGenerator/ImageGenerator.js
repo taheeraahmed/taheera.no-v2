@@ -1,9 +1,14 @@
 
    
-import React, {useEffect, useState} from "react";
+import { Button } from "@mui/material";
+import React, {useEffect, useState, useContext} from "react";
+import { ThemeContext } from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const ImageGenerator = () => {
     const [image, setImage] = useState([]);
+      const { t } = useTranslation();
+      const themeContext = useContext(ThemeContext);
 
     const handleClick = () => {
         fetch("https://meme-api.herokuapp.com/gimme/1")
@@ -24,12 +29,22 @@ const ImageGenerator = () => {
                 })
     }
     ,[])
+        const ButtonStyle = {
+          "&.MuiButton-root": {
+            fontSize: "12pt",
+            color: "#ffffff",
+            background: themeContext.gradient,
+            boxShadow: themeContext.boxShad,
+            marginTop: 2,
+          },
+        };
+
     return (
-        <div className="imageContainer">
+        <div className="imageContainer" style={{textAlign: 'center'}}>
             <div className="image">
                 <img src={image} width="250px"alt="Meme"/>
             </div>
-            <button onClick={() => handleClick()}>Trykk her</button>
+            <Button sx={ButtonStyle}onClick={() => handleClick()}>{t('clickHere')}</Button>
         </div>
     );
 };

@@ -90,5 +90,11 @@ export const GlobalStyles = createGlobalStyle`
       color:${({ theme }) => theme.secondary};
     }
   }
+  .iconHolder {
+    background: ${({ theme }) => theme.backgroundIconHolder};
+}
+.iconHolder:hover {
+    background: ${({ theme }) => theme.backgroundIconHolderHover};
+}
 }
 `;

@@ -10,6 +10,8 @@ export const blueGreenTheme = {
   boxShad: "0 1px 10px 3px rgba(115, 74, 232, .4)",
   footerText: "#dedede",
   white: "#ffffff",
+  backgroundIconHolder: 'rgba(66, 66, 66, 0.2)',
+  backgroundIconHolderHover: "rgba(66, 66, 66, 0.5)",
 };
 
 export const pinkOrangeTheme = {
@@ -22,5 +24,7 @@ export const pinkOrangeTheme = {
   footerColor: "#ffffff",
   boxShad: "0 1px 7px 3px rgba(255, 105, 135, .3)",
   gradient: "linear-gradient(315deg, #fe6b8b 30%,#ff8e53 90%)",
+  backgroundIconHolder: "rgba(177, 177, 177, 0.2)",
+  backgroundIconHolderHover: "rgba(201, 201, 201, 0.5);",
 };
 

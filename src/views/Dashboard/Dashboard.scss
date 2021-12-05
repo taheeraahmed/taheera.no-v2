@@ -6,5 +6,15 @@
     background-color: rgba(256,256,256,0.2);
     padding: 50px;
     border-radius: 3px;
+    width: fit-content;
+    height: 300px;
+  }
+  .boxOutside {
+    margin: auto;
+    background-color: rgba(256,256,256,0.2);
+    padding: 30px;
+    border-radius: 3px;
+    max-width: 400px;
+    
   }
 }
