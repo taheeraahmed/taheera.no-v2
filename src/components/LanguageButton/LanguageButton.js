@@ -1,6 +1,6 @@
 import { Button, ButtonGroup } from "@mui/material";
 import { ThemeContext } from "styled-components";
-import React, { useContext, useEffect } from "react";
+import React, { useContext  } from "react";
 import { useTranslation } from "react-i18next";
 import ReactGA from "react-ga4";
 
