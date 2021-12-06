@@ -6,9 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import './styles/fonts.scss';
 import App from './App';
 import "./translations/i18n";
-import ReactGA from "react-ga";
-const TRACKING_ID = "G-FHNMC7GFX9"; 
-ReactGA.initialize(TRACKING_ID);
 
 ReactDOM.render(
   <React.StrictMode>
