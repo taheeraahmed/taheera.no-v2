@@ -17,9 +17,12 @@ function App() {
   const [theme, setTheme] = useState(darkThemeMq.matches ? 'blueGreenTheme' : 'pinkOrangeTheme');
   const { t } = useTranslation();
 
-  const gaTrackingId = "UA-214163544-1"; // enter your Tracking ID
-  ReactGA.initialize(gaTrackingId);
-  ReactGA.pageview("/");
+  useEffect(() => {
+    const gaTrackingId = "G-YL2X2XBVYQ"; // enter your Tracking ID
+    ReactGA.initialize(gaTrackingId);
+    ReactGA.pageview("/");
+  },)
+
 
   useEffect(() => {
     const faviconUpdate = async () => {
