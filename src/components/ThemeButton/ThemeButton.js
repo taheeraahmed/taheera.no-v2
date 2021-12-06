@@ -54,8 +54,6 @@ const Toggle = ({ theme, toggleTheme }) => {
     },
   };
 
-  console.log(theme)
-
   return (
     <>
       <MaterialUISwitch onClick={toggleTheme} sx={styles.background} />
