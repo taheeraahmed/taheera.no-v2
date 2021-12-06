@@ -20,11 +20,7 @@ function App() {
   useEffect(() => {
     const gaTrackingId = "G-YL2X2XBVYQ"; // enter your Tracking ID
     ReactGA.initialize(gaTrackingId);
-    ReactGA.send("/");
-    ReactGA.send({ hitType: "pageview", page: "/" });
-    ReactGA.send({ hitType: "pageview", page: "/about" });
-    ReactGA.send({ hitType: "pageview", page: "/CV" });
-    ReactGA.send({ hitType: "pageview", page: "/projects" });
+    ReactGA.send('pageview');
   },)
 
 
