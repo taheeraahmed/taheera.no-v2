@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Instagram from "../../assets/images/instagram.svg";
 import Netflix from "../../assets/images/netflix.svg";
 import Blackboard from "../../assets/images/blackboard.svg";
