@@ -18,7 +18,7 @@ const Cv = () => {
   const handleClick = (e, language) => {
     ReactGA.event({
       category: "Download CV",
-      action: 1,
+      action: "Download CV",
     });
   };
 
