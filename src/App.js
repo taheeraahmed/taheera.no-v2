@@ -10,7 +10,7 @@ import "./App.scss";
 import { useTranslation } from "react-i18next";
 import LanguageButton from "./components/LanguageButton/LanguageButton";
 import { Grid } from "@mui/material";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 function App() {
   const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
@@ -20,7 +20,11 @@ function App() {
   useEffect(() => {
     const gaTrackingId = "G-YL2X2XBVYQ"; // enter your Tracking ID
     ReactGA.initialize(gaTrackingId);
-    ReactGA.pageview("/");
+    ReactGA.send("/");
+    ReactGA.send({ hitType: "pageview", page: "/" });
+    ReactGA.send({ hitType: "pageview", page: "/about" });
+    ReactGA.send({ hitType: "pageview", page: "/CV" });
+    ReactGA.send({ hitType: "pageview", page: "/projects" });
   },)
 
 
