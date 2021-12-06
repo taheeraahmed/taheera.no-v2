@@ -2,6 +2,8 @@ import React, {useState, useEffect }  from "react";
 import "./cv.scss";
 import { Document, Page,pdfjs } from 'react-pdf';
 import { useTranslation } from "react-i18next";
+import ReactGA from "react-ga4";
+
 
 const CV = {
   en: process.env.PUBLIC_URL + "/CV_taheera_en.pdf",
@@ -12,11 +14,17 @@ const Cv = () => {
   const { t, i18n } = useTranslation();
   const [language, setLanguage] = useState('');
   const [cv, setCv] = useState(CV[i18n.language]);
+
+  const handleClick = (e, language) => {
+    ReactGA.event({
+      category: "Download CV",
+      action: 1,
+    });
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-
-
 
   useEffect(() => {
     setLanguage(i18n.language);
@@ -54,6 +62,7 @@ const Cv = () => {
           rel="noreferrer"
           target="_blank"
           href={cv}
+          onClick={(e) => handleClick(e)}
         >
           {" "}
           {t("common.here")}
