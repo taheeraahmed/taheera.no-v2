@@ -1,12 +1,20 @@
 import { Button, ButtonGroup } from "@mui/material";
 import { ThemeContext } from "styled-components";
-import React, { useContext } from "react";
+import React, { useContext  } from "react";
 import { useTranslation } from "react-i18next";
+import ReactGA from "react-ga4";
 
 const lngs = {
   en: { nativeName: "English" },
   no: { nativeName: "Norsk" },
 };
+
+const handleClick = (e, language) => {
+  ReactGA.event({
+    category: "Language",
+    action: language,
+  });
+}
 
 const LanguageButton = () => {
   const { i18n } = useTranslation();
@@ -37,8 +45,8 @@ const LanguageButton = () => {
             },
           }}
           type="submit"
-          onClick={() => {
-            i18n.changeLanguage(lng);
+          onClick={(e) => {
+            i18n.changeLanguage(lng) && handleClick(e, lng);
           }}
         >
           {lngs[lng].nativeName}

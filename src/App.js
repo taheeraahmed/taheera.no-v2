@@ -10,14 +10,20 @@ import "./App.scss";
 import { useTranslation } from "react-i18next";
 import LanguageButton from "./components/LanguageButton/LanguageButton";
 import { Grid } from "@mui/material";
-import RouteChangeTracker from "./components/RouteChangeTracker/RouteChangeTracker";
+import ReactGA from "react-ga4";
 
 function App() {
   const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
   const [theme, setTheme] = useState(darkThemeMq.matches ? 'blueGreenTheme' : 'pinkOrangeTheme');
   const { t } = useTranslation();
-  
-  
+
+  useEffect(() => {
+    const gaTrackingId = "G-YL2X2XBVYQ"; // enter your Tracking ID
+    ReactGA.initialize(gaTrackingId);
+    ReactGA.send('pageview');
+  },)
+
+
   useEffect(() => {
     const faviconUpdate = async () => {
       //grab favicon element by ID
@@ -51,7 +57,6 @@ function App() {
     >
       <>
         <GlobalStyles />
-        <RouteChangeTracker />
         <Navbar />
         <Routes />
         <Footer />
