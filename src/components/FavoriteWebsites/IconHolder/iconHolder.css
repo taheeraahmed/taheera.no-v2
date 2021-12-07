@@ -1,0 +1,15 @@
+.iconHolder {
+    text-align: center;
+    font-weight: lighter;
+    padding: 10px 20px 30px 20px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    margin-right: 17px;
+    border-radius: 4px;
+    background: rgba(177, 177, 177, 0.2);
+    transition: background cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.iconHolder:hover {
+    background: rgba(177   , 177, 177, 0.5);
+}

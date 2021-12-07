@@ -7,12 +7,14 @@ import Contact from "./Contact/Contact";
 import NavLinks from "./NavLinks/NavLinks";
 import { ThemeContext } from "styled-components";
 import { useTranslation } from "react-i18next";
-
-
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
   const themeContext = useContext(ThemeContext);
   const { t } = useTranslation();
+  const location = useLocation();
+  if (location.pathname === "/dashboard") return null;
+  
   return (
     <div className="footer">
       <Grid container spacing={5}>

@@ -58,7 +58,6 @@ function App() {
       <>
         <GlobalStyles />
         <Navbar />
-
         <Routes />
         <Footer />
         <Grid container spacing={5} className="extra">

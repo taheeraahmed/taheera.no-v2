@@ -80,4 +80,21 @@ export const GlobalStyles = createGlobalStyle`
   .nav-icon {
     color:${({ theme }) => theme.color};
   }
+  .login__container {
+    
+  }
+  .register__container {
+    
+    color:${({ theme }) => theme.body};
+    a {
+      color:${({ theme }) => theme.secondary};
+    }
+  }
+  .iconHolder {
+    background: ${({ theme }) => theme.backgroundIconHolder};
+}
+.iconHolder:hover {
+    background: ${({ theme }) => theme.backgroundIconHolderHover};
+}
+}
 `;
