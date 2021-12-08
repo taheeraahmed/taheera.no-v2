@@ -14,6 +14,6 @@
 	"shell": "Shell",
 	"shellDesc": "Implemented a fairly simple shell in C, which can do the basic operations like cs, pipe and ls. ",
 	"subtitle": "These are some of the projects I have finished",
-	"thisPageDescription": "I have had tons of fun making this React-app. I have used some material-ui components but I have mostly created my own. ",
+	"thisPageDescription": "I have had tons of fun making this React-app. I have used some material-ui components but I have mostly created my own. Additionaly I have played around with authentification through Google's Firebase and also used Google Analytics. ",
 	"thispage": "This website"
 }

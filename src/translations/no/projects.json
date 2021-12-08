@@ -14,6 +14,6 @@
 	"shell": "Shell",
 	"shellDesc": "Implementerte et relativt simpelt shell i C som kan gjøre basic operasjoner som cd, pipe og ls",
 	"subtitle": "Dette er noen av prosjektene jeg har fullført",
-	"thisPageDescription": "Kost meg med å lage en React-app. Brukt noen Material-UI komponenter, men har laget de fleste selv.",
+	"thisPageDescription": "Kost meg med å lage en React-app. Brukt noen Material-UI komponenter, men har laget de fleste selv. Ellers har jeg lekt meg litt med autentifisering gjennom Firebase og Google Analytics",
 	"thispage": "Denne nettsiden"
 }
