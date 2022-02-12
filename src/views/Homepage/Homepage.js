@@ -1,7 +1,8 @@
 import React, {useEffect} from "react";
 import "./homepage.scss";
 import ImageWithBorder from "../../components/ImageWithBorder/ImageWithBorder";
-import { Facebook, GitHub, Instagram, Email, LinkedIn,  MusicNote } from "@mui/icons-material";
+import { Facebook, GitHub, Instagram, Email, LinkedIn } from "@mui/icons-material";
+import { FaTiktok } from "react-icons/fa"
 import { Grid, IconButton } from "@mui/material";
 import { useContext } from "react";
 import { ThemeContext } from "styled-components";
@@ -119,8 +120,8 @@ const Homepage = () => {
               target="_blank"
             >
               <IconButton>
-                <MusicNote
-                  fontSize="large"
+                <FaTiktok
+                  size={28}
                   style={{ color: themeContext.white }}
                 />
               </IconButton>
