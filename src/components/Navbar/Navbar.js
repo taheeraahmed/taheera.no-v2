@@ -29,7 +29,7 @@ const Navbar = () => {
               className="nav-logo"
               style={{ color: themeContext.color }}
             >
-              Taheera Ahmed
+              taheera.py
               <i className="fa fa-code"></i>
             </NavLink>
 

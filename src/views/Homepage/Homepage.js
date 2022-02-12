@@ -1,13 +1,12 @@
 import React, {useEffect} from "react";
 import "./homepage.scss";
 import ImageWithBorder from "../../components/ImageWithBorder/ImageWithBorder";
-import { Facebook, GitHub, Instagram, Email, LinkedIn } from "@mui/icons-material";
+import { Facebook, GitHub, Instagram, Email, LinkedIn,  MusicNote } from "@mui/icons-material";
 import { Grid, IconButton } from "@mui/material";
 import { useContext } from "react";
 import { ThemeContext } from "styled-components";
 import { useTranslation } from "react-i18next";
 import LanguageButton from "../../components/LanguageButton/LanguageButton";
-
 
 const picture = {
   pinkOrangeTheme: require("../../assets/images/meg_1.jpg").default,
@@ -98,7 +97,7 @@ const Homepage = () => {
               </IconButton>
             </a>
             <a
-              href="https://www.instagram.com/taheera_/"
+              href="https://www.instagram.com/taheera.py/"
               rel="noreferrer"
               target="_blank"
             >
@@ -112,6 +111,18 @@ const Homepage = () => {
             <a href="mailto:taheera@hotmail.com">
               <IconButton>
                 <Email fontSize="large" style={{ color: themeContext.white }} />
+              </IconButton>
+            </a>
+            <a
+              href="https://www.tiktok.com/@taheera.py"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <IconButton>
+                <MusicNote
+                  fontSize="large"
+                  style={{ color: themeContext.white }}
+                />
               </IconButton>
             </a>
           </div>
