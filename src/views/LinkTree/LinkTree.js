@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "styled-components";
-import ImageWithBorder from "../../components/ImageWithBorder/ImageWithBorder";
 import LinkTreeButton from "../../components/LinkTreeButton/LinkTreeButton";
 import "./LinkTree.css";
 
@@ -44,6 +43,7 @@ const LinkTree = () => {
     <div className="link-tree">
       <div>
         <img
+          alt="taheera ahmed"
           src={picture[themeContext.name]}
           style={{
             width: "60%",
