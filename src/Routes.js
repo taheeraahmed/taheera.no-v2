@@ -6,9 +6,9 @@ import Cv from "./views/CV/Cv";
 import Projects from "./views/Projects/Projects"
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { useTranslation } from "react-i18next";
-import Login from "./views/Login/Login";
 import Dashboard from "./views/Dashboard/Dashboard";
 import Register from "./views/Register/Register";
+import LinkTree from "./views/LinkTree/LinkTree";
 
 
 const Routes = () => {
@@ -21,6 +21,7 @@ const Routes = () => {
   useEffect(() => {
     const titleMap = [
       { path: "/", title: "Taheera Ahmed" },
+      { path: "/linktree", title: "Taheera Ahmed" },
       { path: "/about", title: `${t("common.aboutme")} | Taheera` },
       { path: "/cv", title: "CV | Taheera " },
       { path: "/projects", title: `${t("common.projects")} | Taheera` },
@@ -40,11 +41,11 @@ const Routes = () => {
         <Switch location={location}>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/cv" component={Cv} />
           <Route exact path="/projects" component={Projects} />
+          <Route exact path="/linktree" component={LinkTree} />
         </Switch>
       </CSSTransition>
     </TransitionGroup>
