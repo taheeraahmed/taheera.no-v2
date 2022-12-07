@@ -1,4 +1,6 @@
-import React from 'react'
+import React from "react";
+import LinkTreeButton from "../../components/LinkTreeButton/LinkTreeButton";
+import './LinkTree.css'
 
 const links = [
   {
@@ -30,8 +32,17 @@ const links = [
 
 const LinkTree = () => {
   return (
-    <div>LinkTree</div>
-  )
-}
+    <div className="link-tree">
+      {links.map((link) => (
+        <LinkTreeButton
+          name={link.name}
+          url={link.url}
+          icon={link.icon}
+          key={link.name}
+        />
+      ))}
+    </div>
+  );
+};
 
-export default LinkTree
+export default LinkTree;
