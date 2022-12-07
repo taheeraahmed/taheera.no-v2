@@ -16,6 +16,8 @@ import projects_no from "./no/projects.json";
 import projects_en from "./en/projects.json";
 import dashboard_no from "./no/dashboard.json";
 import dashboard_en from "./en/dashboard.json";
+import linktree_no from "./no/linktree.json";
+import linktree_en from "./en/linktree.json";
 
 i18n
   // load translation using http -> see /public/locales (i.e. https://github.com/i18next/react-i18next/tree/master/example/react/public/locales)
@@ -44,6 +46,7 @@ i18n
           homepage: homepage_no,
           projects: projects_no,
           dashboard: dashboard_no,
+          linktree: linktree_no,
         },
       },
       en: {
@@ -54,6 +57,7 @@ i18n
           homepage: homepage_en,
           projects: projects_en,
           dashboard: dashboard_en,
+          linktree: linktree_en,
         },
       },
     },

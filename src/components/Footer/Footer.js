@@ -13,7 +13,7 @@ const Footer = () => {
   const themeContext = useContext(ThemeContext);
   const { t } = useTranslation();
   const location = useLocation();
-  if (location.pathname === "/dashboard") return null;
+  if (location.pathname === "/linktree") return null;
   
   return (
     <div className="footer">

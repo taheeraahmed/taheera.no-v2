@@ -14,7 +14,7 @@ const Navbar = () => {
   const handleClick = () => setClick(!click);
   const Close = () => setClick(false);
   const { t } = useTranslation();
-    if (location.pathname === "/dashboard") return null;
+    if (location.pathname === "/linktree") return null;
     return (
       <div>
         <div
