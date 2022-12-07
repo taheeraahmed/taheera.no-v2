@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useTranslation } from "react-i18next";
+import { ThemeContext } from "styled-components";
+import ImageWithBorder from "../../components/ImageWithBorder/ImageWithBorder";
 import LinkTreeButton from "../../components/LinkTreeButton/LinkTreeButton";
-import './LinkTree.css'
+import "./LinkTree.css";
 
 const links = [
   {
@@ -15,7 +18,7 @@ const links = [
   },
   {
     name: "Instagram",
-    url: "https://www.instagram.com/taheeraahmed",
+    url: "https://www.instagram.com/taheera.py",
     icon: "instagram",
   },
   {
@@ -25,14 +28,35 @@ const links = [
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/taheera-ahmed",
+    url: "https://www.linkedin.com/in/taheera-ahmed-997750158/",
     icon: "linkedin",
   },
 ];
 
 const LinkTree = () => {
+  const themeContext = useContext(ThemeContext);
+  const { t } = useTranslation();
+  const picture = {
+    pinkOrangeTheme: require("../../assets/images/meg_1.jpg").default,
+    blueGreenTheme: require("../../assets/images/meg_2.jpg").default,
+  };
   return (
     <div className="link-tree">
+      <div>
+        <img
+          src={picture[themeContext.name]}
+          style={{
+            width: "60%",
+            borderRadius: "50%",
+            boxShadow: themeContext.boxShad,
+          }}
+        />
+      </div>
+      <h3 style={{ fontSize: "22pt", margin: 8 }}>Taheera Ahmed</h3>
+      <p style={{ color: themeContext.footerText, fontSize: "8pt" }}></p>
+      <p style={{ color: themeContext.footerText, fontSize: "12pt" }}>
+        {t("linktree.bio")}{" "}
+      </p>
       {links.map((link) => (
         <LinkTreeButton
           name={link.name}
