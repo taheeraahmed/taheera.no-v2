@@ -11,18 +11,22 @@ import { useTranslation } from "react-i18next";
 import LanguageButton from "./components/LanguageButton/LanguageButton";
 import { Grid } from "@mui/material";
 import ReactGA from "react-ga4";
+import { useLocation } from "react-router-dom";
 
 function App() {
   const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-  const [theme, setTheme] = useState(darkThemeMq.matches ? 'blueGreenTheme' : 'pinkOrangeTheme');
+  const [theme, setTheme] = useState(
+    darkThemeMq.matches ? "blueGreenTheme" : "pinkOrangeTheme"
+  );
   const { t } = useTranslation();
 
   useEffect(() => {
     const gaTrackingId = "G-YL2X2XBVYQ"; // enter your Tracking ID
     ReactGA.initialize(gaTrackingId);
-    ReactGA.send('pageview');
-  },)
+    ReactGA.send("pageview");
+  });
 
+  const location = useLocation();
 
   useEffect(() => {
     const faviconUpdate = async () => {
@@ -60,31 +64,35 @@ function App() {
         <Navbar />
         <Routes />
         <Footer />
-        <Grid container spacing={5} className="extra">
-          <Grid item className="box" md={4} xs={12}>
-            <h3>{t("common.becauseIcan")}</h3>
-            <br />
-            <Toggle theme={theme} toggleTheme={toggleTheme} />
-          </Grid>
-          <Grid item className="box" md={4} xs={12}>
-            <h3>{t("common.changeLang")}</h3>
-            <br />
-            <LanguageButton />
-          </Grid>
-          <Grid item className="box" md={4} xs={12}>
-            <p
-              style={{
-                padding: "0 8em 0 8em",
-                fontSize: "12pt",
-                color: theme.footerText,
-                lineHeight: 1.3,
-                fontWeight: "lighter",
-              }}
-            >
-              {t("common.whyDesc")}
-            </p>
-          </Grid>
-        </Grid>
+        {location.pathname === "/linktree" ? null : (
+          <>
+            <Grid container spacing={5} className="extra">
+              <Grid item className="box" md={4} xs={12}>
+                <h3>{t("common.becauseIcan")}</h3>
+                <br />
+                <Toggle theme={theme} toggleTheme={toggleTheme} />
+              </Grid>
+              <Grid item className="box" md={4} xs={12}>
+                <h3>{t("common.changeLang")}</h3>
+                <br />
+                <LanguageButton />
+              </Grid>
+              <Grid item className="box" md={4} xs={12}>
+                <p
+                  style={{
+                    padding: "0 8em 0 8em",
+                    fontSize: "12pt",
+                    color: theme.footerText,
+                    lineHeight: 1.3,
+                    fontWeight: "lighter",
+                  }}
+                >
+                  {t("common.whyDesc")}
+                </p>
+              </Grid>
+            </Grid>
+          </>
+        )}
       </>
     </ThemeProvider>
   );
