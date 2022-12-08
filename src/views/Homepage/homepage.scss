@@ -16,7 +16,7 @@
     text-align: right;
   }
   .circle {
-    width:8px;
+    width: 8px;
     height: 8px;
     margin: 0.1em;
     border-radius: 10px;
@@ -27,16 +27,20 @@
     align-items: center;
   }
 }
-@media screen and (max-width: 962px) { 
+@media screen and (max-width: 962px) {
   .homepage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    padding-top: 2em;
-    padding-left: 0em;
-    padding-right: 0em;
-    h1, .image {
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: none;
+    align-items: none;
+    min-height: 0vh;
+    h1 {
+      font-size: 22pt;
+    }
+    h1,
+    .image {
       text-align: center;
     }
     .chips {
@@ -52,5 +56,9 @@
       position: relative;
       top: -5em;
     }
+  }
+  p {
+    line-height: 1.5;
+    font-size: 10pt;
   }
 }

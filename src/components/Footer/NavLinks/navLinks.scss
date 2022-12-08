@@ -4,3 +4,12 @@
 .navLink {
   margin: 0.2em;
 }
+
+@media screen and (max-width: 962px) {
+  .navLinksContainer {
+    p {
+      line-height: 1.5;
+      font-size: 10pt;
+    }
+  }
+}
