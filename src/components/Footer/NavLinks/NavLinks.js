@@ -20,7 +20,7 @@ const NavLinks = () => {
         className="navLink"
         style={{ color: themeContext.footerText }}
       >
-        {t("common.home")}
+        <p>{t("common.home")}</p>
       </NavLink>
       <NavLink
         exact
@@ -29,7 +29,7 @@ const NavLinks = () => {
         style={{ color: themeContext.footerText }}
         className="navLink"
       >
-        {t("common.aboutme")}
+        <p>{t("common.aboutme")}</p>
       </NavLink>
       <NavLink
         exact
@@ -38,7 +38,7 @@ const NavLinks = () => {
         style={{ color: themeContext.footerText }}
         className="navLink"
       >
-        Cv
+        <p>Cv</p>
       </NavLink>
       <NavLink
         exact
@@ -47,7 +47,7 @@ const NavLinks = () => {
         activeclassname="active"
         className="navLink"
       >
-        {t("common.projects")}
+        <p>{t("common.projects")}</p>
       </NavLink>
     </div>
   );

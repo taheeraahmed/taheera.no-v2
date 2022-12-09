@@ -1,6 +1,6 @@
 import React from "react";
 import { Chip } from "@mui/material";
-import { Mail, PhoneIphone } from "@mui/icons-material";
+import { Mail } from "@mui/icons-material";
 import "./contact.scss";
 import { useContext } from "react";
 import { ThemeContext } from "styled-components";
@@ -13,7 +13,7 @@ const Contact = () => {
     <div className="contact">
       <p
         style={{
-          padding: "0 8em 0 8em",
+          padding: "0 6em 0 6em",
           color: themeContext.footerText,
           lineHeight: 1.3,
           fontWeight: "lighter",

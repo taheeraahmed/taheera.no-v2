@@ -53,8 +53,14 @@ const LinkTree = () => {
         />
       </div>
       <h3 style={{ fontSize: "22pt", margin: 8 }}>Taheera Ahmed</h3>
-      <p style={{ color: themeContext.footerText, fontSize: "8pt" }}></p>
-      <p style={{ color: themeContext.footerText, fontSize: "12pt" }}>
+      <p
+        style={{
+          color: themeContext.footerText,
+          fontSize: "12pt",
+          paddingBottom: 8,
+          lineHeight: "1.5",
+        }}
+      >
         {t("linktree.bio")}{" "}
       </p>
       {links.map((link) => (
