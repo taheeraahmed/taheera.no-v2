@@ -35,7 +35,6 @@ const LanguageButton = () => {
                 i18n.resolvedLanguage === lng ? themeContext.colorOpacity : "",
               marginLeft: "8px",
               padding: '2px 8px 2px 8px',
-              fontSize: '12pt',
               color: themeContext.color,
               border: `1px ${themeContext.color} solid`,
               "&:hover": {

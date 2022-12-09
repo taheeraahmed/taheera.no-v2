@@ -19,3 +19,7 @@ code {
   opacity: 1;
   transition: opacity 250ms ease-in;
 }
+
+p {
+  font-size: 12pt;
+}

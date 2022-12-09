@@ -67,28 +67,15 @@ function App() {
         {location.pathname === "/linktree" ? null : (
           <>
             <Grid container spacing={5} className="extra">
-              <Grid item className="box" md={4} xs={12}>
+              <Grid item className="box" md={6} xs={12}>
                 <h3>{t("common.becauseIcan")}</h3>
                 <br />
                 <Toggle theme={theme} toggleTheme={toggleTheme} />
               </Grid>
-              <Grid item className="box" md={4} xs={12}>
+              <Grid item className="box" md={6} xs={12}>
                 <h3>{t("common.changeLang")}</h3>
                 <br />
                 <LanguageButton />
-              </Grid>
-              <Grid item className="box" md={4} xs={12}>
-                <p
-                  style={{
-                    padding: "0 8em 0 8em",
-                    fontSize: "12pt",
-                    color: theme.footerText,
-                    lineHeight: 1.3,
-                    fontWeight: "lighter",
-                  }}
-                >
-                  {t("common.whyDesc")}
-                </p>
               </Grid>
             </Grid>
           </>

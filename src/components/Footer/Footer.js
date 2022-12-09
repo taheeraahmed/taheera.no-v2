@@ -14,7 +14,7 @@ const Footer = () => {
   const { t } = useTranslation();
   const location = useLocation();
   if (location.pathname === "/linktree") return null;
-  
+
   return (
     <div className="footer">
       <Grid container spacing={5}>
@@ -40,9 +40,8 @@ const Footer = () => {
                 style={{ color: themeContext.footerText }}
               />
               <br />
-              {t("common.githubfooter")}
-              <br />
-              {t("common.githubfooter2")}
+              <p>{t("common.githubfooter")}</p>
+              <p>{t("common.githubfooter2")}</p>
             </a>
           </div>
         </Grid>
