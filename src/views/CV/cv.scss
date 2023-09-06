@@ -1,16 +1,15 @@
 @import "src/styles/colors";
 
-.cv{
+.cv {
   min-height: 90vh;
   text-align: center;
   padding-bottom: 4em;
   line-height: 1.5em;
-  a{
-    color:$pink;
+  a {
     font-weight: bolder;
   }
 }
-.react-pdf__Document{
+.react-pdf__Document {
   .linkAnnotation {
     display: none;
   }
@@ -18,12 +17,12 @@
 .react-pdf__Page__canvas {
   width: 30% !important;
   height: 20% !important;
-  margin-top:1.5em;
+  margin-top: 1.5em;
   border: double 6px transparent;
   margin-bottom: 20;
   background-repeat: no;
   background: linear-gradient($pink 30%, $orange 90%);
-  box-shadow: 0 1px 7px 3px rgba(255, 105, 135, .3);
+  box-shadow: 0 1px 7px 3px rgba(255, 105, 135, 0.3);
 }
 
 @media screen and (max-width: 960px) {
@@ -31,5 +30,4 @@
     width: 70% !important;
     height: 20% !important;
   }
-
 }

@@ -44,9 +44,6 @@ export const GlobalStyles = createGlobalStyle`
     } 
   }
   .cv{
-    a {
-      color: ${({ theme }) => theme.color}
-    }
   }
   .footer{
     background-color: ${({ theme }) => theme.footerColor};
