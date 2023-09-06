@@ -7,7 +7,6 @@ import { Grid, IconButton } from "@mui/material";
 import { useContext } from "react";
 import { ThemeContext } from "styled-components";
 import { useTranslation } from "react-i18next";
-import LanguageButton from "../../components/LanguageButton/LanguageButton";
 
 const picture = {
   pinkOrangeTheme: require("../../assets/images/meg_1.jpg").default,
@@ -47,8 +46,6 @@ const Homepage = () => {
               />{" "}
               <p>Trondheim</p>
             </div>
-            <LanguageButton />
-
             <span>
               <p>{t("homepage.bio")} </p>
               <p>
