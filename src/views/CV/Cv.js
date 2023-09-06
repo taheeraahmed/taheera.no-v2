@@ -69,7 +69,7 @@ const Cv = () => {
         href={cv}
         onClick={(e) => handleClick(e)}
       >
-        Download CV
+        {t("cv.downloadcv")}
       </Button>
     </div>
   );
