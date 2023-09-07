@@ -34,7 +34,7 @@ const ImageWithDescription = ({ src, heading, children, href }) => {
       </Grid>
       <Grid item xs={12} md={6}>
         <a href={href} style={styles}>
-          <Typography gutterBottom variant="h5">
+          <Typography gutterBottom variant="h4">
             {heading}
           </Typography>
         </a>

@@ -33,21 +33,21 @@ const Homepage = () => {
         <Grid item xs={12} md={6}>
           <div className="text">
             <h1>Taheera Ahmed</h1>
-            <div className="chips">
-              <p>{t("homepage.age")}</p>
+            <div className="chips" style={{ margin: "6.4px" }}>
+              <h4>{t("homepage.age")}</h4>{" "}
               <div
                 className="circle"
                 style={{ boxShadow: themeContext.boxShad }}
               />
-              <p>{t("homepage.compsci")}</p>{" "}
+              <h4>{t("homepage.compsci")}</h4>{" "}
               <div
                 className="circle"
-                style={{ boxShadow: themeContext.boxShad }}
+                style={{ boxShadow: themeContext.boxShad}}
               />{" "}
-              <p>Trondheim</p>
+              <h4>Trondheim</h4>
             </div>
             <span>
-              <p>{t("homepage.bio")} </p>
+              <p style={{paddingTop: 10}}>{t("homepage.bio")} </p>
               <p>
                 {t("homepage.dataengineer")}
                 <a href="https://www.youtube.com/watch?v=CmkaDiaAB9E&ab_channel=TaheeraAhmed">
