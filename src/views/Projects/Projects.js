@@ -31,7 +31,7 @@ const Projects = () => {
       <Stack container spacing={2} alignItems="center" justify="center">
         <Grid item md={12}>
           <h1>{t("common.projects")}</h1>
-          <p style={{ textAlign: "center" }}>{t("projects.subtitle")}</p>
+          <h4 style={{ textAlign: "center" }}>{t("projects.subtitle")}</h4>
         </Grid>
         <Grid item md={8}>
           <ImageWithDescription

@@ -19,7 +19,7 @@ const About = () => {
       <Stack container spacing={2} alignItems="center" justify="center">
         <Grid item md={12}>
           <h1>{t("common.aboutme")} </h1>
-          <p style={{ textAlign: "center" }}>{t("aboutme.subtitle")}</p>
+          <h4 style={{ textAlign: "center" }}>{t("aboutme.subtitle")}</h4>
         </Grid>
         <Grid item md={8}>
           <ImageWithDescription src={Tur} heading={t("aboutme.turglad")}>

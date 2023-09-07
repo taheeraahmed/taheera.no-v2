@@ -29,6 +29,7 @@ const LanguageButton = () => {
           disableElevation
           sx={{
             "&.MuiButton-root": {
+              fontFamily: "Source Code Pro, monospace",
               fontWeight: i18n.resolvedLanguage === lng ? "1000" : "normal",
               textTransform: "capitalize",
               background:
