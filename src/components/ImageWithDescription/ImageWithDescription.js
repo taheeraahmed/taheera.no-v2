@@ -16,7 +16,6 @@ const ImageWithDescription = ({ src, heading, children, href }) => {
   else {
     styles = {
       color: themeContext.color,
-      textDecoration: "underline",
     };
   }
 
