@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./footer.scss";
 import "../../styles/fonts.scss";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { GitHub } from "@mui/icons-material";
 import Contact from "./Contact/Contact";
 import NavLinks from "./NavLinks/NavLinks";
@@ -40,8 +40,12 @@ const Footer = () => {
                 style={{ color: themeContext.footerText }}
               />
               <br />
-              <p>{t("common.githubfooter")}</p>
-              <p>{t("common.githubfooter2")}</p>
+              <Typography variant="body2">
+                {t("common.githubfooter")}
+              </Typography>
+              <Typography variant="body2">
+                {t("common.githubfooter2")}
+              </Typography>
             </a>
           </div>
         </Grid>

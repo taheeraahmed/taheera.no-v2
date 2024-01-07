@@ -1,5 +1,5 @@
 import React from "react";
-import { Chip } from "@mui/material";
+import { Chip, Typography } from "@mui/material";
 import { Mail } from "@mui/icons-material";
 import "./contact.scss";
 import { useContext } from "react";
@@ -11,16 +11,15 @@ const Contact = () => {
   const { t } = useTranslation();
   return (
     <div className="contact">
-      <p
+      <Typography
+        variant="body2"
         style={{
           padding: "0 6em 0 6em",
           color: themeContext.footerText,
-          lineHeight: 1.3,
-          fontWeight: "lighter",
         }}
       >
         {t("common.contactDesc")}
-      </p>
+      </Typography>
       <Chip
         sx={{
           backgroundColor: "transparent",

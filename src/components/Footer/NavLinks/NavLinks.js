@@ -3,52 +3,46 @@ import { NavLink } from "react-router-dom";
 import { ThemeContext } from "styled-components";
 import "./navLinks.scss";
 import { useTranslation } from "react-i18next";
+import { Typography } from "@mui/material";
 
 
 const NavLinks = () => {
   const themeContext = useContext(ThemeContext);
   const { t } = useTranslation();
 
-
+  const navlinks = [
+    {
+      to: "/",
+      text: t("common.home"),
+    },
+    {
+      to: "/about",
+      text: t("common.aboutme"),
+    },
+    {
+      to: "/cv",
+      text: "CV"
+    },
+    {
+      to: "/projects",
+      text: t("common.projects"),
+    },
+  ];
 
   return (
     <div className="navLinksContainer">
-      <NavLink
-        exact
-        to="/"
-        activeclassname="active"
-        className="navLink"
-        style={{ color: themeContext.footerText }}
-      >
-        <p>{t("common.home")}</p>
-      </NavLink>
-      <NavLink
-        exact
-        to="/about"
-        activeclassname="active"
-        style={{ color: themeContext.footerText }}
-        className="navLink"
-      >
-        <p>{t("common.aboutme")}</p>
-      </NavLink>
-      <NavLink
-        exact
-        to="/cv"
-        activeclassname="active"
-        style={{ color: themeContext.footerText }}
-        className="navLink"
-      >
-        <p>Cv</p>
-      </NavLink>
-      <NavLink
-        exact
-        to="/projects"
-        style={{ color: themeContext.footerText }}
-        activeclassname="active"
-        className="navLink"
-      >
-        <p>{t("common.projects")}</p>
-      </NavLink>
+      {navlinks.map((link, index) => (
+        <NavLink
+          key={index}
+          exact
+          to={link.to}
+          activeclassname="active"
+          style={{ color: themeContext.footerText }}
+          className="navLink"
+        >
+          <Typography variant="body2">{link.text}</Typography>
+        </NavLink>
+      ))}
     </div>
   );
 };

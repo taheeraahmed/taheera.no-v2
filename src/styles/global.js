@@ -16,17 +16,19 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.25s linear;
   }
   h1 {
-  font-size: 4em;
-  background: ${({ theme }) => theme.gradient};
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1.2;
-  text-align: center;
-  margin: 0;
-  font-family: 'Abril Fatface', cursive;
+    font-size: 4em;
+    background: ${({ theme }) => theme.gradient};
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+    font-family: "Source Code Pro", ui-monospace;
   }
   h3 {
+    font-family: "Source Code Pro", ui-monospace;
+    font-size: 2em;
     display:inline-block;
     background: ${({ theme }) => theme.gradient};
     background-size:100% 4px;

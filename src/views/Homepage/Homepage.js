@@ -3,7 +3,7 @@ import "./homepage.scss";
 import ImageWithBorder from "../../components/ImageWithBorder/ImageWithBorder";
 import { Facebook, GitHub, Instagram, Email, LinkedIn } from "@mui/icons-material";
 import { FaTiktok } from "react-icons/fa"
-import { Grid, IconButton } from "@mui/material";
+import { Grid, IconButton, Typography } from "@mui/material";
 import { useContext } from "react";
 import { ThemeContext } from "styled-components";
 import { useTranslation } from "react-i18next";
@@ -27,13 +27,13 @@ const Homepage = () => {
           <ImageWithBorder
             src={picture[themeContext.name]}
             alt="Taheera Ahmed"
-            width="40%"
+            width="60%"
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <div className="text">
             <h1>Taheera Ahmed</h1>
-            <div className="chips" style={{ margin: "6.4px" }}>
+            {/* <div className="chips" style={{ margin: "6.4px" }}>
               <h4>{t("homepage.age")}</h4>{" "}
               <div
                 className="circle"
@@ -45,16 +45,18 @@ const Homepage = () => {
                 style={{ boxShadow: themeContext.boxShad}}
               />{" "}
               <h4>Trondheim</h4>
-            </div>
+            </div> */}
             <span>
-              <p style={{paddingTop: 10}}>{t("homepage.bio")} </p>
-              <p>
+              <Typography variant="body2" style={{ paddingTop: 10 }}>
+                {t("homepage.bio")}{" "}
+              </Typography>
+              <Typography variant="body2">
                 {t("homepage.dataengineer")}
                 <a href="https://www.youtube.com/watch?v=CmkaDiaAB9E&ab_channel=TaheeraAhmed">
                   {t("homepage.checkout")}
                 </a>
                 .
-              </p>
+              </Typography>
             </span>
           </div>
           <div className="icons">
@@ -117,10 +119,7 @@ const Homepage = () => {
               target="_blank"
             >
               <IconButton>
-                <FaTiktok
-                  size={28}
-                  style={{ color: themeContext.white }}
-                />
+                <FaTiktok size={28} style={{ color: themeContext.white }} />
               </IconButton>
             </a>
           </div>

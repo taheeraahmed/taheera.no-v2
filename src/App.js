@@ -68,12 +68,12 @@ function App() {
           <>
             <Grid container spacing={5} className="extra">
               <Grid item className="box" md={6} xs={12}>
-                <h3>{t("common.becauseIcan")}</h3>
+                <h3 style={{ fontSize: "1em" }}>{t("common.becauseIcan")}</h3>
                 <br />
                 <Toggle theme={theme} toggleTheme={toggleTheme} />
               </Grid>
               <Grid item className="box" md={6} xs={12}>
-                <h3>{t("common.changeLang")}</h3>
+                <h3 style={{ fontSize: "1em" }}>{t("common.changeLang")}</h3>
                 <br />
                 <LanguageButton />
               </Grid>
