@@ -53,7 +53,7 @@ const Cv = () => {
 
   return (
     <div className="cv">
-      <h1>Cv</h1>
+      {/* <h1>Cv</h1> */}
       <center>
         <Document file={cv} onLoadSuccess={onDocumentLoadSuccess}>
           <Page pageNumber={1} />

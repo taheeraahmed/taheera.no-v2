@@ -1,6 +1,12 @@
-import React, { useEffect } from "react";
-import { Grid, Stack } from "@mui/material";
-import ImageWithDescription from "../../components/ImageWithDescription/ImageWithDescription";
+import React, { useContext, useEffect } from "react";
+import {
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Grid,
+  Typography,
+} from "@mui/material";
 import "./projects.scss";
 import Gradients from "../../assets/images/gradients.jpeg";
 import Classification from "../../assets/images/klassifisering.png";
@@ -14,9 +20,13 @@ import Dreamknit from "../../assets/images/dreamknit.jpeg";
 import Fotogjengen from "../../assets/images/fotogjengen.png";
 import StyledChip from "../../components/StyledChip/StyledChip";
 import { useTranslation } from "react-i18next";
+import Masonry from "@mui/lab/Masonry";
+import { ThemeContext } from "styled-components";
 
 const Projects = () => {
   const { t } = useTranslation();
+  const themeContext = useContext(ThemeContext);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -115,26 +125,47 @@ const Projects = () => {
     },
   ];
 
+  const styles = {
+    maxWidth: 445,
+    backgroundColor: themeContext.paperCardBackground,
+  };
+
   return (
     <div className="projects">
-      <Stack container spacing={2} alignItems="center" justify="center">
-        <Grid item md={12}>
-          <h1>{t("common.projects")}</h1>
-          <h4 style={{ textAlign: "center" }}>{t("projects.subtitle")}</h4>
-        </Grid>
+      {/* <Grid item md={12}>
+        <h1>{t("common.projects")}</h1>
+        <h4 style={{ textAlign: "center" }}>{t("projects.subtitle")}</h4>
+      </Grid>
+      <br /> */}
+      <Masonry columns={3} spacing={3}>
         {projectList.map((project, index) => (
-          <Grid item md={8} key={index}>
-            <ImageWithDescription
-              src={project.src}
-              heading={project.heading}
-              href={project.href}
-            >
-              {project.description}
-              <StyledChip chipList={project.chipList} />
-            </ImageWithDescription>
-          </Grid>
+          <Card sx={styles} elevation={0}>
+            <a href={project.href} style={{ textDecoration: "none" }}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="250"
+                  image={project.src}
+                  alt={project.heading}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {project.heading}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{ color: themeContext.text }}
+                  >
+                    {project.description}
+                  </Typography>
+                  <StyledChip chipList={project.chipList} />
+                </CardContent>
+              </CardActionArea>
+            </a>
+          </Card>
         ))}
-      </Stack>
+      </Masonry>
     </div>
   );
 };
