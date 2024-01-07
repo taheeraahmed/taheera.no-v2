@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Grid, Stack } from "@mui/material";
 import ImageWithDescription from "../../components/ImageWithDescription/ImageWithDescription";
 import "./projects.scss";
@@ -15,16 +15,60 @@ import { useTranslation } from "react-i18next";
 const Projects = () => {
   const { t } = useTranslation();
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
-  const thispage = ['React', 'Javascript', 'Gradients']
-  const classification = ['Python', 'TensorFlow/Keras', 'Supervised learning']
-  const kmeans = ["Python", t("projects.ai"), "Data mining"];
-  const shell =  ['C', t('projects.os')]
-  const chatbot = ["Python", t("projects.ai"), "TensorFlow"];
-  const fg = ['Typescript', 'Kotlin' , 'React']
-  const dreamknit = ['Django', 'React', 'JavaScript']
+  const projectList = [
+    {
+      src: Gradients,
+      heading: t("projects.thispage"),
+      href: "https://taheera.no",
+      description: t("projects.thisPageDescription"),
+      chipList: ["React", "Javascript", "Gradients"],
+    },
+    {
+      src: Fotogjengen,
+      heading: t("projects.fotogang"),
+      href: "https://github.com/Fotogjengen/",
+      description: t("projects.fotogangDescription"),
+      chipList: ["Typescript", "Kotlin", "React", "Microsoft Azure", "Docker", "SQL"],
+    },
+    {
+      src: Dreamknit,
+      heading: t("projects.dreamknit"),
+      href: "https://app.dreamknit.no",
+      description: t("projects.dreamknitDescription"),
+      chipList: ["Django", "React", "JavaScript", "Microsoft Azure"],
+    },
+    {
+      src: Classification,
+      heading: t("projects.classification"),
+      href: "https://github.com/taheeraahmed/Forest-Type-Cover-Classification",
+      description: t("projects.classificationDescription"),
+      chipList: ["Python", "TensorFlow/Keras", "Supervised learning"],
+    },
+    {
+      src: Chatbot,
+      heading: t("projects.chatbot"),
+      href: "https://github.com/taheeraahmed/Chat-bots",
+      description: t("projects.chatbotDesc"),
+      chipList: ["Python", t("projects.ai"), "TensorFlow"],
+    },
+    {
+      src: Kmeans,
+      heading: "K-means",
+      href: "https://github.com/taheeraahmed/K-means-cluster",
+      description: t("projects.kmeans"),
+      chipList: ["Python", t("projects.ai"), "Data mining"],
+    },
+    {
+      src: Shell,
+      heading: t("projects.shell"),
+      href: "https://github.com/taheeraahmed/Shell-Implementation",
+      description: t("projects.shellDesc"),
+      chipList: ["C", t("projects.os")],
+    },
+  ];
 
   return (
     <div className="projects">
@@ -33,82 +77,18 @@ const Projects = () => {
           <h1>{t("common.projects")}</h1>
           <h4 style={{ textAlign: "center" }}>{t("projects.subtitle")}</h4>
         </Grid>
-        <Grid item md={8}>
-          <ImageWithDescription
-            src={Gradients}
-            heading={t("projects.thispage")}
-            href="https://taheera.no"
-          >
-            {t("projects.thisPageDescription")}
-            <StyledChip chipList={thispage} />
-          </ImageWithDescription>
-        </Grid>
-        <Grid item md={8}>
-          <ImageWithDescription
-            src={Fotogjengen}
-            heading={t("projects.fotogang")}
-            href="https://github.com/Fotogjengen/"
-          >
-            {t("projects.fotogangDescription")}
-            <a href="https://github.com/Fotogjengen/"> {t("common.here")}</a>
-            <br />
-            {t("projects.fotoGangDescription2")}:{" "}
-            <a href="https://foto.samfundet.no">foto.samfundet.no</a>
-            <StyledChip chipList={fg} />
-          </ImageWithDescription>
-        </Grid>
-
-        <Grid item md={8}>
-          <ImageWithDescription
-            src={Dreamknit}
-            heading={t("projects.dreamknit")}
-            href="https://app.dreamknit.no"
-          >
-            {t("projects.dreamknitDescription")}
-            <a href="https://www.dreamknit.no/"> {t("common.here")}</a>
-            <StyledChip chipList={dreamknit} />
-          </ImageWithDescription>
-        </Grid>
-        <Grid item md={8}>
-          <ImageWithDescription
-            src={Classification}
-            heading={t("projects.classification")}
-            href="https://github.com/taheeraahmed/Forest-Type-Cover-Classification"
-          >
-            {t("projects.classificationDescription")}
-            <StyledChip chipList={classification} />
-          </ImageWithDescription>
-        </Grid>
-        <Grid item md={8}>
-          <ImageWithDescription
-            src={Chatbot}
-            heading={t("projects.chatbot")}
-            href="https://github.com/taheeraahmed/Chat-bots"
-          >
-            {t("projects.chatbotDesc")}
-            <StyledChip chipList={chatbot} />
-          </ImageWithDescription>
-        </Grid>
-        <Grid item md={8}>
-          <ImageWithDescription
-            src={Kmeans}
-            heading="K-means"
-            href="https://github.com/taheeraahmed/K-means-cluster"
-          >
-            {t("projects.kmeans")}
-            <StyledChip chipList={kmeans} />
-          </ImageWithDescription>
-        </Grid>
-        <Grid item md={8}>
-          <ImageWithDescription
-            src={Shell}
-            heading={t("projects.shell")}
-            href="https://github.com/taheeraahmed/Shell-Implementation"
-          >
-            {t("projects.shellDesc")}
-            <StyledChip chipList={shell} />
-          </ImageWithDescription>
-        </Grid>
+        {projectList.map((project, index) => (
+          <Grid item md={8} key={index}>
+            <ImageWithDescription
+              src={project.src}
+              heading={project.heading}
+              href={project.href}
+            >
+              {project.description}
+              <StyledChip chipList={project.chipList} />
+            </ImageWithDescription>
+          </Grid>
+        ))}
       </Stack>
     </div>
   );
