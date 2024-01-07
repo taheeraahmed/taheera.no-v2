@@ -6,8 +6,6 @@ import Cv from "./views/CV/Cv";
 import Projects from "./views/Projects/Projects"
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { useTranslation } from "react-i18next";
-import Dashboard from "./views/Dashboard/Dashboard";
-import Register from "./views/Register/Register";
 import LinkTree from "./views/LinkTree/LinkTree";
 
 
@@ -41,8 +39,6 @@ const Routes = () => {
         <Switch location={location}>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/cv" component={Cv} />
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/linktree" component={LinkTree} />
