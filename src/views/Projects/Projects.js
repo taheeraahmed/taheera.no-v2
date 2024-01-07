@@ -4,7 +4,6 @@ import {
   CardActionArea,
   CardContent,
   CardMedia,
-  Grid,
   Typography,
 } from "@mui/material";
 import "./projects.scss";
@@ -12,7 +11,6 @@ import Gradients from "../../assets/images/gradients.jpeg";
 import Classification from "../../assets/images/klassifisering.png";
 import Kmeans from "../../assets/images/kmeans.png";
 import Shell from "../../assets/images/terminal.jpeg";
-import Chatbot from "../../assets/images/chatbot.jpeg";
 import MSD from "../../assets/images/MSD.jpg";
 import ML from "../../assets/images/ML.png";
 import CVDL from "../../assets/images/cv_dl.png";
@@ -51,7 +49,7 @@ const Projects = () => {
       heading: t("projects.mlproject"),
       href: "https://github.com/taheeraahmed/tdt4173-project",
       description: t("projects.mlprojectdesc"),
-      chipList: ["Python", t("projects.ml"), "scikit-learn"],
+      chipList: ["Python", t("projects.ml"), "scikit-learn", "Git"],
     },
     {
       src: CVDL,
@@ -64,6 +62,7 @@ const Projects = () => {
         t("projects.cv"),
         "scikit-learn",
         "PyTorch",
+        "Git",
       ],
     },
     {
@@ -93,7 +92,7 @@ const Projects = () => {
       heading: t("projects.dreamknit"),
       href: "https://app.dreamknit.no",
       description: t("projects.dreamknitDescription"),
-      chipList: ["Django", "React", "JavaScript", "Microsoft Azure"],
+      chipList: ["Django", "React", "JavaScript", "Microsoft Azure", "Git"],
     },
     {
       src: Classification,
@@ -101,13 +100,6 @@ const Projects = () => {
       href: "https://github.com/taheeraahmed/Forest-Type-Cover-Classification",
       description: t("projects.classificationDescription"),
       chipList: ["Python", "TensorFlow/Keras", "Supervised learning"],
-    },
-    {
-      src: Chatbot,
-      heading: t("projects.chatbot"),
-      href: "https://github.com/taheeraahmed/Chat-bots",
-      description: t("projects.chatbotDesc"),
-      chipList: ["Python", t("projects.ai"), "TensorFlow"],
     },
     {
       src: Kmeans,

@@ -43,27 +43,27 @@ const About = () => {
 
   return (
     <div className="about">
-      <Stack container spacing={2} alignItems="center" justify="center">
-        {/* <Grid item md={12}>
-          <h1>{t("common.aboutme")} </h1>
-          <h4 style={{ textAlign: "center" }}>{t("aboutme.subtitle")}</h4>
-        </Grid> */}
-        {about.map((item, index) => (
-          <Grid item md={8} key={index}>
-            <Paper
-              elevation={0}
-              sx={{
-                maxWidth: 900,
-                padding: 3,
-                backgroundColor: themeContext.paperCardBackground,
-              }}
-            >
-              <ImageWithDescription src={item.src} heading={item.heading}>
-                {item.desc}
-              </ImageWithDescription>
-            </Paper>
-          </Grid>
-        ))}
+      <Stack spacing={2} alignItems="center" justify="center">
+        <Grid container spacing={2}>
+          {about.map((item, index) => (
+            <Grid item xs={12} md={6} key={index}>
+              {" "}
+              {/* xs=12 for full width on smaller screens, md=6 for half width on medium screens */}
+              <Paper
+                elevation={0}
+                sx={{
+                  maxWidth: 900,
+                  padding: 3,
+                  backgroundColor: themeContext.paperCardBackground,
+                }}
+              >
+                <ImageWithDescription src={item.src} heading={item.heading}>
+                  {item.desc}
+                </ImageWithDescription>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
       </Stack>
     </div>
   );
