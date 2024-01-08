@@ -14,7 +14,7 @@ const StyledChip = ({chipList}) => {
       marginRight: "8px",
       boxShadow: themeContext.boxShad,
       borderRadius: "80px",
-      background: themeContext.gradient,
+      background: themeContext.gradientChip,
       color: "white",
     },
     link: {
