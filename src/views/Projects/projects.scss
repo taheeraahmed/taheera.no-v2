@@ -1,13 +1,13 @@
-.projects{
+.projects {
   min-height: 90vh;
-  margin: 4em;
-  a{
+  margin: 2em;
+  a {
     font-weight: bolder;
   }
 }
 
 @media screen and (max-width: 960px) {
   .projects {
-    text-align: center;
+    margin: 1em;
   }
 }

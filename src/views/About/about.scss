@@ -1,4 +1,10 @@
 .about {
   min-height: 90vh;
-  margin: 4em 2em 4em 2em;
+  margin: 2em 2em 4em 2em;
+}
+
+@media screen and (max-width: 960px) {
+  .about {
+    margin: 1em 1em 4em 1em;
+  }
 }

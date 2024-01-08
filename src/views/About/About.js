@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import "./about.scss";
-import { Grid, Paper, Stack } from "@mui/material";
+import { Grid, Paper, Stack, useMediaQuery, useTheme } from "@mui/material";
 import Tur from "../../assets/images/tur.jpg";
 import BucketHat from "../../assets/images/buckethat.jpg";
 import Trene from "../../assets/images/trene.jpg";
@@ -10,6 +10,9 @@ import { useTranslation } from "react-i18next";
 import { ThemeContext } from "styled-components";
 
 const About = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
   const { t } = useTranslation();
   const themeContext = useContext(ThemeContext);
 
@@ -41,10 +44,19 @@ const About = () => {
     // Add more items here as needed
   ];
 
+  let size;
+  if (isSmallScreen) {
+    size = 0;
+  } else if (isMediumScreen) {
+    size = 0;
+  } else {
+    size = 2
+  }
+
   return (
     <div className="about">
       <Stack spacing={2} alignItems="center" justify="center">
-        <Grid container spacing={2}>
+        <Grid container spacing={size}>
           {about.map((item, index) => (
             <Grid item xs={12} md={6} key={index}>
               {" "}
