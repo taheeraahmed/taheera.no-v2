@@ -9,7 +9,7 @@ const ImageWithDescription = ({ src, heading, children, href }) => {
   const themeContext = useContext(ThemeContext);
 
   return (
-    <Grid container alignItems="center">
+    <Grid container justifyContent="center" alignItems="center">
       <Grid item xs={12} md={6}>
         <ImageWithBorder width="80%" src={src} alt={heading} />
       </Grid>
@@ -18,7 +18,11 @@ const ImageWithDescription = ({ src, heading, children, href }) => {
           <Typography
             gutterBottom
             variant="h1"
-            sx={{ fontFamily: "Source Code Pro, monospace", fontSize: "3em", fontWeight: "800"}}
+            sx={{
+              fontFamily: "Source Code Pro, monospace",
+              fontSize: "3em",
+              fontWeight: "800",
+            }}
           >
             {heading}
           </Typography>

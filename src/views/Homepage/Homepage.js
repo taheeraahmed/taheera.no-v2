@@ -3,7 +3,6 @@ import "./homepage.scss";
 import ImageWithBorder from "../../components/ImageWithBorder/ImageWithBorder";
 import {
   GitHub,
-  Instagram,
   Email,
   LinkedIn,
 } from "@mui/icons-material";

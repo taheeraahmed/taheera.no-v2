@@ -50,7 +50,7 @@ const About = () => {
   } else if (isMediumScreen) {
     size = 0;
   } else {
-    size = 2
+    size = 2;
   }
 
   return (
@@ -78,6 +78,7 @@ const About = () => {
                   {item.desc}
                 </ImageWithDescription>
               </Paper>
+              {isSmallScreen ? <br /> : null}
             </Grid>
           ))}
         </Grid>
