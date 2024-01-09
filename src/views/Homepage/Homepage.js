@@ -1,8 +1,14 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./homepage.scss";
 import ImageWithBorder from "../../components/ImageWithBorder/ImageWithBorder";
-import { Facebook, GitHub, Instagram, Email, LinkedIn } from "@mui/icons-material";
-import { FaTiktok } from "react-icons/fa"
+import {
+  Facebook,
+  GitHub,
+  Instagram,
+  Email,
+  LinkedIn,
+} from "@mui/icons-material";
+import { FaTiktok } from "react-icons/fa";
 import { Grid, IconButton, Typography } from "@mui/material";
 import { useContext } from "react";
 import { ThemeContext } from "styled-components";
@@ -17,9 +23,8 @@ const Homepage = () => {
   const themeContext = useContext(ThemeContext);
   const { t } = useTranslation();
   useEffect(() => {
-    window.scrollTo(0, 0)
-
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="homepage">
       <Grid container className="homepage" spacing={10}>
@@ -33,29 +38,13 @@ const Homepage = () => {
         <Grid item xs={12} md={6}>
           <div className="text">
             <h1>Taheera Ahmed</h1>
-            {/* <div className="chips" style={{ margin: "6.4px" }}>
-              <h4>{t("homepage.age")}</h4>{" "}
-              <div
-                className="circle"
-                style={{ boxShadow: themeContext.boxShad }}
-              />
-              <h4>{t("homepage.compsci")}</h4>{" "}
-              <div
-                className="circle"
-                style={{ boxShadow: themeContext.boxShad}}
-              />{" "}
-              <h4>Trondheim</h4>
-            </div> */}
             <span>
+              <Typography variant="body2">{t("homepage.study")}</Typography>
               <Typography variant="body2" style={{ paddingTop: 10 }}>
-                {t("homepage.bio")}{" "}
+                {t("homepage.bio")}
               </Typography>
-              <Typography variant="body2">
-                {t("homepage.dataengineer")}
-                <a href="https://www.youtube.com/watch?v=CmkaDiaAB9E&ab_channel=TaheeraAhmed">
-                  {t("homepage.checkout")}
-                </a>
-                .
+              <Typography variant="body2" style={{ paddingTop: 10 }}>
+                {t("homepage.girlstech")}
               </Typography>
             </span>
           </div>
