@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "./homepage.scss";
 import ImageWithBorder from "../../components/ImageWithBorder/ImageWithBorder";
 import {
-  Facebook,
   GitHub,
   Instagram,
   Email,
@@ -25,6 +24,31 @@ const Homepage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const links = [
+    {
+      url: "https://www.linkedin.com/in/taheera-ahmed-997750158/",
+      component: (
+        <LinkedIn fontSize="large" style={{ color: themeContext.white }} />
+      ),
+    },
+    {
+      url: "https://github.com/taheeraahmed",
+      component: (
+        <GitHub fontSize="large" style={{ color: themeContext.white }} />
+      ),
+    },
+    {
+      url: "mailto:taheera@hotmail.com",
+      component: (
+        <Email fontSize="large" style={{ color: themeContext.white }} />
+      ),
+    },
+    {
+      url: "https://www.tiktok.com/@taheera.py",
+      component: <FaTiktok size={28} style={{ color: themeContext.white }} />,
+    },
+  ];
+
   return (
     <div className="homepage">
       <Grid container className="homepage" spacing={10}>
@@ -49,68 +73,11 @@ const Homepage = () => {
             </span>
           </div>
           <div className="icons">
-            <a
-              href="https://www.facebook.com/taheera.ahmed"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <IconButton>
-                <Facebook
-                  fontSize="large"
-                  style={{ color: themeContext.white }}
-                />
-              </IconButton>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/taheera-ahmed-997750158/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <IconButton>
-                <LinkedIn
-                  fontSize="large"
-                  style={{ color: themeContext.white }}
-                />
-              </IconButton>
-            </a>
-            <a
-              href="https://github.com/taheeraahmed"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <IconButton>
-                <GitHub
-                  fontSize="large"
-                  style={{ color: themeContext.white }}
-                />
-              </IconButton>
-            </a>
-            <a
-              href="https://www.instagram.com/taheera.py/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <IconButton>
-                <Instagram
-                  fontSize="large"
-                  style={{ color: themeContext.white }}
-                />
-              </IconButton>
-            </a>
-            <a href="mailto:taheera@hotmail.com">
-              <IconButton>
-                <Email fontSize="large" style={{ color: themeContext.white }} />
-              </IconButton>
-            </a>
-            <a
-              href="https://www.tiktok.com/@taheera.py"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <IconButton>
-                <FaTiktok size={28} style={{ color: themeContext.white }} />
-              </IconButton>
-            </a>
+            {links.map((link, index) => (
+              <a key={index} href={link.url} rel="noreferrer" target="_blank">
+                <IconButton>{link.component}</IconButton>
+              </a>
+            ))}
           </div>
         </Grid>
       </Grid>
