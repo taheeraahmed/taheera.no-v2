@@ -68,7 +68,7 @@ const ProjectsList = () => {
       heading: t("projects.thispage"),
       href: "https://taheera.no",
       description: t("projects.thisPageDescription"),
-      chipList: ["React", "Javascript", "Gradients", "Git"],
+      chipList: ["React", "JavaScript", "Gradients", "Git"],
     },
     {
       src: Fotogjengen,
@@ -76,7 +76,7 @@ const ProjectsList = () => {
       href: "https://github.com/Fotogjengen/",
       description: t("projects.fotogangDescription"),
       chipList: [
-        "Typescript",
+        "TypeScript",
         "Kotlin",
         "React",
         "Microsoft Azure",
