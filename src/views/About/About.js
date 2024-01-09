@@ -74,9 +74,11 @@ const About = () => {
                   backgroundColor: themeContext.paperCardBackground,
                 }}
               >
-                <ImageWithDescription src={item.src} heading={item.heading}>
-                  {item.desc}
-                </ImageWithDescription>
+                <center>
+                  <ImageWithDescription src={item.src} heading={item.heading}>
+                    {item.desc}
+                  </ImageWithDescription>
+                </center>
               </Paper>
               {isSmallScreen ? <br /> : null}
             </Grid>
