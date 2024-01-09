@@ -52,7 +52,7 @@ const ProjectsList = () => {
     {
       src: CVDL,
       heading: t("projects.cvdlproject"),
-      href: "https://github.com/taheeraahmed/tdt4173-project",
+      href: "https://github.com/taheeraahmed/tdt4265-project",
       description: t("projects.cvdlprojectdesc"),
       chipList: [
         "Python",
