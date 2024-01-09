@@ -56,7 +56,12 @@ const About = () => {
   return (
     <div className="about">
       <Stack spacing={2} alignItems="center" justify="center">
-        <Grid container spacing={size}>
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="center"
+          spacing={size}
+        >
           {about.map((item, index) => (
             <Grid item xs={12} md={6} key={index}>
               {" "}
