@@ -6,11 +6,9 @@
   min-height: 100vh;
   padding-left: 0em;
   padding-right: 4em;
+  text-align: center;
   p {
     line-height: 1.5;
-  }
-  h1 {
-    text-align: left;
   }
   .image {
     text-align: right;
@@ -21,10 +19,6 @@
     margin: 0.1em;
     border-radius: 10px;
     display: inline-block;
-  }
-  .chips {
-    display: flex;
-    align-items: center;
   }
 }
 @media screen and (max-width: 962px) {
@@ -37,14 +31,11 @@
     align-items: none;
     min-height: 0vh;
     h1 {
-      font-size: 22pt;
+      font-size: 48pt;
     }
     h1,
     .image {
       text-align: center;
-    }
-    .chips {
-      justify-content: center;
     }
     .icons {
       text-align: center;

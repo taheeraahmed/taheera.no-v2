@@ -1,11 +1,7 @@
 import React, { useEffect } from "react";
 import "./homepage.scss";
 import ImageWithBorder from "../../components/ImageWithBorder/ImageWithBorder";
-import {
-  GitHub,
-  Email,
-  LinkedIn,
-} from "@mui/icons-material";
+import { GitHub, Email, LinkedIn } from "@mui/icons-material";
 import { FaTiktok } from "react-icons/fa";
 import { Grid, IconButton, Typography } from "@mui/material";
 import { useContext } from "react";
@@ -58,9 +54,9 @@ const Homepage = () => {
             width="60%"
           />
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} styles={{ width: "60%" }}>
           <div className="text">
-            <h1>Taheera Ahmed</h1>
+              <h1>Taheera Ahmed</h1>
             <span>
               <Typography variant="body2">{t("homepage.study")}</Typography>
               <Typography variant="body2" style={{ paddingTop: 10 }}>
@@ -72,11 +68,13 @@ const Homepage = () => {
             </span>
           </div>
           <div className="icons">
-            {links.map((link, index) => (
-              <a key={index} href={link.url} rel="noreferrer" target="_blank">
-                <IconButton>{link.component}</IconButton>
-              </a>
-            ))}
+            <center>
+              {links.map((link, index) => (
+                <a key={index} href={link.url} rel="noreferrer" target="_blank">
+                  <IconButton>{link.component}</IconButton>
+                </a>
+              ))}
+            </center>
           </div>
         </Grid>
       </Grid>

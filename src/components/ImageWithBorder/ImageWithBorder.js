@@ -6,7 +6,6 @@ import { ThemeContext } from "styled-components";
 const ImageWithBorder = ({ src, width, alt }) => {
   const themeContext = useContext(ThemeContext);
   return (
-    <center>
       <LazyLoadImage
         src={src}
         style={{
@@ -20,7 +19,6 @@ const ImageWithBorder = ({ src, width, alt }) => {
         effect="blur"
         alt={alt}
       />
-    </center>
   );
 };
 
