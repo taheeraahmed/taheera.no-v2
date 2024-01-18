@@ -7,6 +7,7 @@ import Projects from "./views/Projects/Projects"
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { useTranslation } from "react-i18next";
 import LinkTree from "./views/LinkTree/LinkTree";
+import CouponView from "./views/CouponView/CouponView";
 
 
 const Routes = () => {
@@ -42,6 +43,7 @@ const Routes = () => {
           <Route exact path="/cv" component={Cv} />
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/linktree" component={LinkTree} />
+          <Route exact path="/forecastking" component={CouponView} />
         </Switch>
       </CSSTransition>
     </TransitionGroup>

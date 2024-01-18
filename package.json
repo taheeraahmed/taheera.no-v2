@@ -11,6 +11,7 @@
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^1.6.5",
     "hamburger-react": "^2.4.1",
     "i18next": "^21.5.4",
     "i18next-browser-languagedetector": "^6.1.2",

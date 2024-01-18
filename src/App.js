@@ -54,6 +54,7 @@ function App() {
       setTheme("pinkOrangeTheme");
     }
   };
+  const showNavbarAndFooter = location.pathname !== "/linktree" && location.pathname !== "/forecastking";
 
   return (
     <ThemeProvider
@@ -61,10 +62,10 @@ function App() {
     >
       <>
         <GlobalStyles />
-        <Navbar />
+        {showNavbarAndFooter && <Navbar />}
         <Routes />
-        <Footer />
-        {location.pathname === "/linktree" ? null : (
+        {showNavbarAndFooter && <Footer />}
+        {location.pathname === "/linktree" || "forecastking" ? null : (
           <>
             <Grid container spacing={5} className="extra">
               <Grid item className="box" md={6} xs={12}>
