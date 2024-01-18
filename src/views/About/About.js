@@ -50,13 +50,18 @@ const About = () => {
   } else if (isMediumScreen) {
     size = 0;
   } else {
-    size = 2
+    size = 2;
   }
 
   return (
     <div className="about">
       <Stack spacing={2} alignItems="center" justify="center">
-        <Grid container spacing={size}>
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="center"
+          spacing={size}
+        >
           {about.map((item, index) => (
             <Grid item xs={12} md={6} key={index}>
               {" "}
@@ -69,10 +74,13 @@ const About = () => {
                   backgroundColor: themeContext.paperCardBackground,
                 }}
               >
-                <ImageWithDescription src={item.src} heading={item.heading}>
-                  {item.desc}
-                </ImageWithDescription>
+                <center>
+                  <ImageWithDescription src={item.src} heading={item.heading}>
+                    {item.desc}
+                  </ImageWithDescription>
+                </center>
               </Paper>
+              {isSmallScreen ? <br /> : null}
             </Grid>
           ))}
         </Grid>

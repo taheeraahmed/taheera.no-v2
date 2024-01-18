@@ -18,19 +18,29 @@ const Projects = () => {
   let projectDisplay;
   if (isSmallScreen) {
     projectDisplay = (
-      <Stack spacing={3}>
+      <Stack justifyContent="center" alignItems="center" spacing={3}>
         <ProjectsList />
       </Stack>
     );
   } else if (isMediumScreen) {
     projectDisplay = (
-      <Masonry columns={2} spacing={3}>
+      <Masonry
+        justifyContent="center"
+        alignItems="center"
+        columns={2}
+        spacing={3}
+      >
         <ProjectsList />
       </Masonry>
     );
   } else {
     projectDisplay = (
-      <Masonry columns={3} spacing={3}>
+      <Masonry
+        justifyContent="center"
+        alignItems="center"
+        columns={3}
+        spacing={3}
+      >
         <ProjectsList />
       </Masonry>
     );

@@ -1,13 +1,7 @@
 import React, { useEffect } from "react";
 import "./homepage.scss";
 import ImageWithBorder from "../../components/ImageWithBorder/ImageWithBorder";
-import {
-  Facebook,
-  GitHub,
-  Instagram,
-  Email,
-  LinkedIn,
-} from "@mui/icons-material";
+import { GitHub, Email, LinkedIn } from "@mui/icons-material";
 import { FaTiktok } from "react-icons/fa";
 import { Grid, IconButton, Typography } from "@mui/material";
 import { useContext } from "react";
@@ -25,6 +19,31 @@ const Homepage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const links = [
+    {
+      url: "https://www.linkedin.com/in/taheera-ahmed-997750158/",
+      component: (
+        <LinkedIn fontSize="large" style={{ color: themeContext.white }} />
+      ),
+    },
+    {
+      url: "https://github.com/taheeraahmed",
+      component: (
+        <GitHub fontSize="large" style={{ color: themeContext.white }} />
+      ),
+    },
+    {
+      url: "mailto:taheera@hotmail.com",
+      component: (
+        <Email fontSize="large" style={{ color: themeContext.white }} />
+      ),
+    },
+    {
+      url: "https://www.tiktok.com/@taheera.py",
+      component: <FaTiktok size={28} style={{ color: themeContext.white }} />,
+    },
+  ];
+
   return (
     <div className="homepage">
       <Grid container className="homepage" spacing={10}>
@@ -35,9 +54,9 @@ const Homepage = () => {
             width="60%"
           />
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} styles={{ width: "60%" }}>
           <div className="text">
-            <h1>Taheera Ahmed</h1>
+              <h1>Taheera Ahmed</h1>
             <span>
               <Typography variant="body2">{t("homepage.study")}</Typography>
               <Typography variant="body2" style={{ paddingTop: 10 }}>
@@ -49,68 +68,13 @@ const Homepage = () => {
             </span>
           </div>
           <div className="icons">
-            <a
-              href="https://www.facebook.com/taheera.ahmed"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <IconButton>
-                <Facebook
-                  fontSize="large"
-                  style={{ color: themeContext.white }}
-                />
-              </IconButton>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/taheera-ahmed-997750158/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <IconButton>
-                <LinkedIn
-                  fontSize="large"
-                  style={{ color: themeContext.white }}
-                />
-              </IconButton>
-            </a>
-            <a
-              href="https://github.com/taheeraahmed"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <IconButton>
-                <GitHub
-                  fontSize="large"
-                  style={{ color: themeContext.white }}
-                />
-              </IconButton>
-            </a>
-            <a
-              href="https://www.instagram.com/taheera.py/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <IconButton>
-                <Instagram
-                  fontSize="large"
-                  style={{ color: themeContext.white }}
-                />
-              </IconButton>
-            </a>
-            <a href="mailto:taheera@hotmail.com">
-              <IconButton>
-                <Email fontSize="large" style={{ color: themeContext.white }} />
-              </IconButton>
-            </a>
-            <a
-              href="https://www.tiktok.com/@taheera.py"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <IconButton>
-                <FaTiktok size={28} style={{ color: themeContext.white }} />
-              </IconButton>
-            </a>
+            <center>
+              {links.map((link, index) => (
+                <a key={index} href={link.url} rel="noreferrer" target="_blank">
+                  <IconButton>{link.component}</IconButton>
+                </a>
+              ))}
+            </center>
           </div>
         </Grid>
       </Grid>
