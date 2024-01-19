@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { checkCoupon } from '../../api/api';
+import React, { useState } from "react";
+import { checkCoupon } from "../../api/api";
 
 const CheckCoupon = () => {
-  const [couponId, setCouponId] = useState('');
-  const [code, setCode] = useState('');
-  const [message, setMessage] = useState('');
+  const [couponId, setCouponId] = useState("");
+  const [code, setCode] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -12,7 +12,7 @@ const CheckCoupon = () => {
       const response = await checkCoupon(couponId, code);
       setMessage(response.message);
     } catch (error) {
-      setMessage('Error checking coupon.');
+      setMessage("Error checking coupon.");
     }
   };
 
