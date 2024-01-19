@@ -1,13 +1,13 @@
 import React from 'react';
-import Coupons from '../../components/Coupons/Coupons';
-import CheckCoupon from '../../components/Coupons/CheckCoupon';
+import CalendarWithCoupons from '../../components/Coupons/Coupons';
 
 const CouponView = () => {
   return (
     <div>
-      <h1>Coupon Management</h1>
-      <Coupons />
-      <CheckCoupon />
+      <h1>30 dager med Andre</h1>
+      <CalendarWithCoupons />
+      <br />
+      <br />
     </div>
   );
 };

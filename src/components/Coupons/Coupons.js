@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import Calendar from './Calendar'; // Adjust the import path as needed
 import { getCoupons } from '../../api/api';
 
-const Coupons = () => {
+const CalendarWithCoupons = () => {
   const [coupons, setCoupons] = useState([]);
 
   useEffect(() => {
@@ -18,15 +19,10 @@ const Coupons = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Coupons</h2>
-      <ul>
-        {coupons.map(coupon => (
-          <li key={coupon._id}>{coupon.title}</li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <Calendar coupons={coupons} />
+    </>
   );
 };
 
-export default Coupons;
+export default CalendarWithCoupons;
