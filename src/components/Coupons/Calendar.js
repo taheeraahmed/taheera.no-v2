@@ -12,6 +12,8 @@ const Calendar = ({ coupons }) => {
     return date > today;
   };
 
+  console.log(coupons)
+
   const renderCoupons = (date) => {
     return coupons
       .filter(coupon => {
@@ -20,7 +22,8 @@ const Calendar = ({ coupons }) => {
       })
       .map(coupon => (
         <Typography key={coupon._id} variant="body2" style={{ marginTop: '0.5em' }}>
-          {isFutureDate(new Date(coupon.available_date * 1000)) ? '??' : coupon.title} 
+          {/* {isFutureDate(new Date(coupon.available_date * 1000)) ? '??' : coupon.title}  */}
+          {coupon.type}
         </Typography>
       ));
   }; // denne vil faile nar man ikke lenger henter alle kuponger uansett dato
@@ -62,7 +65,7 @@ const Calendar = ({ coupons }) => {
             <Grid item xs={12 / 7} key={idx} style={{ height: '20vh' }}>
               {day ? (
                 <Paper elevation={3} style={{ padding: '0.5em', textAlign: 'center', height: '100%' }}>
-                  <Typography variant="body1">
+                  <Typography variant="body2">
                     {day.getDate()}
                   </Typography>
                   {renderCoupons(day)}
