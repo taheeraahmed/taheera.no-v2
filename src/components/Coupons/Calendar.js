@@ -2,7 +2,6 @@ import React from "react";
 import { Grid, Paper, Typography } from "@mui/material";
 import AlertDialog from "./Dialog";
 
-
 // TODO: Generelt sett gjør småting som gjør at det ser mer sexy ut (add effekter osv)
 const Calendar = ({ coupons }) => {
   const startDate = new Date(2024, 1, 12); // February 12, 2024
@@ -67,15 +66,26 @@ const Calendar = ({ coupons }) => {
             <Grid item xs={12 / 7} key={idx} style={{ height: "20vh" }}>
               {day ? (
                 <Paper
-                  elevation={3}
+                  elevation={1}
                   style={{
-                    padding: "0.5em",
+                    padding: "3px",
                     textAlign: "center",
                     height: "100%",
                   }}
                 >
                   {/* TODO: Make a circle around the current date, and gray around the others */}
-                  <Typography variant="body2">{day.getDate()}</Typography>
+                  <Typography
+                    variant="body2"
+                    style={{
+                      backgroundColor: "#ff00ff",
+                      borderRadius: "3px",
+                      paddingBottom: "5px",
+                      paddingTop: "5px",
+                      marginBottom: "5px",
+                    }}
+                  >
+                    {day.getDate()}
+                  </Typography>
                   {renderCoupons(day)}
                 </Paper>
               ) : (
