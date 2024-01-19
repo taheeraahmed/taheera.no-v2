@@ -73,7 +73,7 @@ const Calendar = ({ coupons }) => {
                     height: "100%",
                   }}
                 >
-                  {/* TODO: Make a circle around the current date, and gray around the others */}
+                  {/* TODO: Change styling if today is in calendar */}
                   <Typography
                     variant="body2"
                     style={{
