@@ -20,10 +20,10 @@ const Calendar = ({ coupons }) => {
       })
       .map(coupon => (
         <Typography key={coupon._id} variant="body2" style={{ marginTop: '0.5em' }}>
-          {isFutureDate(new Date(coupon.available_date * 1000)) ? '??' : coupon.title}
+          {isFutureDate(new Date(coupon.available_date * 1000)) ? '??' : coupon.title} 
         </Typography>
       ));
-  };
+  }; // denne vil faile nar man ikke lenger henter alle kuponger uansett dato
 
   const generateWeeksArray = () => {
     const weeks = [];
