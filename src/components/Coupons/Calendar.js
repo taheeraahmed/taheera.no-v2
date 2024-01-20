@@ -2,23 +2,19 @@ import React from "react";
 import { Grid, Paper, Stack, Typography } from "@mui/material";
 import AlertDialog from "./Dialog";
 import "./styles.css";
-// TODO: Generelt sett gjør småting som gjør at det ser mer sexy ut (add effekter osv)
 const Calendar = ({ coupons }) => {
-  const startDate = new Date(2024, 1, 12); // February 12, 2024
-  const endDate = new Date(2024, 2, 15); // March 15, 2024
+  const startDate = new Date(2024, 1, 12);
+  const endDate = new Date(2024, 2, 15);
   const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   const renderCoupons = (date) => {
     const today = new Date();
-    today.setHours(0, 0, 0, 0); // Reset time to start of the day
-  
-    // Check if the date has not passed yet
-    // TODO: Uncomment this after
+    today.setHours(0, 0, 0, 0);
+
     /* if (date >= today) {
       return <span className="shake">❓❓</span>;
     } */
-  
-    // Continue with your existing logic for rendering coupons
+
     return coupons
       .filter((coupon) => {
         const availableDate = new Date(coupon.available_date * 1000);
@@ -34,7 +30,6 @@ const Calendar = ({ coupons }) => {
         </>
       ));
   };
-  
 
   const generateWeeksArray = () => {
     const weeks = [];

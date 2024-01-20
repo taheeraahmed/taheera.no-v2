@@ -1,4 +1,4 @@
-/* Add this to your CSS file */
+
 @keyframes shake {
   0%, 100% {
     transform: translateX(0);
@@ -9,6 +9,10 @@
   20%, 40%, 60%, 80% {
     transform: translateX(10px);
   }
+}
+
+.shake {
+  font-size: 2vw;
 }
 
 .shake:hover {

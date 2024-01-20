@@ -5,6 +5,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import ConfettiExplosion from "react-confetti-explosion";
 import { getCouponById } from "../../api/api";
 import { Typography } from "@mui/material";
+import './styles.css';
 
 const AlertDialog = ({ coupon }) => {
   const [open, setOpen] = useState(false);
@@ -43,7 +44,7 @@ const AlertDialog = ({ coupon }) => {
   const [isHovered, setIsHovered] = React.useState(false);
 
   const defaultStyle = {
-    fontSize: "40px",
+    fontSize: "2vw",
     textShadow: "0 0 10px rgba(255,255,255, 0.2)",
     transition: "text-shadow 0.3s ease-in-out", // Add this line for the transition
     cursor: "pointer",
@@ -79,10 +80,10 @@ const AlertDialog = ({ coupon }) => {
         ) : null}
 
         <DialogContent style={{ textAlign: "center", color: "black" }}>
-          <Typography varient="body1" id="alert-dialog-description">
+          <Typography variant="body1" id="alert-dialog-description">
             Finn gaven med disse emojiiene!!
           </Typography>
-          <Typography varient="body1" id="alert-dialog-description">
+          <Typography style={{fontSize: "40px"}}>
             {couponDetails ? couponDetails.code : "Loading..."}
           </Typography>
         </DialogContent>
