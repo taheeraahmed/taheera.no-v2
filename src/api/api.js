@@ -12,22 +12,24 @@ export const api = axios.create({
   headers: HEADERS,
 });
 
-export const getCoupons = async () => {
+export const getTypes = async () => {
   try {
-    const response = await api.get("/coupons");
+    const response = await api.get("/types");
+    console.log(response.data)
     return response.data;
   } catch (error) {
-    console.error("Error fetching coupons:", error);
+    console.error("Error fetching types:", error);
     throw error;
   }
 };
 
-export const checkCoupon = async (couponId, code) => {
+export const getCouponById = async (id) => {
   try {
-    const response = await api.post("/coupons/check", { coupon_id: couponId, code });
+    const response = await api.get(`/api/coupons/${id}`);
+    console.log(response.data)
     return response.data;
   } catch (error) {
-    console.error("Error checking coupon:", error);
+    console.error("Error fetching coupon with ID:", id, error);
     throw error;
   }
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Calendar from "./Calendar"; // Adjust the import path as needed
-import { getCoupons } from "../../api/api";
+import { getTypes } from "../../api/api";
 
 const CalendarWithCoupons = () => {
   const [coupons, setCoupons] = useState([]);
@@ -8,7 +8,7 @@ const CalendarWithCoupons = () => {
   useEffect(() => {
     const fetchCoupons = async () => {
       try {
-        const data = await getCoupons();
+        const data = await getTypes();
         setCoupons(data);
       } catch (error) {
         console.error(error);
