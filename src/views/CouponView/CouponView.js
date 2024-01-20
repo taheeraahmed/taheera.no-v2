@@ -30,7 +30,7 @@ const CouponView = () => {
     <div
       className="calendar"
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL + "/bursdag.jpeg"})`,
+        backgroundImage: `url(${process.env.PUBLIC_URL + "/bursdag1.jpeg"})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
