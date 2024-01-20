@@ -1,6 +1,5 @@
 .calendar {
   .text-container {
-    z-index: 100;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -10,7 +9,6 @@
     justify-content: center;
     align-items: center;
     color: white;
-    opacity: 0.8;
     user-select: none;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
     .btn {

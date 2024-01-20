@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Paper, Stack, Typography } from "@mui/material";
 import AlertDialog from "./Dialog";
-
+import "./styles.css";
 // TODO: Generelt sett gjør småting som gjør at det ser mer sexy ut (add effekter osv)
 const Calendar = ({ coupons }) => {
   const startDate = new Date(2024, 1, 12); // February 12, 2024
@@ -15,7 +15,13 @@ const Calendar = ({ coupons }) => {
         return availableDate.toDateString() === date.toDateString();
       })
       .map((coupon) => (
-        <>{coupon.type ? <AlertDialog coupon={coupon} /> : <>❓❓</>}</>
+        <>
+          {coupon.type ? (
+            <AlertDialog coupon={coupon} />
+          ) : (
+            <span className="shake">❓❓</span>
+          )}
+        </>
       ));
   };
 
