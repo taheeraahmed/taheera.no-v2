@@ -76,6 +76,11 @@ const Calendar = ({ coupons }) => {
               {day ? (
                 <Paper
                   elevation={1}
+                  className={
+                    day.getMonth() === 2 && day.getDate() === 15
+                      ? "specialStyleForMarch15"
+                      : ""
+                  }
                   style={{
                     padding: "3px",
                     textAlign: "center",
