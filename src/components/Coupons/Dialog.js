@@ -31,6 +31,7 @@ const AlertDialog = ({ coupon }) => {
     fontSize: "40px",
     textShadow: "0 0 10px rgba(255,255,255, 0.2)",
     transition: "text-shadow 0.3s ease-in-out", // Add this line for the transition
+    cursor: "pointer",
   };
 
   const hoverStyle = {
