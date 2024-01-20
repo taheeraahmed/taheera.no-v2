@@ -25,7 +25,7 @@ export const getTypes = async () => {
 
 export const getCouponById = async (id) => {
   try {
-    const response = await api.get(`/api/coupons/${id}`);
+    const response = await api.get(`/coupons/${id}`);
     console.log(response.data)
     return response.data;
   } catch (error) {

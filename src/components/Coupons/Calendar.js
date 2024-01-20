@@ -13,9 +13,10 @@ const Calendar = ({ coupons }) => {
     today.setHours(0, 0, 0, 0); // Reset time to start of the day
   
     // Check if the date has not passed yet
-    if (date >= today) {
+    // TODO: Uncomment this after
+    /* if (date >= today) {
       return <span className="shake">❓❓</span>;
-    }
+    } */
   
     // Continue with your existing logic for rendering coupons
     return coupons
