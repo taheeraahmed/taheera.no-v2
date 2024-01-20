@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Paper, Typography } from "@mui/material";
+import { Grid, Paper, Stack, Typography } from "@mui/material";
 import AlertDialog from "./Dialog";
 
 // TODO: Generelt sett gjør småting som gjør at det ser mer sexy ut (add effekter osv)
@@ -57,7 +57,7 @@ const Calendar = ({ coupons }) => {
     <Grid container spacing={1} style={{ padding: "1em" }}>
       {weekdays.map((day) => (
         <Grid item xs={12 / 7} key={day} style={{ textAlign: "center" }}>
-          <Typography variant="h3">{day}</Typography>
+          <Typography variant="h4">{day}</Typography>
         </Grid>
       ))}
       {weeks.map((week, index) => (
@@ -80,18 +80,31 @@ const Calendar = ({ coupons }) => {
                   }}
                 >
                   {/* TODO: Change styling if today is in calendar */}
-                  <Typography
-                    variant="body2"
-                    style={{
-                      borderRadius: "3px",
-                      paddingBottom: "5px",
-                      paddingTop: "5px",
-                      marginBottom: "5px",
-                    }}
+                  <Stack
+                    direction="column"
+                    justifyContent="flex-start"
+                    alignItems="center"
+                    spacing={2}
+
                   >
-                    {day.getDate()}
-                  </Typography>
-                  {renderCoupons(day)}
+                    <Typography
+                      variant="body2"
+                      style={{
+                        borderRadius: "3px",
+                        paddingBottom: "5px",
+                        paddingTop: "5px",
+                        marginBottom: "5px",
+                        color: "white",
+                        // background: "red",
+                        borderRadius: "50%",
+                        width: "30px",
+                        height: "30px"
+                      }}
+                    >
+                      {day.getDate()}
+                    </Typography>
+                    {renderCoupons(day)}
+                  </Stack>
                 </Paper>
               ) : (
                 <div />

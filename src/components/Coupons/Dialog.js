@@ -17,17 +17,32 @@ const AlertDialog = ({ coupon }) => {
   const handleClose = () => {
     setOpen(false);
   };
+  const [isHovered, setIsHovered] = React.useState(false);
+
+  const defaultStyle = {
+    fontSize: "40px",
+    textShadow: "0 0 10px rgba(255,255,255, 0.2)",
+    transition: "text-shadow 0.3s ease-in-out", // Add this line for the transition
+  };
+
+  const hoverStyle = {
+    ...defaultStyle,
+    textShadow:
+      "0 0 20px rgba(255,255,255, 0.5), 0 0 30px rgba(255,255,255, 0.7)",
+  };
 
   return (
     <React.Fragment>
-        {/* TODO: Make this prettier */}
-      <Button
+      {/* TODO: Make this prettier */}
+      <div
         variant="outlined"
         onClick={handleClickOpen}
-        style={{ fontSize: "40px" }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        style={isHovered ? hoverStyle : defaultStyle}
       >
         {coupon.type}
-      </Button>
+      </div>
       <Dialog
         open={open}
         onClose={handleClose}
