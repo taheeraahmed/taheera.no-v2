@@ -1,7 +1,5 @@
 // TODO: Add correct styling for headers https://coolors.co/palette/22577a-38a3a5-57cc99-80ed99-c7f9cc
 .calendar {
-  color: white;
-
   .text-container {
     z-index: 100;
     width: 100vw;
@@ -16,6 +14,54 @@
     opacity: 0.8;
     user-select: none;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    .btn {
+      position: relative;
+      border-radius: 100%;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      height: 60px;
+      width: 60px;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+      background-size: 400%;
+      z-index: 1;
+    }
+
+    .btn:hover {
+      animation: animate 8s linear infinite;
+    }
+
+    @keyframes animate {
+      0% {
+        background-position: 0%;
+      }
+      100% {
+        background-position: 400%;
+      }
+    }
+
+    .btn:before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      bottom: -5px;
+      left: -5px;
+      z-index: -1;
+      background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+      background-size: 400%;
+      border-radius: 40px;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .btn:hover:before {
+      filter: blur(20px);
+      opacity: 1;
+      animation: animate 8s linear infinite;
+    }
   }
   h1 {
     color: #38a3a5;
@@ -35,12 +81,8 @@
   h4 {
   }
   .glowy-button {
-    color: #29b6f6; /* Choose a color that fits your design */
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
   }
 
   .glowy-button:hover {
-    box-shadow: 0 0 10px #29b6f6, 0 0 20px #29b6f6; /* Glowing effect */
-    transform: scale(1.1); /* Slightly enlarge on hover */
   }
 }
