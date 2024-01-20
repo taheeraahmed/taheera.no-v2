@@ -71,13 +71,18 @@ const Calendar = ({ coupons }) => {
                     padding: "3px",
                     textAlign: "center",
                     height: "100%",
+                    background:
+                      "linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))",
+                    backdropFilter: "blur(10px)",
+                    WebkitBackdropFilter: "blur(10px)", // for webkit browsers
+                    border: "1px solid rgba(255, 255, 255, 0.18)",
+                    boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.17)",
                   }}
                 >
                   {/* TODO: Change styling if today is in calendar */}
                   <Typography
                     variant="body2"
                     style={{
-                      backgroundColor: "#ff00ff",
                       borderRadius: "3px",
                       paddingBottom: "5px",
                       paddingTop: "5px",
