@@ -1,21 +1,29 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import ConfettiExplosion from "react-confetti-explosion";
 
-// TODO: Add correct information
 const AlertDialog = ({ coupon }) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
 
   const handleClickOpen = () => {
+    const today = new Date();
+    const isMarch15 = today.getMonth() === 2 && today.getDate() === 15;
+
     setOpen(true);
+    if (isMarch15) {
+      setShowConfetti(true);
+    }
   };
 
   const handleClose = () => {
     setOpen(false);
+    setShowConfetti(false);
   };
   const [isHovered, setIsHovered] = React.useState(false);
 
@@ -33,7 +41,7 @@ const AlertDialog = ({ coupon }) => {
 
   return (
     <React.Fragment>
-      {/* TODO: Make this prettier */}
+      {showConfetti && <ConfettiExplosion />}
       <div
         variant="outlined"
         onClick={handleClickOpen}
