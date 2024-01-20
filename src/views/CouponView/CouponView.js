@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import CalendarWithCoupons from "../../components/Coupons/Coupons";
 import "./calendar.scss";
-import { IconButton, Stack, Typography } from "@mui/material";
+import { Stack } from "@mui/material";
 import { ArrowDownward } from "@mui/icons-material";
 import FrontPageText from "../../components/Coupons/FrontPageText";
 
@@ -36,12 +36,8 @@ const CouponView = () => {
           spacing={2}
         >
           <FrontPageText />
-          <button
-            type="button"
-            className="btn"
-            onClick={scrollToNextWindow}
-          >
-            <ArrowDownward fontSize="large" style={{paddingTop: "5px"}} />
+          <button type="button" className="btn" onClick={scrollToNextWindow}>
+            <ArrowDownward fontSize="large" style={{ paddingTop: "5px" }} />
           </button>
         </Stack>
       </div>

@@ -4,7 +4,7 @@ import React from "react";
 const FrontPageText = () => {
   return (
     <>
-      <h1>30 dager med Andre</h1>
+      <h1>30 dager med André</h1>
       <Typography variant="body" style={{ width: "40%", textAlign: "center" }}>
         Jeg tviler på at forecastking så for seg denne gaven:))
       </Typography>
