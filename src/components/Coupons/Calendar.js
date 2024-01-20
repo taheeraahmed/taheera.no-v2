@@ -9,6 +9,15 @@ const Calendar = ({ coupons }) => {
   const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   const renderCoupons = (date) => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Reset time to start of the day
+  
+    // Check if the date has not passed yet
+    if (date >= today) {
+      return <span className="shake">❓❓</span>;
+    }
+  
+    // Continue with your existing logic for rendering coupons
     return coupons
       .filter((coupon) => {
         const availableDate = new Date(coupon.available_date * 1000);
@@ -24,6 +33,7 @@ const Calendar = ({ coupons }) => {
         </>
       ));
   };
+  
 
   const generateWeeksArray = () => {
     const weeks = [];
