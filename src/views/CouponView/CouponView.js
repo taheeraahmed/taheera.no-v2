@@ -27,7 +27,15 @@ const CouponView = () => {
   }, []);
 
   return (
-    <div className="calendar">
+    <div
+      className="calendar"
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL + "/bursdag.jpeg"})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="text-container">
         <Stack
           direction="column"

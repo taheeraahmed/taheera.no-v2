@@ -1,6 +1,4 @@
 .calendar {
-  background-size: cover;
-  background-position: center;
   .text-container {
     z-index: 100;
     width: 100vw;
@@ -65,11 +63,8 @@
     }
   }
   h1 {
-    color: #38a3a5;
     background: transparent;
-    -webkit-text-fill-color: #38a3a5;
-  }
-  h2 {
+    -webkit-text-fill-color: white;
   }
   h3 {
     color: white;
@@ -80,10 +75,5 @@
     color: #dedede;
   }
   h4 {
-  }
-  .glowy-button {
-  }
-
-  .glowy-button:hover {
   }
 }
