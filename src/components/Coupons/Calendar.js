@@ -8,14 +8,6 @@ const Calendar = ({ coupons }) => {
   const endDate = new Date(2024, 2, 15); // March 15, 2024
   const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-  const isFutureDate = (date) => {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0); // Reset time to start of the day
-    return date > today;
-  };
-
-  console.log(coupons);
-
   const renderCoupons = (date) => {
     return coupons
       .filter((coupon) => {
@@ -85,19 +77,19 @@ const Calendar = ({ coupons }) => {
                     justifyContent="flex-start"
                     alignItems="center"
                     spacing={2}
-
                   >
                     <Typography
                       variant="body2"
                       style={{
-                        borderRadius: "3px",
                         paddingBottom: "5px",
                         paddingTop: "5px",
+                        marginTop: "5px",
                         color: "white",
-                        // background: "red",
+                        background: "rgba(255,255,255, 0.2)",
                         borderRadius: "50%",
-                        width: "30px",
-                        height: "30px"
+                        width: "25px",
+                        height: "25px",
+                        fontSize: "9pt",
                       }}
                     >
                       {day.getDate()}
