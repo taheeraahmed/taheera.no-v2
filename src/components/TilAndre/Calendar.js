@@ -69,7 +69,7 @@ const Calendar = ({ coupons }) => {
     <Grid container spacing={1} style={{ padding: "1em" }}>
       {weekdays.map((day) => (
         <Grid item xs={12 / 7} key={day} style={{ textAlign: "center" }}>
-          <Typography variant="h4" style={{ font: "white"}}>
+          <Typography variant="h4" style={{ font: "white" }}>
             {day}
           </Typography>
         </Grid>
@@ -80,59 +80,59 @@ const Calendar = ({ coupons }) => {
             <Grid item xs={12 / 7} key={idx} style={{ height: "17vh" }}>
               {day ? (
                 <Paper
-                elevation={1}
-                className={
-                  day.getMonth() === 2 && day.getDate() === 15
-                    ? "specialStyleForMarch15"
-                    : ""
-                }
-                style={{
-                  position: 'relative', // Added for absolute positioning of the coupon
-                  padding: "3px",
-                  textAlign: "center",
-                  height: "100%",
-                  background: "linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))",
-                  backdropFilter: "blur(10px)",
-                  WebkitBackdropFilter: "blur(10px)", // for webkit browsers
-                  border: "1px solid rgba(255, 255, 255, 0.18)",
-                  boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.17)",
-                }}
-              >
-                <div style={{ textAlign: 'center', width: '100%' }}>
-                  <Typography
-                    variant="body2"
-                    style={{
-                      fontFamily: "Source Code Pro,ui-monospace",
-                      paddingBottom: "5px",
-                      paddingTop: "5px",
-                      marginTop: "5px",
-                      color: "white",
-                      background: "rgba(255,255,255, 0.2)",
-                      borderRadius: "50%",
-                      width: "25px",
-                      height: "25px",
-                      display: 'inline-block', // Ensures the text aligns center in its container
-                    }}
-                  >
-                    {day.getDate()}
-                  </Typography>
-                </div>
-                <div
+                  elevation={1}
+                  className={
+                    day.getMonth() === 2 && day.getDate() === 15
+                      ? "specialStyleForMarch15"
+                      : ""
+                  }
                   style={{
-                    position: 'absolute', 
-                    top: '25px', // Adjust based on the height of the Typography
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    display: 'flex',
-                    justifyContent: 'center', 
-                    alignItems: 'center', 
+                    position: "relative", // Added for absolute positioning of the coupon
+                    padding: "3px",
+                    textAlign: "center",
+                    height: "100%",
+                    background:
+                      "linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))",
+                    backdropFilter: "blur(10px)",
+                    WebkitBackdropFilter: "blur(10px)", // for webkit browsers
+                    border: "1px solid rgba(255, 255, 255, 0.18)",
+                    boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.17)",
                   }}
                 >
-                  {renderCoupons(day)}
-                </div>
-              </Paper>
-              
+                  <div style={{ textAlign: "center", width: "100%" }}>
+                    <Typography
+                      variant="body2"
+                      style={{
+                        fontFamily: "Source Code Pro,ui-monospace",
+                        paddingBottom: "5px",
+                        paddingTop: "5px",
+                        marginTop: "5px",
+                        color: "white",
+                        background: "rgba(255,255,255, 0.2)",
+                        borderRadius: "50%",
+                        width: "25px",
+                        height: "25px",
+                        display: "inline-block", // Ensures the text aligns center in its container
+                      }}
+                    >
+                      {day.getDate()}
+                    </Typography>
+                  </div>
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "25px", // Adjust based on the height of the Typography
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    {renderCoupons(day)}
+                  </div>
+                </Paper>
               ) : (
                 <div />
               )}
