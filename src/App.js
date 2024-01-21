@@ -30,22 +30,22 @@ function App() {
 
   useEffect(() => {
     const faviconUpdate = async () => {
-      //grab favicon element by ID
       const favicon = document.getElementById("favicon");
-      //check count value, if below 0 we change href property to our red circle image path
-      if (theme === "pinkOrangeTheme") {
-        favicon.href = "favicon_1.svg";
-      }
-      //if above 0, we set back to green
-      else {
-        favicon.href = "favicon_2.svg";
+      const path = location.pathname;
+
+      if (path === "/forecastking") {
+        favicon.href = "data:image/svg+xml," + encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'><text x='50%' y='50%' dy='.35em' text-anchor='middle' font-size='24'>💛</text></svg>`);
+      } else {
+        if (theme === "pinkOrangeTheme") {
+          favicon.href = "favicon_1.svg";
+        } else {
+          favicon.href = "favicon_2.svg";
+        }
       }
     };
-    //run our function here
-    faviconUpdate();
 
-    //2nd paramenter passed to useEffect is dependency array so that this effect only runs on changes to count
-  }, [theme]);
+    faviconUpdate();
+  }, [theme, location]); // Add location to the dependency array
 
   const toggleTheme = () => {
     if (theme === "pinkOrangeTheme") {
@@ -54,7 +54,8 @@ function App() {
       setTheme("pinkOrangeTheme");
     }
   };
-  const showNavbarAndFooter = location.pathname !== "/linktree" && location.pathname !== "/forecastking";
+  const showNavbarAndFooter =
+    location.pathname !== "/linktree" && location.pathname !== "/forecastking";
 
   return (
     <ThemeProvider
