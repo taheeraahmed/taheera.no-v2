@@ -84,6 +84,13 @@ const AlertDialog = ({ coupon }) => {
     textShadow:
       "0 0 20px rgba(255,255,255, 0.5), 0 0 30px rgba(255,255,255, 0.7)",
   };
+  const emojiPattern = ["👴", "💛"];
+  const numberOfRepeats = 16; // Adjust the number of repeats as needed
+  const emojis = [];
+
+  for (let i = 0; i < numberOfRepeats; i++) {
+    emojis.push(...emojiPattern);
+  }
 
   return (
     <React.Fragment>
@@ -110,13 +117,21 @@ const AlertDialog = ({ coupon }) => {
                 textAlign: "center",
                 fontSize: "30px",
                 color: "transparent",
-                paddingTop: "20px",
+                paddingTop: "25px",
               }}
             >
               Gratulerer kjæresten miiiiin
             </h1>
-            <p style={{ textAlign: "center", fontSize: "9pt" }}>
-              💖💛💖💛💖💛💖💛💖💛💖💛💖💛💖💛💖💛💖💛💖💛💖💛💖
+            <p style={{ textAlign: "center", fontSize: "9pt", paddingTop: "-2px" }}>
+              {emojis.map((emoji, index) => (
+                <span
+                  key={index}
+                  className="wave"
+                  style={{ "--char-index": index }}
+                >
+                  {emoji}
+                </span>
+              ))}
             </p>
           </>
         ) : (
@@ -133,7 +148,15 @@ const AlertDialog = ({ coupon }) => {
                 ? formatDate(coupon.available_date)
                 : "Loading..."}
             </h1>
-            <DialogContent style={{ textAlign: "center", color: "black", margin: 0, paddingTop: 1, paddingBottom: 1 }}>
+            <DialogContent
+              style={{
+                textAlign: "center",
+                color: "black",
+                margin: 0,
+                paddingTop: 1,
+                paddingBottom: 1,
+              }}
+            >
               <Typography variant="body1" style={{ textAlign: "center" }}>
                 det er bare {daysUntilMarch15()} dager til bursdagen din💛
               </Typography>

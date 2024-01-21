@@ -69,7 +69,7 @@ const Calendar = ({ coupons }) => {
     <Grid container spacing={1} style={{ padding: "1em" }}>
       {weekdays.map((day) => (
         <Grid item xs={12 / 7} key={day} style={{ textAlign: "center" }}>
-          <Typography variant="h4" style={{ color: "white" }}>
+          <Typography variant="h4" style={{ font: "white"}}>
             {day}
           </Typography>
         </Grid>
@@ -102,6 +102,7 @@ const Calendar = ({ coupons }) => {
                   <Typography
                     variant="body2"
                     style={{
+                      fontFamily: "Source Code Pro,ui-monospace",
                       paddingBottom: "5px",
                       paddingTop: "5px",
                       marginTop: "5px",
