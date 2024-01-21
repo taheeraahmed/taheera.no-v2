@@ -10,11 +10,16 @@ const Calendar = ({ coupons }) => {
   const renderCoupons = (date) => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-
-    /* if (date >= today) {
+  
+    // Check if the date is February 13th or 14th
+    if (date.getMonth() === 1 && (date.getDate() === 13 || date.getDate() === 14 || date.getDate() === 12)) {
+      return null; // Return nothing for these dates
+    }
+  
+    if (date >= today) {
       return <span className="shake">❓❓</span>;
-    } */
-
+    }
+  
     return coupons
       .filter((coupon) => {
         const availableDate = new Date(coupon.available_date * 1000);
