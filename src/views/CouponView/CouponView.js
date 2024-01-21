@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import CalendarWithCoupons from "../../components/Coupons/Coupons";
+import CalendarWithCoupons from "../../components/TilAndre/Coupons";
 import "./calendar.scss";
 import { Stack } from "@mui/material";
 import { ArrowDownward } from "@mui/icons-material";
-import FrontPageText from "../../components/Coupons/FrontPageText";
+import FrontPageText from "../../components/TilAndre/FrontPageText";
 import Confetti from "react-confetti";
 
 const CouponView = () => {
