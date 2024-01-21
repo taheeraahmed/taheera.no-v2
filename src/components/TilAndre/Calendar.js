@@ -77,7 +77,7 @@ const Calendar = ({ coupons }) => {
       {weeks.map((week, index) => (
         <React.Fragment key={index}>
           {week.map((day, idx) => (
-            <Grid item xs={12 / 7} key={idx} style={{ height: "17vh" }}>
+            <Grid item xs={12 / 7} key={idx} style={{ height: "15vh" }}>
               {day ? (
                 <Paper
                   elevation={1}
