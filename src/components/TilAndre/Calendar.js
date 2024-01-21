@@ -19,10 +19,10 @@ const Calendar = ({ coupons }) => {
       return null; // Return nothing for these dates
     }
 
-    if (date >= today) {
+    /* if (date >= today) {
       return <span className="shake">❓❓</span>;
     }
-   
+   */
     return coupons
       .filter((coupon) => {
         const availableDate = new Date(coupon.available_date * 1000);
