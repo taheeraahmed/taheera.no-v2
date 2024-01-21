@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "https://dev-backend-taheera-no.vercel.app/api";
+const API_BASE_URL = "https://dev-backend.taheera.no/api";
 const HEADERS = {
   Accept: "application/json",
   "Content-Type": "application/json",
