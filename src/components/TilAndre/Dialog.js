@@ -5,12 +5,14 @@ import DialogTitle from "@mui/material/DialogTitle";
 import ConfettiExplosion from "react-confetti-explosion";
 import { getCouponById } from "../../api/api";
 import { Typography } from "@mui/material";
-import './styles.css';
+import "./styles.css";
 
 const AlertDialog = ({ coupon }) => {
   const [open, setOpen] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const [couponDetails, setCouponDetails] = useState(null);
+  const today = new Date();
+  const isMarch15 = today.getMonth() === 2 && today.getDate() === 15;
 
   useEffect(() => {
     const fetchCoupon = async () => {
@@ -28,9 +30,6 @@ const AlertDialog = ({ coupon }) => {
   }, [coupon]);
 
   const handleClickOpen = () => {
-    const today = new Date();
-    const isMarch15 = today.getMonth() === 2 && today.getDate() === 15;
-
     setOpen(true);
     if (isMarch15) {
       setShowConfetti(true);
@@ -73,17 +72,40 @@ const AlertDialog = ({ coupon }) => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
+        {isMarch15 ? (
+          <>
+            <h1
+              style={{
+                WebkitTextFillColor: "#00000F",
+                textAlign: "center",
+                fontSize: "30px",
+                color: "transparent",
+                paddingTop: "20px",
+              }}
+            >
+              Gratulerer kjæresten miiiiin
+            </h1>
+            <p style={{ textAlign: "center", fontSize: "9pt" }}>
+              💖💛💖💛💖💛💖💛💖💛💖💛💖💛💖💛💖💛💖💛💖💛💖💛💖
+            </p>
+          </>
+        ) : null}
+
         {couponDetails && couponDetails.desc ? (
-          <DialogTitle id="alert-dialog-title" style={{ textAlign: "center" }}>
+                    <DialogTitle id="alert-dialog-title" style={{ textAlign: "center" }}>
+
+          <Typography variant="body2" style={{ textAlign: "center" }}>
             {couponDetails.desc}
+          </Typography>
           </DialogTitle>
+
         ) : null}
 
         <DialogContent style={{ textAlign: "center", color: "black" }}>
-          <Typography variant="body1" id="alert-dialog-description">
+          <Typography variant="body2" id="alert-dialog-description">
             Finn gaven med disse emojiiene!!
           </Typography>
-          <Typography style={{fontSize: "40px"}}>
+          <Typography style={{ fontSize: "40px" }}>
             {couponDetails ? couponDetails.code : "Loading..."}
           </Typography>
         </DialogContent>
