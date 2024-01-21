@@ -15,7 +15,6 @@ export const api = axios.create({
 export const getTypes = async () => {
   try {
     const response = await api.get("/types");
-    console.log(response.data)
     return response.data;
   } catch (error) {
     console.error("Error fetching types:", error);
@@ -26,7 +25,6 @@ export const getTypes = async () => {
 export const getCouponById = async (id) => {
   try {
     const response = await api.get(`/coupons/${id}`);
-    console.log(response.data)
     return response.data;
   } catch (error) {
     console.error("Error fetching coupon with ID:", id, error);
