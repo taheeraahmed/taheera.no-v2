@@ -1,3 +1,4 @@
+import React from "react";
 import { Masonry } from "@mui/lab";
 import "./projects.scss";
 import { useEffect } from "react";
