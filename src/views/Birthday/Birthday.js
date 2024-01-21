@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import CalendarWithCoupons from "../../components/TilAndre/Coupons";
-import "./calendar.scss";
+import "./Birthday.scss";
 import { Stack } from "@mui/material";
 import { ArrowDownward } from "@mui/icons-material";
 import FrontPageText from "../../components/TilAndre/FrontPageText";

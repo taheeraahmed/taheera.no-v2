@@ -7,7 +7,7 @@ import Projects from "./views/Projects/Projects"
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { useTranslation } from "react-i18next";
 import LinkTree from "./views/LinkTree/LinkTree";
-import CouponView from "./views/CouponView/CouponView";
+import CouponView from "./views/Birthday/Birthday";
 
 
 const Routes = () => {
