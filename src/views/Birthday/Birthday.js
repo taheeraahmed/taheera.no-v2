@@ -8,7 +8,7 @@ import Confetti from "react-confetti";
 
 const CouponView = () => {
   const nextWindowRef = useRef(null);
-  const [countdown, setCountdown] = useState("");
+  const [, setCountdown] = useState("");
   const today = new Date();
   const isAfterFeb15 =
     today.getMonth() > 1 || (today.getMonth() === 1 && today.getDate() >= 15);
