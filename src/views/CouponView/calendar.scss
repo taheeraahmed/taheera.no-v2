@@ -10,6 +10,18 @@
     color: white;
     user-select: none;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    @keyframes hoverUpDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    
+    .hover-effect {
+      animation: hoverUpDown 3s ease-in-out infinite;
+    }
     .btn {
       position: relative;
       border-radius: 100%;
