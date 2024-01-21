@@ -110,14 +110,12 @@ const Calendar = ({ coupons }) => {
                       borderRadius: "50%",
                       width: "25px",
                       height: "25px",
-                      fontSize: "9pt",
                       display: 'inline-block', // Ensures the text aligns center in its container
                     }}
                   >
                     {day.getDate()}
                   </Typography>
                 </div>
-              
                 <div
                   style={{
                     position: 'absolute', 
