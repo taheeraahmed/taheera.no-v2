@@ -10,7 +10,8 @@ const CouponView = () => {
   const nextWindowRef = useRef(null);
   const [countdown, setCountdown] = useState("");
   const today = new Date();
-  const isAfterFeb15 = today.getMonth() > 1 || (today.getMonth() === 1 && today.getDate() >= 15);
+  const isAfterFeb15 =
+    today.getMonth() > 1 || (today.getMonth() === 1 && today.getDate() >= 15);
 
   const calculateCountdown = () => {
     const now = new Date();
@@ -23,7 +24,9 @@ const CouponView = () => {
       const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
       const minutes = Math.floor((diff / 1000 / 60) % 60);
       const seconds = Math.floor((diff / 1000) % 60);
-      setCountdown(`${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`);
+      setCountdown(
+        `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`
+      );
     } else {
       setCountdown(null);
     }
@@ -60,7 +63,18 @@ const CouponView = () => {
 
   if (!isAfterFeb15) {
     return (
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', fontSize: '24px' }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+          fontSize: "24px",
+          cursor: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>💛</text></svg>")
+      16 0,
+    auto`,
+        }}
+      >
         {countdown}
       </div>
     );
@@ -68,7 +82,9 @@ const CouponView = () => {
 
   return (
     <>
-      {today.getMonth() === 1 && today.getDate() === 15 && <Confetti height={"1500vh"} />}
+      {today.getMonth() === 1 && today.getDate() === 15 && (
+        <Confetti height={"1500vh"} />
+      )}
       <div
         className="calendar"
         style={{
@@ -87,7 +103,11 @@ const CouponView = () => {
           >
             <FrontPageText />
             <button type="button" className="btn" onClick={scrollToNextWindow}>
-              <ArrowDownward fontSize="large" style={{ paddingTop: "5px" }} className="hover-effect" />
+              <ArrowDownward
+                fontSize="large"
+                style={{ paddingTop: "5px" }}
+                className="hover-effect"
+              />
             </button>
           </Stack>
         </div>
