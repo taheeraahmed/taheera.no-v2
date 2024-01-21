@@ -24,6 +24,7 @@ const Routes = () => {
       { path: "/about", title: `${t("common.aboutme")} | Taheera` },
       { path: "/cv", title: "CV | Taheera " },
       { path: "/projects", title: `${t("common.projects")} | Taheera` },
+      { path: "/forecastking", title: "til my boiii" },
     ];
 
     const curTitle = titleMap.find(item => item.path === location.pathname)
