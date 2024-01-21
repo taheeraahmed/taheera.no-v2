@@ -7,6 +7,7 @@ import Projects from "./views/Projects/Projects"
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { useTranslation } from "react-i18next";
 import LinkTree from "./views/LinkTree/LinkTree";
+import CouponView from "./views/Birthday/Birthday";
 
 
 const Routes = () => {
@@ -23,6 +24,7 @@ const Routes = () => {
       { path: "/about", title: `${t("common.aboutme")} | Taheera` },
       { path: "/cv", title: "CV | Taheera " },
       { path: "/projects", title: `${t("common.projects")} | Taheera` },
+      { path: "/forecastking", title: "til my boiii" },
     ];
 
     const curTitle = titleMap.find(item => item.path === location.pathname)
@@ -42,6 +44,7 @@ const Routes = () => {
           <Route exact path="/cv" component={Cv} />
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/linktree" component={LinkTree} />
+          <Route exact path="/forecastking" component={CouponView} />
         </Switch>
       </CSSTransition>
     </TransitionGroup>

@@ -1,0 +1,62 @@
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+.shake {
+  font-size: 2vw;
+}
+
+.shake:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+.specialStyleForMarch15 {
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  transition: 0.5s;
+  border-radius: 10px; /* Adjust as needed */
+}
+
+.specialStyleForMarch15:hover {
+  animation: animate 8s linear infinite;
+}
+
+.specialStyleForMarch15:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 15px; /* Adjust as needed */
+  opacity: 0;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.specialStyleForMarch15:hover:before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}

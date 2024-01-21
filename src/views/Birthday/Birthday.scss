@@ -1,0 +1,88 @@
+.calendar {
+  .text-container {
+    height: 100vh;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    user-select: none;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    @keyframes hoverUpDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    
+    .hover-effect {
+      animation: hoverUpDown 3s ease-in-out infinite;
+    }
+    .btn {
+      position: relative;
+      border-radius: 100%;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      height: 60px;
+      width: 60px;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+      background-size: 400%;
+      z-index: 1;
+    }
+
+    .btn:hover {
+      animation: animate 8s linear infinite;
+    }
+
+    @keyframes animate {
+      0% {
+        background-position: 0%;
+      }
+      100% {
+        background-position: 400%;
+      }
+    }
+
+    .btn:before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      bottom: -5px;
+      left: -5px;
+      z-index: -1;
+      background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+      background-size: 400%;
+      border-radius: 40px;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .btn:hover:before {
+      filter: blur(20px);
+      opacity: 1;
+      animation: animate 8s linear infinite;
+    }
+  }
+  h1 {
+    background: transparent;
+    -webkit-text-fill-color: white;
+  }
+  h3 {
+    color: white;
+    background: linear-gradient(315deg, #38a3a5 10%, #80ed99 90%);
+    background-size: 100% 4px;
+    background-position: bottom 0 left 0, bottom 8px left 0;
+    background-repeat: no-repeat;
+    color: #dedede;
+  }
+  h4 {
+  }
+}
