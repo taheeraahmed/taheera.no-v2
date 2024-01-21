@@ -61,7 +61,6 @@ const CouponView = () => {
     }
   }, []);
 
-
   return (
     <>
       {today.getMonth() === 1 && today.getDate() === 15 && (
