@@ -4,7 +4,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import ConfettiExplosion from "react-confetti-explosion";
 import { getCouponById } from "../../api/api";
-import { Typography } from "@mui/material";
+import { Divider, Typography } from "@mui/material";
 import "./styles.css";
 
 const AlertDialog = ({ coupon }) => {
@@ -163,9 +163,11 @@ const AlertDialog = ({ coupon }) => {
                 paddingBottom: 1,
               }}
             >
+              <Divider/>
               <Typography variant="overline" style={{ textAlign: "center" }}>
                 det er bare {daysUntilMarch15()} dager til bursdagen din💛
               </Typography>
+              <Divider/>
             </DialogContent>
           </>
         )}
