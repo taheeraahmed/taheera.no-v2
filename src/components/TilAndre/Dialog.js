@@ -122,7 +122,13 @@ const AlertDialog = ({ coupon }) => {
             >
               Gratulerer kjæresten miiiiin
             </h1>
-            <p style={{ textAlign: "center", fontSize: "9pt", paddingTop: "-2px" }}>
+            <p
+              style={{
+                textAlign: "center",
+                fontSize: "9pt",
+                paddingTop: "-2px",
+              }}
+            >
               {emojis.map((emoji, index) => (
                 <span
                   key={index}
@@ -157,7 +163,7 @@ const AlertDialog = ({ coupon }) => {
                 paddingBottom: 1,
               }}
             >
-              <Typography variant="body1" style={{ textAlign: "center" }}>
+              <Typography variant="overline" style={{ textAlign: "center" }}>
                 det er bare {daysUntilMarch15()} dager til bursdagen din💛
               </Typography>
             </DialogContent>
