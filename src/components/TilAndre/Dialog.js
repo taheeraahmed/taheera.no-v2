@@ -81,8 +81,7 @@ const AlertDialog = ({ coupon }) => {
 
   const hoverStyle = {
     ...defaultStyle,
-    textShadow:
-      "0 0 20px rgba(255,255,255, 0.5), 0 0 30px rgba(255,255,255, 0.7)",
+    animation: "radiate 2s infinite ease-in-out",
   };
   const emojiPattern = ["👴", "💛"];
   const numberOfRepeats = 16; // Adjust the number of repeats as needed
