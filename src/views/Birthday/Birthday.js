@@ -84,7 +84,7 @@ const CouponView = () => {
 
   return (
     <>
-      {today.getMonth() === 1 && today.getDate() === 15 && (
+      {today.getMonth() === 3 && today.getDate() === 15 && (
         <Confetti height={"1500vh"} />
       )}
       <div
@@ -113,7 +113,7 @@ const CouponView = () => {
             </button>
           </Stack>
         </div>
-        <div ref={nextWindowRef} style={{ height: "100vh" }}>
+        <div className="text-container" ref={nextWindowRef} style={{ height: "100vh" }}>
           <CalendarWithCoupons />
         </div>
       </div>
