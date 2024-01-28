@@ -10,6 +10,25 @@
     color: white;
     user-select: none;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    @media (min-width: 412px) {
+      width: 100%;
+      padding: 20px;
+      h1 {
+        font-size: 2rem;
+        background: transparent;
+        -webkit-text-fill-color: white;
+        font-family: "Source Code Pro",ui-monospace;
+      }
+    }
+    @media (min-width: 1000px) {
+      width: 100%;
+      h1 {
+        font-size: 4rem;
+        background: transparent;
+        -webkit-text-fill-color: white;
+        font-family: "Source Code Pro",ui-monospace;
+      }
+    }
     @keyframes hoverUpDown {
       0%, 100% {
         transform: translateY(0);
