@@ -82,7 +82,7 @@ const CouponView = () => {
             alignItems="center"
             spacing={2}
           >
-            <FrontPageText />
+              <FrontPageText />
             <button type="button" className="btn" onClick={scrollToNextWindow}>
               <ArrowDownward
                 fontSize="large"
@@ -92,7 +92,11 @@ const CouponView = () => {
             </button>
           </Stack>
         </div>
-        <div className="text-container" ref={nextWindowRef} style={{ height: "100vh" }}>
+        <div
+          className="text-container"
+          ref={nextWindowRef}
+          style={{ height: "100vh" }}
+        >
           <CalendarWithCoupons />
         </div>
       </div>
