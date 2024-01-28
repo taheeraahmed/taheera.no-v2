@@ -63,7 +63,7 @@ const CouponView = () => {
 
   return (
     <>
-      {today.getMonth() === 3 && today.getDate() === 15 && (
+      {today.getMonth() === 2 && today.getDate() === 15 && (
         <Confetti height={"1500vh"} />
       )}
       <div
