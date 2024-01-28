@@ -64,7 +64,13 @@ const FrontPageText = () => {
       <Typography variant="body" style={{ width: "40%", textAlign: "center" }}>
         Du må sjekke denne siden hver dag til du blir 30 hihi for å vite hvilken
         gave som tilhører hvilken dag. For hver dag får du en kode 🔑 som sier
-        hvilken pakke du skal åpne.
+        hvilken pakke du skal åpne. Hvorfor jeg valgte å gjøre det på denne
+        måten, og ikke bare skrive dato, i stedet for kode spør du? Jeg spør meg
+        selv om det samme i det jeg skriver dette :)))
+      </Typography>
+      <Typography variant="body" style={{ width: "40%", textAlign: "center" }}>
+        Liten tilleggs ting: Du må vite HVOR MYE JEG HATER OG PAKKE INN GAVER.
+        Uansett glhf, håper du liker gaven min 🥰
       </Typography>
     </>
   );
