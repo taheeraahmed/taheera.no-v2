@@ -31,3 +31,13 @@ export const getCouponById = async (id) => {
     throw error;
   }
 };
+
+export const getText = async () => {
+  try {
+    const response = await api.get(`/text`);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching text", error);
+    throw error;
+  }
+};
