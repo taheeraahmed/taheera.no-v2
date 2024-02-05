@@ -69,7 +69,11 @@ const AlertDialog = ({ coupon }) => {
 
   const formatDate = (timestamp) => {
     const date = new Date(timestamp * 1000);
-    return date.toLocaleDateString(); // You can customize the format as needed
+  
+    const day = date.getDate();
+    const month = date.toLocaleString('default', { month: 'long' });
+  
+    return `${day}. ${month}`;
   };
 
   const defaultStyle = {
