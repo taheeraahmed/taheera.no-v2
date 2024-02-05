@@ -8,7 +8,7 @@ const FrontPageText = () => {
   const numberOfRepeats = 16; // Adjust the number of repeats as needed
   const emojis = [];
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [text, setText] = useState("");
+  const [text, setText] = useState({ header: "", subheader: "", text: [] });
 
   useEffect(() => {
     // Fetch text from the API
@@ -84,18 +84,11 @@ const FrontPageText = () => {
           <Typography variant="overline" style={typographyStyle}>
             {text.subheadline}
           </Typography>
-          <Typography variant="body" style={typographyStyle}>
-            {text.text[0]}
-          </Typography>
-          <Typography variant="body" style={typographyStyle}>
-            {text.text[1]}
-          </Typography>
-          <Typography variant="body" style={typographyStyle}>
-            {text.text[2]}
-          </Typography>
-          <Typography variant="body" style={typographyStyle}>
-            {text.text[3]}
-          </Typography>
+          {text.text.map((paragraph, index) => (
+            <Typography key={index} variant="body" style={typographyStyle}>
+              {paragraph}
+            </Typography>
+          ))}
         </>
       ) : null}
     </>
