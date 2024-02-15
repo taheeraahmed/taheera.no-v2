@@ -3,6 +3,7 @@ import { Grid, Paper, Typography } from "@mui/material";
 import AlertDialog from "./Dialog";
 import "./styles.css";
 const Calendar = ({ coupons }) => {
+
   const startDate = new Date(2024, 1, 12);
   const endDate = new Date(2024, 2, 15);
   const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -17,26 +18,25 @@ const Calendar = ({ coupons }) => {
       (date.getDate() === 13 || date.getDate() === 14 || date.getDate() === 12)
     ) {
       return null; // Return nothing for these dates
-    }
-
-    if (date >= today) {
+    } 
+    if (date > today) {
       return <span className="shake">❓❓</span>;
+    } else {
+      return coupons
+        .filter((coupon) => {
+          const availableDate = new Date(coupon.available_date * 1000);
+          return availableDate.toDateString() === date.toDateString();
+        })
+        .map((coupon) => (
+          <>
+            {coupon.type ? (
+              <AlertDialog coupon={coupon} />
+            ) : (
+              <span className="shake">❓❓</span>
+            )}
+          </>
+        ));
     }
-   
-    return coupons
-      .filter((coupon) => {
-        const availableDate = new Date(coupon.available_date * 1000);
-        return availableDate.toDateString() === date.toDateString();
-      })
-      .map((coupon) => (
-        <>
-          {coupon.type ? (
-            <AlertDialog coupon={coupon} />
-          ) : (
-            <span className="shake">❓❓</span>
-          )}
-        </>
-      ));
   };
 
   const generateWeeksArray = () => {
