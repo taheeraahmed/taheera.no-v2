@@ -5,6 +5,7 @@ import Tur from "../../assets/images/tur.jpg";
 import BucketHat from "../../assets/images/buckethat.jpg";
 import Trene from "../../assets/images/trene.jpg";
 import Lese from "../../assets/images/lese.jpg";
+import Running from "../../assets/images/running.jpg";
 import ImageWithDescription from "../../components/ImageWithDescription/ImageWithDescription";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "styled-components";
@@ -21,6 +22,11 @@ const About = () => {
   }, []);
 
   const about = [
+    {
+      heading: t("aboutme.running"),
+      desc: t("aboutme.runningDescription"),
+      src: Running,
+    },
     {
       heading: t("aboutme.turglad"),
       desc: t("aboutme.turgladDescription"),
@@ -41,7 +47,6 @@ const About = () => {
       desc: t("aboutme.readingDescription"),
       src: Lese,
     },
-    // Add more items here as needed
   ];
 
   let size;
